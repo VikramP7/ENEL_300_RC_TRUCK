@@ -35,8 +35,15 @@
 
 // #include <>
 
+const unsigned char MASTER = 0;
+
 //  Insert declarations
+void SPIInitialization();
+void RadioCommand();
 void RadioInitialization();
+
+void RadioTransferMessage();
+void RadioReceiveMessage();
 
 
 #endif	/* XC_RADIO_SPI_H */

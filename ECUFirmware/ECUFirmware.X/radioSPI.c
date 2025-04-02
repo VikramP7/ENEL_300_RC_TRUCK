@@ -10,3 +10,15 @@
 
 #include "radioSPI.h"
 
+void RadioCommand(){
+}
+
+void SPIInitialization(){
+}
+
+void RadioInitialization(){
+    /*Check MASTER value to determine which initialization to do*/
+    
+    /**/
+}
+

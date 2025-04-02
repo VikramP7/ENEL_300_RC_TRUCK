@@ -18,9 +18,10 @@ int main(void) {
     
     /*Low level Initialization*/
     // Global System Time Initialization
-    // PWM audio initialization
     // Led initialization
     LedInitialization();
+    LedOn(LED_DEBUG_RED); // turn on red while initializing
+    // PWM audio initialization
     // SPI initialization
     // I2C initialization
     
@@ -29,9 +30,8 @@ int main(void) {
     // I2C bus initialization
     // !!NOT NEEDED ON ECU!! LCD I2C initialization
     
-    /* Replace with your application code */
-    //LedOn(LED_DEBUG_RED);
-    //LedOn(LED_DEBUG_GREEN);
+    LedOff(LED_DEBUG_RED);
+    
     //LedOn(LED_ALL);
     while (1) {
         
