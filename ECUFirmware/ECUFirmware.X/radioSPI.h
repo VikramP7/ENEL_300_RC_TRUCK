@@ -36,6 +36,8 @@
 // #include <>
 
 //  Insert declarations
+void RadioInitialization();
+
 
 #endif	/* XC_RADIO_SPI_H */
 
