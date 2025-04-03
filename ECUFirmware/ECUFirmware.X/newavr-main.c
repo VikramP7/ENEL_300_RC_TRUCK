@@ -17,10 +17,10 @@ volatile unsigned long G_u32SystemFlags = 0;
 int main(void) {
     
     /*Low level Initialization*/
-    // Global System Time Initialization
     // Led initialization
     LedInitialization();
     LedOn(LED_DEBUG_RED); // turn on red while initializing
+    // Global System Time Initialization
     // PWM audio initialization
     // SPI initialization
     // I2C initialization
