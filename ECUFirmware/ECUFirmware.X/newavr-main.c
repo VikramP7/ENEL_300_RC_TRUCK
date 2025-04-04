@@ -8,9 +8,9 @@
 
 #include <avr/io.h>
 #include "leds.h"
+#include "radioSPI.h"
 
 /*Global Variable Definitions*/
-volatile unsigned long G_u32SystemTimeMs = 0;
 volatile unsigned long G_u32SystemFlags = 0;
 
 
@@ -23,10 +23,12 @@ int main(void) {
     // Global System Time Initialization
     // PWM audio initialization
     // SPI initialization
+    SPIInitialization();
     // I2C initialization
     
     /*Driver Initialization*/
     // Radio SPI initialization
+    RadioInitialization();
     // I2C bus initialization
     // !!NOT NEEDED ON ECU!! LCD I2C initialization
     

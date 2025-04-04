@@ -22,6 +22,10 @@
       <itemPath>leds.h</itemPath>
       <itemPath>radioSPI.c</itemPath>
       <itemPath>radioSPI.h</itemPath>
+      <itemPath>systemTime.c</itemPath>
+      <itemPath>systemTime.h</itemPath>
+      <itemPath>buzzer.c</itemPath>
+      <itemPath>buzzer.h</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
