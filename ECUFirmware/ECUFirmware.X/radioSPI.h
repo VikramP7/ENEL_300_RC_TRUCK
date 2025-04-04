@@ -35,7 +35,16 @@
 
 // #include <>
 
+const unsigned char MASTER = 0;
+
 //  Insert declarations
+void SPIInitialization(); // Set up AVR registers
+void RadioCommand(); // useful for RadioInitialization
+void RadioInitialization(); // Set up radio (nRF) registers
+
+void RadioTransmitMessage(); // once initialized send data to other board
+void RadioReceiveMessage(); // once initialized receive data from other board
+
 
 #endif	/* XC_RADIO_SPI_H */
 

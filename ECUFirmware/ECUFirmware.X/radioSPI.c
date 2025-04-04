@@ -8,8 +8,17 @@
 
 #include <avr/io.h>
 
-int main(void) {
-    /* Replace with your application code */
-    while (1) {
-    }
+#include "radioSPI.h"
+
+void RadioCommand(){
 }
+
+void SPIInitialization(){
+}
+
+void RadioInitialization(){
+    /*Check MASTER value to determine which initialization to do*/
+    
+    /**/
+}
+
