@@ -40,7 +40,7 @@ void SPIInitialization(){
     // Enable SPI and set as master. And set clock prescaler to divide by 16
     // this runs SPI clock at 1.5MHz, can up to 10MHz MAX by changing prescaler
     // Also set Data order to send MSb first
-    SPI0.CTRLA = 0b00100011; 
+    SPI0.CTRLA = 0b00100001; 
     
 }
 
