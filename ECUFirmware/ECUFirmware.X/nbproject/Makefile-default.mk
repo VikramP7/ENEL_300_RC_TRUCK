@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=newavr-main.c leds.c radioSPI.c systemTime.c buzzer.c
+SOURCEFILES_QUOTED_IF_SPACED=newavr-main.c leds.c leds.h radioSPI.c radioSPI.h systemTime.c systemTime.h buzzer.c buzzer.h
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/newavr-main.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/radioSPI.o ${OBJECTDIR}/systemTime.o ${OBJECTDIR}/buzzer.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/newavr-main.o.d ${OBJECTDIR}/leds.o.d ${OBJECTDIR}/radioSPI.o.d ${OBJECTDIR}/systemTime.o.d ${OBJECTDIR}/buzzer.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/newavr-main.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/radioSPI.o ${OBJECTDIR}/radioSPI.o ${OBJECTDIR}/systemTime.o ${OBJECTDIR}/systemTime.o ${OBJECTDIR}/buzzer.o ${OBJECTDIR}/buzzer.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/newavr-main.o.d ${OBJECTDIR}/leds.o.d ${OBJECTDIR}/leds.o.d ${OBJECTDIR}/radioSPI.o.d ${OBJECTDIR}/radioSPI.o.d ${OBJECTDIR}/systemTime.o.d ${OBJECTDIR}/systemTime.o.d ${OBJECTDIR}/buzzer.o.d ${OBJECTDIR}/buzzer.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/newavr-main.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/radioSPI.o ${OBJECTDIR}/systemTime.o ${OBJECTDIR}/buzzer.o
+OBJECTFILES=${OBJECTDIR}/newavr-main.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/radioSPI.o ${OBJECTDIR}/radioSPI.o ${OBJECTDIR}/systemTime.o ${OBJECTDIR}/systemTime.o ${OBJECTDIR}/buzzer.o ${OBJECTDIR}/buzzer.o
 
 # Source Files
-SOURCEFILES=newavr-main.c leds.c radioSPI.c systemTime.c buzzer.c
+SOURCEFILES=newavr-main.c leds.c leds.h radioSPI.c radioSPI.h systemTime.c systemTime.h buzzer.c buzzer.h
 
 
 
@@ -88,66 +88,114 @@ MP_PROCESSOR_OPTION=AVR128DB28
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/newavr-main.o: newavr-main.c  .generated_files/flags/default/72bd7ed7f912218d284dd8eef708e6c84e22fdd4 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/newavr-main.o: newavr-main.c  .generated_files/flags/default/3a757ebf50feab7a490f05ba70c6d362b7111b70 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/newavr-main.o.d 
 	@${RM} ${OBJECTDIR}/newavr-main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/newavr-main.o.d" -MT "${OBJECTDIR}/newavr-main.o.d" -MT ${OBJECTDIR}/newavr-main.o -o ${OBJECTDIR}/newavr-main.o newavr-main.c 
 	
-${OBJECTDIR}/leds.o: leds.c  .generated_files/flags/default/863fc182b02e68a40e510eed34b0055a3b6f5fd9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/leds.o: leds.c  .generated_files/flags/default/c650f206b978280730f079b88047698143345695 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/leds.o.d 
 	@${RM} ${OBJECTDIR}/leds.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/leds.o.d" -MT "${OBJECTDIR}/leds.o.d" -MT ${OBJECTDIR}/leds.o -o ${OBJECTDIR}/leds.o leds.c 
 	
-${OBJECTDIR}/radioSPI.o: radioSPI.c  .generated_files/flags/default/8dcddec2f8f9e47280a1fb7c347c2df53d9a05ae .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/leds.o: leds.h  .generated_files/flags/default/ea7d07f1fade739878664324d500f56a4b77ec8b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/leds.o.d 
+	@${RM} ${OBJECTDIR}/leds.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/leds.o.d" -MT "${OBJECTDIR}/leds.o.d" -MT ${OBJECTDIR}/leds.o -o ${OBJECTDIR}/leds.o leds.h 
+	
+${OBJECTDIR}/radioSPI.o: radioSPI.c  .generated_files/flags/default/9e313ef3faa56e80c4dbe49d40360410da64d8c0 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/radioSPI.o.d 
 	@${RM} ${OBJECTDIR}/radioSPI.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/radioSPI.o.d" -MT "${OBJECTDIR}/radioSPI.o.d" -MT ${OBJECTDIR}/radioSPI.o -o ${OBJECTDIR}/radioSPI.o radioSPI.c 
 	
-${OBJECTDIR}/systemTime.o: systemTime.c  .generated_files/flags/default/3256ca56e61eeb1164fcf6bc27af93daee42018d .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/radioSPI.o: radioSPI.h  .generated_files/flags/default/e9a65297ecffbc7e8b1f03fb4e5683988daac226 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/radioSPI.o.d 
+	@${RM} ${OBJECTDIR}/radioSPI.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/radioSPI.o.d" -MT "${OBJECTDIR}/radioSPI.o.d" -MT ${OBJECTDIR}/radioSPI.o -o ${OBJECTDIR}/radioSPI.o radioSPI.h 
+	
+${OBJECTDIR}/systemTime.o: systemTime.c  .generated_files/flags/default/bfaba9b48a7935f568527f939c66f6ead5796ad8 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/systemTime.o.d 
 	@${RM} ${OBJECTDIR}/systemTime.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/systemTime.o.d" -MT "${OBJECTDIR}/systemTime.o.d" -MT ${OBJECTDIR}/systemTime.o -o ${OBJECTDIR}/systemTime.o systemTime.c 
 	
-${OBJECTDIR}/buzzer.o: buzzer.c  .generated_files/flags/default/ef7a82a99516c5e997887ade96ae1d2e0ce345f9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/systemTime.o: systemTime.h  .generated_files/flags/default/306ea5ff5fd12b91d30be140eaca00d1a07bfb1f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/systemTime.o.d 
+	@${RM} ${OBJECTDIR}/systemTime.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/systemTime.o.d" -MT "${OBJECTDIR}/systemTime.o.d" -MT ${OBJECTDIR}/systemTime.o -o ${OBJECTDIR}/systemTime.o systemTime.h 
+	
+${OBJECTDIR}/buzzer.o: buzzer.c  .generated_files/flags/default/6e7e225afcbd39bf892dc98b5319e684843b7f3d .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/buzzer.o.d 
 	@${RM} ${OBJECTDIR}/buzzer.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/buzzer.o.d" -MT "${OBJECTDIR}/buzzer.o.d" -MT ${OBJECTDIR}/buzzer.o -o ${OBJECTDIR}/buzzer.o buzzer.c 
 	
+${OBJECTDIR}/buzzer.o: buzzer.h  .generated_files/flags/default/519bc64209f32bb248be1913a9b9430da0f4d596 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/buzzer.o.d 
+	@${RM} ${OBJECTDIR}/buzzer.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/buzzer.o.d" -MT "${OBJECTDIR}/buzzer.o.d" -MT ${OBJECTDIR}/buzzer.o -o ${OBJECTDIR}/buzzer.o buzzer.h 
+	
 else
-${OBJECTDIR}/newavr-main.o: newavr-main.c  .generated_files/flags/default/7616022ed577df027dfe02b1a226c2a497af2aa8 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/newavr-main.o: newavr-main.c  .generated_files/flags/default/ae34c35d40af27826f5f7b440bf13aced56d79a1 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/newavr-main.o.d 
 	@${RM} ${OBJECTDIR}/newavr-main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/newavr-main.o.d" -MT "${OBJECTDIR}/newavr-main.o.d" -MT ${OBJECTDIR}/newavr-main.o -o ${OBJECTDIR}/newavr-main.o newavr-main.c 
 	
-${OBJECTDIR}/leds.o: leds.c  .generated_files/flags/default/2f6e7d6ecd96213cf4f09e4f613ea6c2af99ab4f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/leds.o: leds.c  .generated_files/flags/default/a7ea214fcb0eaa0a04c68736cdf8a2fc4ad8cf37 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/leds.o.d 
 	@${RM} ${OBJECTDIR}/leds.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/leds.o.d" -MT "${OBJECTDIR}/leds.o.d" -MT ${OBJECTDIR}/leds.o -o ${OBJECTDIR}/leds.o leds.c 
 	
-${OBJECTDIR}/radioSPI.o: radioSPI.c  .generated_files/flags/default/4163a4f87c7680a234077977ccc081ff3b5e69ec .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/leds.o: leds.h  .generated_files/flags/default/c03ce135b808c3f9fa1354f722a167ff40970199 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/leds.o.d 
+	@${RM} ${OBJECTDIR}/leds.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/leds.o.d" -MT "${OBJECTDIR}/leds.o.d" -MT ${OBJECTDIR}/leds.o -o ${OBJECTDIR}/leds.o leds.h 
+	
+${OBJECTDIR}/radioSPI.o: radioSPI.c  .generated_files/flags/default/f53a193ebaa788888ea7a06ef7abd698a61fa0ce .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/radioSPI.o.d 
 	@${RM} ${OBJECTDIR}/radioSPI.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/radioSPI.o.d" -MT "${OBJECTDIR}/radioSPI.o.d" -MT ${OBJECTDIR}/radioSPI.o -o ${OBJECTDIR}/radioSPI.o radioSPI.c 
 	
-${OBJECTDIR}/systemTime.o: systemTime.c  .generated_files/flags/default/6a45c1df5bf04aab6ee2cbebd43f42e5c20ceee9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/radioSPI.o: radioSPI.h  .generated_files/flags/default/de98ed01802b58778910bfb9eab3cab88332a9c8 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/radioSPI.o.d 
+	@${RM} ${OBJECTDIR}/radioSPI.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/radioSPI.o.d" -MT "${OBJECTDIR}/radioSPI.o.d" -MT ${OBJECTDIR}/radioSPI.o -o ${OBJECTDIR}/radioSPI.o radioSPI.h 
+	
+${OBJECTDIR}/systemTime.o: systemTime.c  .generated_files/flags/default/d3f1b6160787e0f86eacddf5e641cf724352d222 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/systemTime.o.d 
 	@${RM} ${OBJECTDIR}/systemTime.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/systemTime.o.d" -MT "${OBJECTDIR}/systemTime.o.d" -MT ${OBJECTDIR}/systemTime.o -o ${OBJECTDIR}/systemTime.o systemTime.c 
 	
-${OBJECTDIR}/buzzer.o: buzzer.c  .generated_files/flags/default/d6255d93b5d093223267c2874f72e9e535eb88ce .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/systemTime.o: systemTime.h  .generated_files/flags/default/7b26b65da94c484430f3895d97d7c0dd8619367c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/systemTime.o.d 
+	@${RM} ${OBJECTDIR}/systemTime.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/systemTime.o.d" -MT "${OBJECTDIR}/systemTime.o.d" -MT ${OBJECTDIR}/systemTime.o -o ${OBJECTDIR}/systemTime.o systemTime.h 
+	
+${OBJECTDIR}/buzzer.o: buzzer.c  .generated_files/flags/default/5d9ab6e1c229a5f03eaac9f681a644505620316e .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/buzzer.o.d 
 	@${RM} ${OBJECTDIR}/buzzer.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/buzzer.o.d" -MT "${OBJECTDIR}/buzzer.o.d" -MT ${OBJECTDIR}/buzzer.o -o ${OBJECTDIR}/buzzer.o buzzer.c 
+	
+${OBJECTDIR}/buzzer.o: buzzer.h  .generated_files/flags/default/f8aa2d1213fd1781bbf540b9b6690e80f3babb27 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/buzzer.o.d 
+	@${RM} ${OBJECTDIR}/buzzer.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/buzzer.o.d" -MT "${OBJECTDIR}/buzzer.o.d" -MT ${OBJECTDIR}/buzzer.o -o ${OBJECTDIR}/buzzer.o buzzer.h 
 	
 endif
 

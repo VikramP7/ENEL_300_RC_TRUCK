@@ -12,7 +12,7 @@
 
 #include <xc.h> // include processor files - each processor file is guarded.
 
-#define RADIO_MASTER 0
+#define RADIO_MASTER 1
 
 #define R_RX_PAYLOAD    0b01100001
 #define W_TX_PAYLOAD    0b10100000
@@ -29,16 +29,16 @@
 
 // #include <>
 
-const unsigned char MASTER_RECEIVE_REQUEST[] = {0xFF, 0x00, 0x00, 0x00};
+extern const unsigned char MASTER_RECEIVE_REQUEST[];
 
 //  Insert declarations
 void SPIInitialization(); // Set up AVR registers
 void RadioTransmitCommand(char addr, char* data, int dataLength); // useful for RadioInitialization
-void RadioRecieveCommand(char addr, char* data, int dataLength); // useful for RadioInitialization
+int RadioRecieveCommand(char addr, char* data, int dataLength); // useful for RadioInitialization
 void RadioInitialization(); // Set up radio (nRF) registers
 
-void RadioTransmitMessage(char* data, int dataLength); // once initialized send data to other board
-int RadioReceiveMessage(char* data, int dataLength); // once initialized receive data from other board
+void RadioTransmitMessage(char data[], int dataLength); // once initialized send data to other board
+int RadioReceiveMessage(char data[], int dataLength); // once initialized receive data from other board
 
 
 #endif	/* XC_RADIO_SPI_H */
