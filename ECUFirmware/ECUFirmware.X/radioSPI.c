@@ -72,7 +72,7 @@ void RadioInitialization(){
     RadioTransmitCommand(A_RADIO_RXADDR,  &(0b00000001), 1);
     RadioTransmitCommand(A_RADIO_RETRANS, &(0b00001111), 1);
     RadioTransmitCommand(A_RADIO_RETRANS, &(0b00001111), 1);
-    //RadioCommand(A_RADIO_RF_CHAN, &(0b00000000), 1); // leaving as default
+    //RadioTransmitCommand(A_RADIO_RF_CHAN, &(0b00000000), 1); // leaving as default
     //RadioReceiveMessage(A_RADIO_RF_CHAN, &(0b00000000), 1); // leaving as default
     /**/
 }
