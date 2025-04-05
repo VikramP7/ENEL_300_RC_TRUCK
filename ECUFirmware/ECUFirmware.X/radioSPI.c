@@ -93,24 +93,20 @@ void RadioInitialization(){
 }
 
 void RadioTransmitMessage(char* data, int dataLength){
-    if(RADIO_MASTER){
-        RadioTransmitCommand(W_TX_PAYLOAD, data, dataLength);
-    }
+    RadioTransmitCommand(W_TX_PAYLOAD, data, dataLength);
     if(!RADIO_MASTER){
+        RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001011), 1);
     }
 }
 
-void RadioReceiveMessage(char* data, int dataLength){
+int RadioReceiveMessage(char* data, int dataLength){
     if (!RADIO_MASTER){
         RadioRecieveCommand(R_RX_PAYLOAD, data, dataLength);
-        int transmitMode = 1;
-        for(int i = 0; i < dataLength; i++){
-            transmitMode = data[i] == MASTER_RECEIVE_REQUEST[i] ? transmitMode : 0;
-        }
-        if(transmitMode){
+        if(data[0] == MASTER_RECEIVE_REQUEST[0]){
             RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001010), 1);
-            RadioTransmitMessage();
+            return 1;
         }
+        return 0;
     }
     else if (RADIO_MASTER){
         // tell Slave board to go into transmit mode

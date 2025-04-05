@@ -38,7 +38,7 @@ void RadioRecieveCommand(char addr, char* data, int dataLength); // useful for R
 void RadioInitialization(); // Set up radio (nRF) registers
 
 void RadioTransmitMessage(char* data, int dataLength); // once initialized send data to other board
-void RadioReceiveMessage(char* data, int dataLength); // once initialized receive data from other board
+int RadioReceiveMessage(char* data, int dataLength); // once initialized receive data from other board
 
 
 #endif	/* XC_RADIO_SPI_H */
