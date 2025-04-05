@@ -8,14 +8,14 @@
 
 #include <avr/io.h>
 #include "leds.h"
+#include "leds.c"
 #include "radioSPI.h"
+#include "radioSPI.c"
 
 /*Global Variable Definitions*/
 volatile unsigned long G_u32SystemFlags = 0;
 
-
 int main(void) {
-    
     /*Low level Initialization*/
     // Led initialization
     LedInitialization();
@@ -23,6 +23,7 @@ int main(void) {
     // Global System Time Initialization
     // PWM audio initialization
     // SPI initialization
+    
     SPIInitialization();
     // I2C initialization
     
@@ -42,7 +43,7 @@ int main(void) {
     char recieve[4];
     while (1) {
         if(RADIO_MASTER){
-            RadioTransmitMessage(&message, 4);
+            RadioTransmitMessage(message, 4);
             if(ledOn){
                 LedOff(LED_DEBUG_RED);
                 ledOn = 1;
@@ -52,8 +53,8 @@ int main(void) {
             }
         }
         else{
-            RadioReceiveMessage(&recieve, 4);
-            if(recieve[0] = message[0]){
+            RadioReceiveMessage(recieve, 4);
+            if(recieve[0] == message[0]){
                 PORTD.OUT &= 0b11111110;
             }
         }

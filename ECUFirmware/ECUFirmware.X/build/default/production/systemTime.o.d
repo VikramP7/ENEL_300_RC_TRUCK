@@ -1,5 +1,5 @@
-build/default/debug/systemTime.o.d build/default/debug/systemTime.o: \
- systemTime.h \
+build/default/production/systemTime.o.d \
+ build/default/production/systemTime.o: systemTime.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\io.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\sfr_defs.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\inttypes.h \

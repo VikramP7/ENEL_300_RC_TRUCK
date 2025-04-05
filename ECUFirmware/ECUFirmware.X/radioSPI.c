@@ -23,6 +23,8 @@
 
 #include "radioSPI.h"
 
+const unsigned char MASTER_RECEIVE_REQUEST[] = {0xFF, 0x00, 0x00, 0x00};
+
 void SPIInitialization(){
     // sets the SPI output lines to be outputs
     PORTA.DIRSET = 0b11110000;
@@ -41,19 +43,19 @@ void SPIInitialization(){
     
 }
 
-RadioTransmitCommand(char addr, char* data, int dataLength){
+void RadioTransmitCommand(char addr, char* data, int dataLength){
     SPI0.DATA = addr;
     for(int i = 0; i < dataLength; i++){
-        DATA_TRANSFER_STALL();
+        DATA_TRANSFER_STALL;
         SPI0.DATA = data[i];
     }
 }
-void RadioRecieveCommand(char addr, char* data, int dataLength){
+int RadioRecieveCommand(char addr, char* data, int dataLength){
     SPI0.DATA = addr;
-    DATA_TRANSFER_STALL();
+    DATA_TRANSFER_STALL;
     for(int i = 0; i < dataLength; i++){
         SPI0.DATA = 0b00000000;
-        DATA_TRANSFER_STALL();
+        DATA_TRANSFER_STALL;
         data[i] = SPI0.DATA;
     }
     if(data[0] == 0){
@@ -75,27 +77,27 @@ void RadioInitialization(){
     //W_RADIO_CONFIG 0b00100000
     if(RADIO_MASTER){
         // sets master board to transmit by default
-        RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001010), 1);
+        RadioTransmitCommand(A_RADIO_CONFIG,  &(char){0b00001010}, 1);
     }
     else{
         // sets slave board to receive by default
-        RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001011), 1);
+        RadioTransmitCommand(A_RADIO_CONFIG,  &(char){0b00001011}, 1);
     }
     
-    RadioTransmitCommand(A_RADIO_AUTOACK, &(0b00000001), 1);
-    RadioTransmitCommand(A_RADIO_RXADDR,  &(0b00000001), 1);
+    RadioTransmitCommand(A_RADIO_AUTOACK, &(char){0b00000001}, 1);
+    RadioTransmitCommand(A_RADIO_RXADDR,  &(char){0b00000001}, 1);
     // sets to automatically retransmit dropped packets 15 times
-    RadioTransmitCommand(A_RADIO_RETRANS, &(0b00001111), 1);
+    RadioTransmitCommand(A_RADIO_RETRANS, &(char){0b00001111}, 1);
     // sets packet size to 4 bytes
-    RadioTransmitCommand(A_RADIO_PACKET_SIZE, &(0b00000100), 1);
-    //RadioTransmitCommand(A_RADIO_RF_CHAN, &(0b00000000), 1); // leaving as default
-    //RadioReceiveMessage(A_RADIO_RF_CHAN, &(0b00000000), 1); // leaving as default
+    RadioTransmitCommand(A_RADIO_PACKET_SIZE, &(char){0b00000100}, 1);
+    //RadioTransmitCommand(A_RADIO_RF_CHAN, &(char){0b00000000}, 1); // leaving as default
+    //RadioReceiveMessage(A_RADIO_RF_CHAN, &(char){0b00000000}, 1); // leaving as default
 }
 
 void RadioTransmitMessage(char data[], int dataLength){
     RadioTransmitCommand(W_TX_PAYLOAD, data, dataLength);
     if(!RADIO_MASTER){
-        RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001011), 1);
+        RadioTransmitCommand(A_RADIO_CONFIG,  &(char){0b00001011}, 1);
     }
 }
 
@@ -103,20 +105,20 @@ int RadioReceiveMessage(char data[], int dataLength){
     if (!RADIO_MASTER){
         RadioRecieveCommand(R_RX_PAYLOAD, data, dataLength);
         if(data[0] == MASTER_RECEIVE_REQUEST[0]){
-            RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001010), 1);
+            RadioTransmitCommand(A_RADIO_CONFIG,  &(char){0b00001010}, 1);
             return 1;
         }
         return 0;
     }
     else if (RADIO_MASTER){
         // tell Slave board to go into transmit mode
-        RadioTransmitMessage(&MASTER_RECEIVE_REQUEST, 4);
+        RadioTransmitMessage(MASTER_RECEIVE_REQUEST, 4);
         // config board into receiver mode
-        RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001011), 1);
+        RadioTransmitCommand(A_RADIO_CONFIG,  &(char){0b00001011}, 1);
         
         // poll for new data until data received is no longer invalid
         while(RadioRecieveCommand(R_RX_PAYLOAD, data, dataLength) == -1);
-        RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001010), 1);
+        RadioTransmitCommand(A_RADIO_CONFIG,  &(char){0b00001010}, 1);
     }
 }
 
