@@ -1,4 +1,5 @@
-build/default/production/leds.o.d build/default/production/leds.o: leds.h \
+build/default/production/buzzer.o.d build/default/production/buzzer.o: \
+ buzzer.h \
  c:\program\ files\microchip\xc8\v3.00\avr\lib\gcc\avr\5.4.0\include\xc.h \
  c:\program\ files\microchip\xc8\v3.00\avr\lib\gcc\avr\5.4.0\include\cci.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\io.h \

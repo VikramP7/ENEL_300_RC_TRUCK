@@ -92,14 +92,14 @@ void RadioInitialization(){
     //RadioReceiveMessage(A_RADIO_RF_CHAN, &(0b00000000), 1); // leaving as default
 }
 
-void RadioTransmitMessage(char* data, int dataLength){
+void RadioTransmitMessage(char data[], int dataLength){
     RadioTransmitCommand(W_TX_PAYLOAD, data, dataLength);
     if(!RADIO_MASTER){
         RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001011), 1);
     }
 }
 
-int RadioReceiveMessage(char* data, int dataLength){
+int RadioReceiveMessage(char data[], int dataLength){
     if (!RADIO_MASTER){
         RadioRecieveCommand(R_RX_PAYLOAD, data, dataLength);
         if(data[0] == MASTER_RECEIVE_REQUEST[0]){
