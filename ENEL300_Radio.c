@@ -30,7 +30,6 @@ int main(void) {
     PORTA.OUTSET() = 0b10000000; // Default PA7 to high; Want it to not listening for commands yet???
 
     PORTMUX.SPIROUTEA() = 0b00000000; // Set SPI??
-    PORTMUX.TCAROUTEA() = 0b00000000; // Set TCA??
 
     CLKCTRL.OSCHFCTRLA() = 0b00011000; // Apparently the max clock speed we can run SPI at is 1/2 the max clock speed; 12 MHz.
 
