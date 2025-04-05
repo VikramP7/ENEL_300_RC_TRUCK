@@ -35,13 +35,21 @@ int main(void) {
     LedOff(LED_DEBUG_RED);
     
     //LedOn(LED_ALL);
-    PORTD.DIRSET = 0b00000001;
-    PORTD.OUTSET |= 0b00000001;
+    //PORTD.DIRSET = 0b00000001;
+    //PORTD.OUTSET |= 0b00000001;
+    int ledOn = 0;
     char message[] = {0xEC, 0xFF, 0x12, 0x34};
     char recieve[4];
     while (1) {
         if(RADIO_MASTER){
             RadioTransmitMessage(&message, 4);
+            if(ledOn){
+                LedOff(LED_DEBUG_RED);
+                ledOn = 1;
+            }else{
+                LedOn(LED_DEBUG_RED);
+                ledOn = 0;
+            }
         }
         else{
             RadioReceiveMessage(&recieve, 4);
