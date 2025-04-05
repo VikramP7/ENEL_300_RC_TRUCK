@@ -23,9 +23,6 @@
 
 #include "radioSPI.h"
 
-void RadioCommand(){
-}
-
 void SPIInitialization(){
     // sets the SPI output lines to be outputs
     PORTA.DIRSET = 0b11110000;
@@ -53,9 +50,17 @@ RadioTransmitCommand(char addr, char* data, int dataLength){
 }
 void RadioRecieveCommand(char addr, char* data, int dataLength){
     SPI0.DATA = addr;
+    DATA_TRANSFER_STALL();
     for(int i = 0; i < dataLength; i++){
+        SPI0.DATA = 0b00000000;
         DATA_TRANSFER_STALL();
         data[i] = SPI0.DATA;
+    }
+    if(data[0] != 0){
+        return -1;
+    }
+    else{
+        return dataLength;
     }
 }
 
@@ -67,21 +72,43 @@ void RadioInitialization(){
     
     //RADIO_CONGIG_DATA 0b00001010
     //W_RADIO_CONFIG 0b00100000
-    RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001010), 1);
+    if(RADIO_MASTER){
+        // sets master board to transmit by default
+        RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001010), 1);
+    }
+    else{
+        // sets slave board to receive by default
+        RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001011), 1);
+    }
+    
     RadioTransmitCommand(A_RADIO_AUTOACK, &(0b00000001), 1);
     RadioTransmitCommand(A_RADIO_RXADDR,  &(0b00000001), 1);
     RadioTransmitCommand(A_RADIO_RETRANS, &(0b00001111), 1);
     RadioTransmitCommand(A_RADIO_RETRANS, &(0b00001111), 1);
     //RadioTransmitCommand(A_RADIO_RF_CHAN, &(0b00000000), 1); // leaving as default
     //RadioReceiveMessage(A_RADIO_RF_CHAN, &(0b00000000), 1); // leaving as default
-    /**/
+    
+    
 }
 
 void RadioTransmitMessage(char* data, int dataLength){
-    RadioTransmitCommand(W_TX_PAYLOAD, data, dataLength);
+    if (RADIO_MASTER){
+        RadioTransmitCommand(W_TX_PAYLOAD, data, dataLength);
+    }
+    
 }
 
 void RadioReceiveMessage(char* data, int dataLength){
-    RadioRecieveCommand(R_RX_PAYLOAD, data, dataLength);
+    if (!RADIO_MASTER){
+        RadioRecieveCommand(R_RX_PAYLOAD, data, dataLength);
+    }
+    else if (RADIO_MASTER){
+        // tell Slave board to go into transmit mode
+        RadioTransmitMessage(&MASTER_RECEIVE_REQUEST, 4);
+        // config board into receiver mode
+        RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001011), 1);
+        
+        RadioRecieveCommand(R_RX_PAYLOAD, data, dataLength);
+    }
 }
 
