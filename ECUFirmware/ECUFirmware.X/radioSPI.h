@@ -12,7 +12,7 @@
 
 #include <xc.h> // include processor files - each processor file is guarded.
 
-#define RADIO_MASTER 1
+#define RADIO_MASTER 0
 
 #define R_RX_PAYLOAD    0b01100001
 #define W_TX_PAYLOAD    0b10100000
