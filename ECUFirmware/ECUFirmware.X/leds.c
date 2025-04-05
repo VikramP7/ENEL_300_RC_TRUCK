@@ -38,7 +38,6 @@ void LedInitialization(){
 
 void LedOn(LedName selectedLed){
     switch((char)(selectedLed)){
-        char s = selectedLed;
         case 0:
             //LED_DEBUG_RED    = 0b00000010
             PORTD.OUT &= ~(0b00000010);  // PD1
