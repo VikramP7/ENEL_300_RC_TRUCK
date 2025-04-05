@@ -22,13 +22,14 @@
 #define A_RADIO_RETRANS 0b00000100
 #define A_RADIO_RF_CHAN 0b00000101
 #define A_RADIO_STATUS_REG 0b00000111
+#define A_RADIO_PACKET_SIZE 0b00010001
 
 #define DATA_TRANSFER_STALL while(!(SPI0.INTFLAGS & 0b10000000))
 
 
 // #include <>
 
-const unsigned char MASTER_RECEIVE_REQUEST[] = {0xFF, 0x00, 0xFF, 0x00};
+const unsigned char MASTER_RECEIVE_REQUEST[] = {0xFF, 0x00, 0x00, 0x00};
 
 //  Insert declarations
 void SPIInitialization(); // Set up AVR registers

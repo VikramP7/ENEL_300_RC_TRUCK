@@ -56,7 +56,8 @@ void RadioRecieveCommand(char addr, char* data, int dataLength){
         DATA_TRANSFER_STALL();
         data[i] = SPI0.DATA;
     }
-    if(data[0] != 0){
+    if(data[0] == 0){
+        // if data is not valid command / no data
         return -1;
     }
     else{
@@ -83,24 +84,33 @@ void RadioInitialization(){
     
     RadioTransmitCommand(A_RADIO_AUTOACK, &(0b00000001), 1);
     RadioTransmitCommand(A_RADIO_RXADDR,  &(0b00000001), 1);
+    // sets to automatically retransmit dropped packets 15 times
     RadioTransmitCommand(A_RADIO_RETRANS, &(0b00001111), 1);
-    RadioTransmitCommand(A_RADIO_RETRANS, &(0b00001111), 1);
+    // sets packet size to 4 bytes
+    RadioTransmitCommand(A_RADIO_PACKET_SIZE, &(0b00000100), 1);
     //RadioTransmitCommand(A_RADIO_RF_CHAN, &(0b00000000), 1); // leaving as default
     //RadioReceiveMessage(A_RADIO_RF_CHAN, &(0b00000000), 1); // leaving as default
-    
-    
 }
 
 void RadioTransmitMessage(char* data, int dataLength){
-    if (RADIO_MASTER){
+    if(RADIO_MASTER){
         RadioTransmitCommand(W_TX_PAYLOAD, data, dataLength);
     }
-    
+    if(!RADIO_MASTER){
+    }
 }
 
 void RadioReceiveMessage(char* data, int dataLength){
     if (!RADIO_MASTER){
         RadioRecieveCommand(R_RX_PAYLOAD, data, dataLength);
+        int transmitMode = 1;
+        for(int i = 0; i < dataLength; i++){
+            transmitMode = data[i] == MASTER_RECEIVE_REQUEST[i] ? transmitMode : 0;
+        }
+        if(transmitMode){
+            RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001010), 1);
+            RadioTransmitMessage();
+        }
     }
     else if (RADIO_MASTER){
         // tell Slave board to go into transmit mode
@@ -108,7 +118,9 @@ void RadioReceiveMessage(char* data, int dataLength){
         // config board into receiver mode
         RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001011), 1);
         
-        RadioRecieveCommand(R_RX_PAYLOAD, data, dataLength);
+        // poll for new data until data received is no longer invalid
+        while(RadioRecieveCommand(R_RX_PAYLOAD, data, dataLength) == -1);
+        RadioTransmitCommand(A_RADIO_CONFIG,  &(0b00001010), 1);
     }
 }
 
