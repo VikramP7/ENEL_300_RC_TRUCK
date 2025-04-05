@@ -1,7 +1,4 @@
-build/default/production/buzzer.o.d build/default/production/buzzer.o: \
- buzzer.h \
- c:\program\ files\microchip\xc8\v3.00\avr\lib\gcc\avr\5.4.0\include\xc.h \
- c:\program\ files\microchip\xc8\v3.00\avr\lib\gcc\avr\5.4.0\include\cci.h \
+build/default/debug/buzzer.o.d build/default/debug/buzzer.o: buzzer.c \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\io.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\sfr_defs.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\inttypes.h \
@@ -15,12 +12,10 @@ build/default/production/buzzer.o.d build/default/production/buzzer.o: \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\common.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\xmega.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\fuse.h \
- c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\lock.h \
+ c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\lock.h leds.h \
+ c:\program\ files\microchip\xc8\v3.00\avr\lib\gcc\avr\5.4.0\include\xc.h \
+ c:\program\ files\microchip\xc8\v3.00\avr\lib\gcc\avr\5.4.0\include\cci.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\builtins.h
-
-c:\program\ files\microchip\xc8\v3.00\avr\lib\gcc\avr\5.4.0\include\xc.h:
-
-c:\program\ files\microchip\xc8\v3.00\avr\lib\gcc\avr\5.4.0\include\cci.h:
 
 c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\io.h:
 
@@ -49,5 +44,11 @@ c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\xmega.h:
 c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\fuse.h:
 
 c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\lock.h:
+
+leds.h:
+
+c:\program\ files\microchip\xc8\v3.00\avr\lib\gcc\avr\5.4.0\include\xc.h:
+
+c:\program\ files\microchip\xc8\v3.00\avr\lib\gcc\avr\5.4.0\include\cci.h:
 
 c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\builtins.h:

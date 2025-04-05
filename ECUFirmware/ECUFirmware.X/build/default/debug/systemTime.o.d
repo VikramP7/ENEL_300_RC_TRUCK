@@ -1,5 +1,5 @@
-build/default/production/systemTime.o.d \
- build/default/production/systemTime.o: systemTime.h \
+build/default/debug/systemTime.o.d build/default/debug/systemTime.o: \
+ systemTime.c \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\io.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\sfr_defs.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\inttypes.h \
@@ -13,7 +13,8 @@ build/default/production/systemTime.o.d \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\common.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\xmega.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\fuse.h \
- c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\lock.h
+ c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\lock.h \
+ systemTime.h
 
 c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\io.h:
 
@@ -42,3 +43,5 @@ c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\xmega.h:
 c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\fuse.h:
 
 c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\lock.h:
+
+systemTime.h:
