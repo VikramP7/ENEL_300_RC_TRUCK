@@ -12,6 +12,8 @@
 
 #include <xc.h> // include processor files - each processor file is guarded.
 
+#define RADIO_MASTER 1
+
 #define R_RX_PAYLOAD    0b01100001
 #define W_TX_PAYLOAD    0b10100000
 #define A_RADIO_CONFIG  0b00100000
@@ -26,7 +28,7 @@
 
 // #include <>
 
-const unsigned char MASTER = 0;
+const unsigned char MASTER_RECEIVE_REQUEST[] = {0xFF, 0x00, 0xFF, 0x00};
 
 //  Insert declarations
 void SPIInitialization(); // Set up AVR registers
