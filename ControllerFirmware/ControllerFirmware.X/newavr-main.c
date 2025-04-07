@@ -36,8 +36,8 @@ int main(void) {
     LedOff(LED_DEBUG_RED);
     
     //LedOn(LED_ALL);
-    PORTD.DIRSET = 0b00000001;
-    PORTD.OUTSET |= 0b00000001;
+    //PORTD.DIRSET = 0b00000001;
+    //PORTD.OUTSET |= 0b00000001;
     int ledOn = 0;
     char message[] = {0xAF, 0xEC, 0xFF, 0x12, 0x34};
     char receive[4];
