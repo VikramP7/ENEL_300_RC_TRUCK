@@ -47,7 +47,8 @@ void SPIInitialization(){
 void RadioTransmitCommand(char addr, char* data, int dataLength){
     int i = 0;
     SPI0.DATA = addr;
-    //DATA_TRANSFER_STALL;
+    DATA_TRANSFER_STALL;
+    SPI0.DATA = 0x3F;
     for(i = 0; i < dataLength; i++){
         DATA_TRANSFER_STALL;
         SPI0.DATA = data[i];

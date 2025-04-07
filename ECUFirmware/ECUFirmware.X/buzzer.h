@@ -40,7 +40,6 @@
 void BuzzerInitialize();
 void BuzzerOn();
 void BuzzerOff();
-//void BuzzerSetFreq();
 
 #endif	/* XC_BUZZER_H */
 
