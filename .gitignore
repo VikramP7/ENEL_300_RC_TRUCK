@@ -1,1 +1,3 @@
 **/.generated_files
+*.o
+*.o.d

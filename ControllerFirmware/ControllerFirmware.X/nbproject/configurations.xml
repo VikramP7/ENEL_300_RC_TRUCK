@@ -17,6 +17,15 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>buzzer.c</itemPath>
+      <itemPath>buzzer.h</itemPath>
+      <itemPath>leds.c</itemPath>
+      <itemPath>leds.h</itemPath>
+      <itemPath>newavr-main.c</itemPath>
+      <itemPath>radioSPI.c</itemPath>
+      <itemPath>radioSPI.h</itemPath>
+      <itemPath>systemTime.c</itemPath>
+      <itemPath>systemTime.h</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
