@@ -39,11 +39,11 @@ int main(void) {
     //PORTD.DIRSET = 0b00000001;
     //PORTD.OUTSET |= 0b00000001;
     int ledOn = 0;
-    char message[] = {0xEC, 0xFF, 0x12, 0x34};
+    char message[] = {0xAF, 0xEC, 0xFF, 0x12, 0x34};
     char receive[4];
     while (1) {
         if(RADIO_MASTER){
-            RadioTransmitMessage(message, 4);
+            RadioTransmitMessage(message, 5);
             if(ledOn){
                 LedOff(LED_DEBUG_GREEN);
                 ledOn = 0;

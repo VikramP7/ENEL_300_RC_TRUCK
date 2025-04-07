@@ -40,14 +40,25 @@ void SPIInitialization(){
     // this runs SPI clock at 1.5MHz, can up to 10MHz MAX by changing prescaler
     // Also set Data order to send MSb first
     SPI0.CTRLA = 0b00100001; 
+    SPI0.INTCTRL = 0b00000001;
     
 }
 
 void RadioTransmitCommand(char addr, char* data, int dataLength){
+    int i = 0;
     SPI0.DATA = addr;
-    for(int i = 0; i < dataLength; i++){
+    //DATA_TRANSFER_STALL;
+    for(i = 0; i < dataLength; i++){
         DATA_TRANSFER_STALL;
         SPI0.DATA = data[i];
+        /*
+        if(DATA_WCOL_CHECK){
+            LedOn(LED_DEBUG_RED);
+        }
+        else{
+            LedOff(LED_DEBUG_RED);
+        }
+        */      
     }
 }
 int RadioRecieveCommand(char addr, char* data, int dataLength){
