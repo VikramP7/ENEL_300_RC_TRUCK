@@ -23,7 +23,7 @@
 
 #include "radioSPI.h"
 
-const unsigned char MASTER_RECEIVE_REQUEST[] = {0xFF, 0x00, 0x00, 0x00};
+char MASTER_RECEIVE_REQUEST[] = {0xFF, 0x00, 0x00, 0x00};
 
 void SPIInitialization(){
     // sets the SPI output lines to be outputs
@@ -120,11 +120,10 @@ int RadioReceiveMessage(char data[], int dataLength){
             RadioTransmitCommand(A_RADIO_CONFIG,  &(char){0b00001010}, 1);
             return 1;
         }
-        return 0;
     }
     else if (RADIO_MASTER){
         // tell Slave board to go into transmit mode
-        RadioTransmitMessage(MASTER_RECEIVE_REQUEST, 4);
+        RadioTransmitMessage(MASTER_RECEIVE_REQUEST, RADIO_PACKET_SIZE);
         // config board into receiver mode
         RadioTransmitCommand(A_RADIO_CONFIG,  &(char){0b00001011}, 1);
         
@@ -132,5 +131,6 @@ int RadioReceiveMessage(char data[], int dataLength){
         while(RadioRecieveCommand(R_RX_PAYLOAD, data, dataLength) == -1);
         RadioTransmitCommand(A_RADIO_CONFIG,  &(char){0b00001010}, 1);
     }
+    return 0;
 }
 

@@ -1,9 +1,7 @@
 Archive member included to satisfy reference by file (symbol)
 
-c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
-                              build/default/debug/newavr-main.o (__tablejump2__)
 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
-                              build/default/debug/newavr-main.o (__do_copy_data)
+                              build/default/debug/radioSPI.o (__do_copy_data)
 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
                               C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o (exit)
 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(_Exit.o)
@@ -18,24 +16,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/default/debug/newavr-main.o
  .data          0x0000000000000000        0x0 build/default/debug/newavr-main.o
  .bss           0x0000000000000000        0x0 build/default/debug/newavr-main.o
- .text.RadioRecieveCommand
-                0x0000000000000000       0x46 build/default/debug/newavr-main.o
- .text.RadioReceiveMessage
-                0x0000000000000000       0x6a build/default/debug/newavr-main.o
  .bss.G_u32SystemFlags
                 0x0000000000000000        0x4 build/default/debug/newavr-main.o
- .rodata.MASTER_RECEIVE_REQUEST
-                0x0000000000000000        0x4 build/default/debug/newavr-main.o
- .text          0x0000000000000000        0x0 build/default/debug/leds.o
- .data          0x0000000000000000        0x0 build/default/debug/leds.o
- .bss           0x0000000000000000        0x0 build/default/debug/leds.o
- .debug_info    0x0000000000000000      0x296 build/default/debug/leds.o
- .debug_abbrev  0x0000000000000000       0x1b build/default/debug/leds.o
- .debug_aranges
-                0x0000000000000000       0x18 build/default/debug/leds.o
- .debug_line    0x0000000000000000       0x1a build/default/debug/leds.o
- .debug_str     0x0000000000000000        0x0 build/default/debug/leds.o
- .comment       0x0000000000000000       0x30 build/default/debug/leds.o
  .text          0x0000000000000000        0x0 build/default/debug/leds.o
  .data          0x0000000000000000        0x0 build/default/debug/leds.o
  .bss           0x0000000000000000        0x0 build/default/debug/leds.o
@@ -49,33 +31,12 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/default/debug/radioSPI.o
  .data          0x0000000000000000        0x0 build/default/debug/radioSPI.o
  .bss           0x0000000000000000        0x0 build/default/debug/radioSPI.o
- .debug_info    0x0000000000000000      0x29a build/default/debug/radioSPI.o
- .debug_abbrev  0x0000000000000000       0x1b build/default/debug/radioSPI.o
- .debug_aranges
-                0x0000000000000000       0x18 build/default/debug/radioSPI.o
- .debug_line    0x0000000000000000       0x1a build/default/debug/radioSPI.o
- .debug_str     0x0000000000000000        0x0 build/default/debug/radioSPI.o
- .comment       0x0000000000000000       0x30 build/default/debug/radioSPI.o
- .text          0x0000000000000000        0x0 build/default/debug/radioSPI.o
- .data          0x0000000000000000        0x0 build/default/debug/radioSPI.o
- .bss           0x0000000000000000        0x0 build/default/debug/radioSPI.o
- .debug_info    0x0000000000000000      0x29a build/default/debug/radioSPI.o
- .debug_abbrev  0x0000000000000000       0x1b build/default/debug/radioSPI.o
- .debug_aranges
-                0x0000000000000000       0x18 build/default/debug/radioSPI.o
- .debug_line    0x0000000000000000       0x1a build/default/debug/radioSPI.o
- .debug_str     0x0000000000000000        0x0 build/default/debug/radioSPI.o
- .comment       0x0000000000000000       0x30 build/default/debug/radioSPI.o
- .text          0x0000000000000000        0x0 build/default/debug/systemTime.o
- .data          0x0000000000000000        0x0 build/default/debug/systemTime.o
- .bss           0x0000000000000000        0x0 build/default/debug/systemTime.o
- .debug_info    0x0000000000000000      0x29c build/default/debug/systemTime.o
- .debug_abbrev  0x0000000000000000       0x1b build/default/debug/systemTime.o
- .debug_aranges
-                0x0000000000000000       0x18 build/default/debug/systemTime.o
- .debug_line    0x0000000000000000       0x1a build/default/debug/systemTime.o
- .debug_str     0x0000000000000000        0x0 build/default/debug/systemTime.o
- .comment       0x0000000000000000       0x30 build/default/debug/systemTime.o
+ .text.RadioRecieveCommand
+                0x0000000000000000       0x46 build/default/debug/radioSPI.o
+ .text.RadioReceiveMessage
+                0x0000000000000000       0x6e build/default/debug/radioSPI.o
+ .data.MASTER_RECEIVE_REQUEST
+                0x0000000000000000        0x4 build/default/debug/radioSPI.o
  .text          0x0000000000000000        0x0 build/default/debug/systemTime.o
  .data          0x0000000000000000        0x0 build/default/debug/systemTime.o
  .bss           0x0000000000000000        0x0 build/default/debug/systemTime.o
@@ -96,33 +57,6 @@ Discarded input sections
  .debug_line    0x0000000000000000       0x1a build/default/debug/buzzer.o
  .debug_str     0x0000000000000000        0x0 build/default/debug/buzzer.o
  .comment       0x0000000000000000       0x30 build/default/debug/buzzer.o
- .text          0x0000000000000000        0x0 build/default/debug/buzzer.o
- .data          0x0000000000000000        0x0 build/default/debug/buzzer.o
- .bss           0x0000000000000000        0x0 build/default/debug/buzzer.o
- .debug_info    0x0000000000000000      0x298 build/default/debug/buzzer.o
- .debug_abbrev  0x0000000000000000       0x1b build/default/debug/buzzer.o
- .debug_aranges
-                0x0000000000000000       0x18 build/default/debug/buzzer.o
- .debug_line    0x0000000000000000       0x1a build/default/debug/buzzer.o
- .debug_str     0x0000000000000000        0x0 build/default/debug/buzzer.o
- .comment       0x0000000000000000       0x30 build/default/debug/buzzer.o
- .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .text.libgcc.mul
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .text.libgcc.div
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .text.libgcc.prologue
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .stack.descriptors
-                0x0000000000000000       0x1c c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .text.libgcc.builtins
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .text.libgcc.fmul
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .text.libgcc.fixed
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
@@ -189,12 +123,8 @@ LOAD C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/
                 0x0000000000000001                __MPLAB_BUILD = 0x1
 LOAD build/default/debug/newavr-main.o
 LOAD build/default/debug/leds.o
-LOAD build/default/debug/leds.o
-LOAD build/default/debug/radioSPI.o
 LOAD build/default/debug/radioSPI.o
 LOAD build/default/debug/systemTime.o
-LOAD build/default/debug/systemTime.o
-LOAD build/default/debug/buzzer.o
 LOAD build/default/debug/buzzer.o
 START GROUP
 LOAD c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a
@@ -308,56 +238,52 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000      0x132
+.text           0x0000000000000000      0x112
  *(.vectors)
  .vectors       0x0000000000000000       0xa8 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
                 0x0000000000000000                __vector_default
                 0x0000000000000000                __vectors
  *(.vectors)
  *(.progmem.gcc*)
- .progmem.gcc_sw_table.LedOn
-                0x00000000000000a8       0x10 build/default/debug/newavr-main.o
- .progmem.gcc_sw_table.LedOff
-                0x00000000000000b8       0x10 build/default/debug/newavr-main.o
  *(.dinit)
- .dinit         0x00000000000000c8        0x0 data_init
-                0x00000000000000c8                . = ALIGN (0x2)
-                0x00000000000000c8                __trampolines_start = .
+ .dinit         0x00000000000000a8        0x0 data_init
+                0x00000000000000a8                . = ALIGN (0x2)
+                0x00000000000000a8                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x00000000000000c8        0x0 linker stubs
+ .trampolines   0x00000000000000a8        0x0 linker stubs
  *(.trampolines*)
-                0x00000000000000c8                __trampolines_end = .
+                0x00000000000000a8                __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
-                0x00000000000000c8                . = ALIGN (0x2)
+                0x00000000000000a8                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x00000000000000c8                __ctors_start = .
+                0x00000000000000a8                __ctors_start = .
  *(.ctors)
-                0x00000000000000c8                __ctors_end = .
-                0x00000000000000c8                __dtors_start = .
+                0x00000000000000a8                __ctors_end = .
+                0x00000000000000a8                __dtors_start = .
  *(.dtors)
-                0x00000000000000c8                __dtors_end = .
+                0x00000000000000a8                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x00000000000000c8        0x0 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
-                0x00000000000000c8                __init
+ .init0         0x00000000000000a8        0x0 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
+                0x00000000000000a8                __init
  *(.init0)
  *(.init1)
- .init1         0x00000000000000c8       0x12 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
+ .init1         0x00000000000000a8       0x12 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
  *(.init1)
  *(.init2)
- .init2         0x00000000000000da        0xc C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
+ .init2         0x00000000000000ba        0xc C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x00000000000000e6       0x40 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
-                0x00000000000000e6                __do_copy_data
-                0x0000000000000118                __do_clear_bss
+ .init4         0x00000000000000c6       0x40 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
+                0x00000000000000c6                __do_copy_data
+                0x00000000000000f8                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -368,12 +294,12 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000000000000126        0x8 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
+ .init9         0x0000000000000106        0x8 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
  *(.init9)
-                0x000000000000012e                . = ALIGN (0x2)
+                0x000000000000010e                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000000000000012e        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_exit.o)
-                0x000000000000012e                _exit
+ .fini9         0x000000000000010e        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_exit.o)
+                0x000000000000010e                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -392,11 +318,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000000000000012e        0x4 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_exit.o)
+ .fini0         0x000000000000010e        0x4 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000000000000132                _etext = .
+                0x0000000000000112                _etext = .
 
-.data           0x0000000000804000        0x0 load address 0x0000000000000132
+.data           0x0000000000804000        0x0 load address 0x0000000000000112
                 [!provide]                        PROVIDE (__data_start, .)
  *(.gnu.linkonce.d*)
  *(.gnu.linkonce.r*)
@@ -408,8 +334,8 @@ END GROUP
                 [!provide]                        PROVIDE (__bss_start, .)
  *(COMMON)
                 [!provide]                        PROVIDE (__bss_end, .)
-                0x0000000000000132                __data_load_start = LOADADDR (.data)
-                0x0000000000000132                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000000000000112                __data_load_start = LOADADDR (.data)
+                0x0000000000000112                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0000000000804000        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
@@ -461,20 +387,19 @@ END GROUP
  *(.comment)
  .comment       0x0000000000000000       0x2f build/default/debug/newavr-main.o
                                          0x30 (size before relaxing)
+ .comment       0x000000000000002f       0x30 build/default/debug/radioSPI.o
  .comment       0x000000000000002f       0x2c c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
                                          0x2d (size before relaxing)
  .comment       0x000000000000005b       0x2d c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(_Exit.o)
 
 .stack.descriptors.hdr
-                0x0000000000000000       0x38
+                0x0000000000000000       0x2a
  .stack.descriptors.hdr
-                0x0000000000000000        0xe c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
+                0x0000000000000000        0xe c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
  .stack.descriptors.hdr
-                0x000000000000000e        0xe c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
+                0x000000000000000e        0xe c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(_Exit.o)
  .stack.descriptors.hdr
-                0x000000000000001c        0xe c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(_Exit.o)
- .stack.descriptors.hdr
-                0x000000000000002a        0xe c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_exit.o)
+                0x000000000000001c        0xe c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_exit.o)
 
 .note.GNU-stack
                 0x0000000000000000        0x0
@@ -501,38 +426,46 @@ END GROUP
 .debug_aranges  0x0000000000000000       0x68
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000       0x68 build/default/debug/newavr-main.o
+                0x0000000000000000       0x20 build/default/debug/newavr-main.o
+ .debug_aranges
+                0x0000000000000020       0x48 build/default/debug/radioSPI.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x3373
+.debug_info     0x0000000000000000     0x37f2
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000     0x272b C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
- .debug_info    0x000000000000272b      0xc48 build/default/debug/newavr-main.o
+ .debug_info    0x000000000000272b      0x6ce build/default/debug/newavr-main.o
+ .debug_info    0x0000000000002df9      0x9f9 build/default/debug/radioSPI.o
 
-.debug_abbrev   0x0000000000000000     0x26ff
+.debug_abbrev   0x0000000000000000     0x27c5
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000     0x2518 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
- .debug_abbrev  0x0000000000002518      0x1e7 build/default/debug/newavr-main.o
+ .debug_abbrev  0x0000000000002518      0x136 build/default/debug/newavr-main.o
+ .debug_abbrev  0x000000000000264e      0x177 build/default/debug/radioSPI.o
 
-.debug_line     0x0000000000000000      0x5d0
+.debug_line     0x0000000000000000      0x59d
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x1ce C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
- .debug_line    0x00000000000001ce      0x402 build/default/debug/newavr-main.o
+ .debug_line    0x00000000000001ce      0x16c build/default/debug/newavr-main.o
+ .debug_line    0x000000000000033a      0x263 build/default/debug/radioSPI.o
 
-.debug_frame    0x0000000000000000      0x104
+.debug_frame    0x0000000000000000       0xe8
  *(.debug_frame)
- .debug_frame   0x0000000000000000      0x104 build/default/debug/newavr-main.o
+ .debug_frame   0x0000000000000000       0x34 build/default/debug/newavr-main.o
+ .debug_frame   0x0000000000000034       0xb4 build/default/debug/radioSPI.o
 
-.debug_str      0x0000000000000000     0x1154
+.debug_str      0x0000000000000000     0x1195
  *(.debug_str)
  .debug_str     0x0000000000000000     0x111e C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
- .debug_str     0x000000000000111e       0x36 build/default/debug/newavr-main.o
+ .debug_str     0x000000000000111e       0x4d build/default/debug/newavr-main.o
+ .debug_str     0x000000000000116b       0x2a build/default/debug/radioSPI.o
 
-.debug_loc      0x0000000000000000      0x395
+.debug_loc      0x0000000000000000      0x202
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0x395 build/default/debug/newavr-main.o
+ .debug_loc     0x0000000000000000       0x60 build/default/debug/newavr-main.o
+ .debug_loc     0x0000000000000060      0x1a2 build/default/debug/radioSPI.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -552,9 +485,10 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000       0x58
+.debug_ranges   0x0000000000000000       0x48
  *(.debug_ranges)
- .debug_ranges  0x0000000000000000       0x58 build/default/debug/newavr-main.o
+ .debug_ranges  0x0000000000000000       0x10 build/default/debug/newavr-main.o
+ .debug_ranges  0x0000000000000010       0x38 build/default/debug/radioSPI.o
 
 .debug_macro
  *(.debug_macro)
@@ -567,122 +501,101 @@ LOAD data_init
  .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x40 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
 
-.rodata         0x0000000000808132        0x5 load address 0x0000000000000132
- .rodata        0x0000000000808132        0x5 build/default/debug/newavr-main.o
-
 .text.RadioInitialization
-                0x0000000000000138       0x90
+                0x0000000000000112       0x90
  .text.RadioInitialization
-                0x0000000000000138       0x90 build/default/debug/newavr-main.o
-                0x0000000000000138                RadioInitialization
+                0x0000000000000112       0x90 build/default/debug/radioSPI.o
+                0x0000000000000112                RadioInitialization
 
-.text.main      0x00000000000001c8       0x80
- .text.main     0x00000000000001c8       0x80 build/default/debug/newavr-main.o
-                0x00000000000001c8                main
-
-.text.LedOn     0x0000000000000248       0x7c
- .text.LedOn    0x0000000000000248       0x7c build/default/debug/newavr-main.o
-                0x0000000000000248                LedOn
-
-.text.LedOff    0x00000000000002c4       0x7c
- .text.LedOff   0x00000000000002c4       0x7c build/default/debug/newavr-main.o
-                0x00000000000002c4                LedOff
-
-.text.LedInitialization
-                0x0000000000000340       0x30
- .text.LedInitialization
-                0x0000000000000340       0x30 build/default/debug/newavr-main.o
-                0x0000000000000340                LedInitialization
+.text.main      0x00000000000001a2       0x7c
+ .text.main     0x00000000000001a2       0x7c build/default/debug/newavr-main.o
+                0x00000000000001a2                main
 
 .text.RadioTransmitCommand
-                0x0000000000000370       0x26
+                0x000000000000021e       0x36
  .text.RadioTransmitCommand
-                0x0000000000000370       0x26 build/default/debug/newavr-main.o
-                0x0000000000000370                RadioTransmitCommand
+                0x000000000000021e       0x36 build/default/debug/radioSPI.o
+                0x000000000000021e                RadioTransmitCommand
 
 .text.SPIInitialization
-                0x0000000000000396       0x1c
+                0x0000000000000254       0x1c
  .text.SPIInitialization
-                0x0000000000000396       0x1c build/default/debug/newavr-main.o
-                0x0000000000000396                SPIInitialization
+                0x0000000000000254       0x1c build/default/debug/radioSPI.o
+                0x0000000000000254                SPIInitialization
 
-.text.exit      0x00000000000003b2       0x16
- .text.exit     0x00000000000003b2       0x16 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
-                0x00000000000003b2                exit
-
-.text.libgcc    0x00000000000003c8       0x12
- .text.libgcc   0x00000000000003c8       0x12 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
-                0x00000000000003c8                __tablejump2__
+.text.exit      0x0000000000000270       0x16
+ .text.exit     0x0000000000000270       0x16 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
+                0x0000000000000270                exit
 
 .text.RadioTransmitMessage
-                0x00000000000003da        0xc
+                0x0000000000000286        0xc
  .text.RadioTransmitMessage
-                0x00000000000003da        0xc build/default/debug/newavr-main.o
-                0x00000000000003da                RadioTransmitMessage
+                0x0000000000000286        0xc build/default/debug/radioSPI.o
+                0x0000000000000286                RadioTransmitMessage
 
-.text           0x00000000000003e6        0x4
- .text          0x00000000000003e6        0x4 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
-                0x00000000000003e6                __vector_38
-                0x00000000000003e6                __vector_22
-                0x00000000000003e6                __vector_28
-                0x00000000000003e6                __vector_1
-                0x00000000000003e6                __vector_32
-                0x00000000000003e6                __vector_34
-                0x00000000000003e6                __vector_24
-                0x00000000000003e6                __vector_12
-                0x00000000000003e6                __bad_interrupt
-                0x00000000000003e6                __vector_6
-                0x00000000000003e6                __vector_31
-                0x00000000000003e6                __vector_35
-                0x00000000000003e6                __vector_39
-                0x00000000000003e6                __vector_3
-                0x00000000000003e6                __vector_23
-                0x00000000000003e6                __vector_30
-                0x00000000000003e6                __vector_25
-                0x00000000000003e6                __vector_11
-                0x00000000000003e6                __vector_13
-                0x00000000000003e6                __vector_17
-                0x00000000000003e6                __vector_19
-                0x00000000000003e6                __vector_7
-                0x00000000000003e6                __vector_41
-                0x00000000000003e6                __vector_27
-                0x00000000000003e6                __vector_5
-                0x00000000000003e6                __vector_33
-                0x00000000000003e6                __vector_37
-                0x00000000000003e6                __vector_4
-                0x00000000000003e6                __vector_9
-                0x00000000000003e6                __vector_2
-                0x00000000000003e6                __vector_21
-                0x00000000000003e6                __vector_15
-                0x00000000000003e6                __vector_36
-                0x00000000000003e6                __vector_29
-                0x00000000000003e6                __vector_40
-                0x00000000000003e6                __vector_8
-                0x00000000000003e6                __vector_26
-                0x00000000000003e6                __vector_14
-                0x00000000000003e6                __vector_10
-                0x00000000000003e6                __vector_16
-                0x00000000000003e6                __vector_18
-                0x00000000000003e6                __vector_20
+.text           0x0000000000000292        0x4
+ .text          0x0000000000000292        0x4 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
+                0x0000000000000292                __vector_38
+                0x0000000000000292                __vector_22
+                0x0000000000000292                __vector_28
+                0x0000000000000292                __vector_1
+                0x0000000000000292                __vector_32
+                0x0000000000000292                __vector_34
+                0x0000000000000292                __vector_24
+                0x0000000000000292                __vector_12
+                0x0000000000000292                __bad_interrupt
+                0x0000000000000292                __vector_6
+                0x0000000000000292                __vector_31
+                0x0000000000000292                __vector_35
+                0x0000000000000292                __vector_39
+                0x0000000000000292                __vector_3
+                0x0000000000000292                __vector_23
+                0x0000000000000292                __vector_30
+                0x0000000000000292                __vector_25
+                0x0000000000000292                __vector_11
+                0x0000000000000292                __vector_13
+                0x0000000000000292                __vector_17
+                0x0000000000000292                __vector_19
+                0x0000000000000292                __vector_7
+                0x0000000000000292                __vector_41
+                0x0000000000000292                __vector_27
+                0x0000000000000292                __vector_5
+                0x0000000000000292                __vector_33
+                0x0000000000000292                __vector_37
+                0x0000000000000292                __vector_4
+                0x0000000000000292                __vector_9
+                0x0000000000000292                __vector_2
+                0x0000000000000292                __vector_21
+                0x0000000000000292                __vector_15
+                0x0000000000000292                __vector_36
+                0x0000000000000292                __vector_29
+                0x0000000000000292                __vector_40
+                0x0000000000000292                __vector_8
+                0x0000000000000292                __vector_26
+                0x0000000000000292                __vector_14
+                0x0000000000000292                __vector_10
+                0x0000000000000292                __vector_16
+                0x0000000000000292                __vector_18
+                0x0000000000000292                __vector_20
 
-.text._Exit     0x00000000000003ea        0x4
- .text._Exit    0x00000000000003ea        0x4 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(_Exit.o)
-                0x00000000000003ea                _Exit
+.text._Exit     0x0000000000000296        0x4
+ .text._Exit    0x0000000000000296        0x4 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(_Exit.o)
+                0x0000000000000296                _Exit
 
 .text.__dummy_fini
-                0x00000000000003ee        0x2
+                0x000000000000029a        0x2
  .text.__dummy_fini
-                0x00000000000003ee        0x2 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
-                0x00000000000003ee                _fini
+                0x000000000000029a        0x2 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
+                0x000000000000029a                _fini
 
 .text.__dummy_funcs_on_exit
-                0x00000000000003f0        0x2
+                0x000000000000029c        0x2
  .text.__dummy_funcs_on_exit
-                0x00000000000003f0        0x2 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
-                0x00000000000003f0                __funcs_on_exit
+                0x000000000000029c        0x2 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
+                0x000000000000029c                __funcs_on_exit
 
 .text.__dummy_simulator_exit
-                0x00000000000003f2        0x2
+                0x000000000000029e        0x2
  .text.__dummy_simulator_exit
-                0x00000000000003f2        0x2 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
-                0x00000000000003f2                __simulator_exit
+                0x000000000000029e        0x2 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
+                0x000000000000029e                __simulator_exit

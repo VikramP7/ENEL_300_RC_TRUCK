@@ -27,10 +27,12 @@
 #define DATA_TRANSFER_STALL while(!(SPI0.INTFLAGS & 0b10000000))
 #define DATA_WCOL_CHECK (SPI0.INTFLAGS & 0b01000000)
 
+#define RADIO_PACKET_SIZE 4
+
 
 // #include <>
 
-extern const unsigned char MASTER_RECEIVE_REQUEST[];
+//extern char MASTER_RECEIVE_REQUEST[];
 
 //  Insert declarations
 void SPIInitialization(); // Set up AVR registers

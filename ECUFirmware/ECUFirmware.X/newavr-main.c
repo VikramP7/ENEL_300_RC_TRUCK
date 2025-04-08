@@ -10,7 +10,7 @@
 #include "leds.h"
 #include "leds.c"
 #include "radioSPI.h"
-#include "radioSPI.c"
+//#include "radioSPI.c"
 
 /*Global Variable Definitions*/
 volatile unsigned long G_u32SystemFlags = 0;
@@ -40,9 +40,8 @@ int main(void) {
     PORTD.OUTSET |= 0b00000001;
     int ledOn = 0;
     char message[] = {0xEC, 0xFF, 0x12, 0x34};
-    char receive[4];
     while (1) {
-        RadioTransmitMessage(message, 4);
+        RadioTransmitMessage(message, RADIO_PACKET_SIZE);
         if(ledOn){
             LedOff(LED_DEBUG_GREEN);
             ledOn = 0;
