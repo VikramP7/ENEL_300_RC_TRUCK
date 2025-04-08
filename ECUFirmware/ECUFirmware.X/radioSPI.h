@@ -12,26 +12,30 @@
 
 #include <xc.h> // include processor files - each processor file is guarded.
 
-#define RADIO_MASTER 0
+#define RADIO_MASTER 1
 
-#define R_RX_PAYLOAD    0b01100001
-#define W_TX_PAYLOAD    0b10100000
-#define A_RADIO_CONFIG  0b00100000
-#define A_RADIO_AUTOACK 0b00000001
-#define A_RADIO_RXADDR  0b00000010
-#define A_RADIO_RETRANS 0b00000100
-#define A_RADIO_RF_CHAN 0b00000101
-#define A_RADIO_STATUS_REG 0b00000111
+#define R_RX_PAYLOAD     0b01100001
+#define W_TX_PAYLOAD     0b10100000
+#define A_RADIO_CONFIG   0b00100000
+#define RA_RADIO_CONFIG  0b00000000
+#define A_RADIO_AUTOACK  0b00100001
+#define A_RADIO_RXADDR   0b00100010
+#define A_RADIO_RETRANS  0b00100100
+#define RA_RADIO_RETRANS 0b00000100
+#define A_RADIO_RF_CHAN  0b00100101
+#define RA_RADIO_STATUS_REG 0b00000111
 #define A_RADIO_PACKET_SIZE 0b00010001
 
 #define DATA_TRANSFER_STALL while(!(SPI0.INTFLAGS & 0b10000000))
 #define DATA_WCOL_CHECK (SPI0.INTFLAGS & 0b01000000)
-#define RADIO_IRQ_CHECK (PORTC.IN & 0b00001000)
+#define RADIO_IRQ_CHECK (!(PORTC.OUT & 0b00000010))
+
+#define RADIO_PACKET_SIZE 4
 
 
 // #include <>
 
-extern char MASTER_RECEIVE_REQUEST[];
+//extern char MASTER_RECEIVE_REQUEST[];
 
 //  Insert declarations
 void SPIInitialization(); // Set up AVR registers

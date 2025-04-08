@@ -8,7 +8,7 @@
 
 #include <avr/io.h>
 #include "leds.h"
-//#include "leds.c"
+#include "leds.c"
 #include "radioSPI.h"
 //#include "radioSPI.c"
 
@@ -37,21 +37,27 @@ int main(void) {
     
     //LedOn(LED_ALL);
     PORTD.DIRSET = 0b00000001;
-    PORTD.OUTSET |= 0b00000011;
+    PORTD.OUTSET |= 0b00000001;
+    int ledOn = 0;
     char message[] = {0xEC, 0xFF, 0x12, 0x34};
-    char receive[4];
+    char status[1];
+    
     while (1) {
         if(RADIO_IRQ_CHECK){
-//            PORTD.OUT = 0b00000000;
-            RadioReceiveMessage(receive, 4);
-            //PORTD.OUT = 0b00000000;
-            if(receive[0] == message[0]){
-                //PORTD.OUT &= 0b11111110;
-            }
+            LedOn(LED_DEBUG_RED);
+        }
+        RadioTransmitMessage(message, RADIO_PACKET_SIZE);
+        //RadioRecieveCommand(RA_RADIO_RETRANS, status, 1);
+        if(ledOn){
+            LedOff(LED_DEBUG_GREEN);
+            ledOn = 0;
+        }else{
+            LedOn(LED_DEBUG_GREEN);
+            ledOn = 1;
         }
         
         long i = 0;
-        while(i < 50000){
+        while(i < 200000){
             i++;
         }
     }
