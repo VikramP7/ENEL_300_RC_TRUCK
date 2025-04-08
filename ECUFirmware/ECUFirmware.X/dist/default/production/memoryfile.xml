@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <project>                                  
-  <executable name="dist/default/debug/ECUFirmware.X.debug.elf">                 
+  <executable name="dist/default/production/ECUFirmware.X.production.elf">                 
     <memory name="program">              
       <units>bytes</units>                 
       <length>131072</length>                 
-      <used>1176</used>                     
-      <free>129896</free>                     
+      <used>1166</used>                     
+      <free>129906</free>                     
     </memory>                              
     <memory name="data">                 
       <units>bytes</units>                 

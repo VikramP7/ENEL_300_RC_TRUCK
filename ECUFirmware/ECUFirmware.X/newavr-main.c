@@ -8,9 +8,9 @@
 
 #include <avr/io.h>
 #include "leds.h"
-#include "leds.c"
+//#include "leds.c"
 #include "radioSPI.h"
-#include "radioSPI.c"
+//#include "radioSPI.c"
 
 /*Global Variable Definitions*/
 volatile unsigned long G_u32SystemFlags = 0;

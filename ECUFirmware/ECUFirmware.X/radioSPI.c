@@ -29,6 +29,8 @@ void SPIInitialization(){
     // sets the SPI output lines to be outputs
     PORTA.DIRSET = 0b11110000;
     
+    PORTA.OUT |= 0b10000000;
+    
     // sets the output pins for SPI0 to be default pin configuration
     // see useful information above
     PORTMUX.SPIROUTEA = 0b00000000;
@@ -45,10 +47,9 @@ void SPIInitialization(){
 }
 
 void RadioTransmitCommand(char addr, char* data, int dataLength){
-    int i = 0;
+    PORTA.OUT &= 0b01111111;
     SPI0.DATA = addr;
-    //DATA_TRANSFER_STALL;
-    for(i = 0; i < dataLength; i++){
+    for(int i = 0; i < dataLength; i++){
         DATA_TRANSFER_STALL;
         SPI0.DATA = data[i];
         /*
@@ -60,8 +61,11 @@ void RadioTransmitCommand(char addr, char* data, int dataLength){
         }
         */      
     }
+    DATA_TRANSFER_STALL;
+    PORTA.OUT |= 0b10000000;
 }
 int RadioRecieveCommand(char addr, char* data, int dataLength){
+    PORTA.OUT &= 0b01111111;
     SPI0.DATA = addr;
     DATA_TRANSFER_STALL;
     for(int i = 0; i < dataLength; i++){
@@ -69,6 +73,7 @@ int RadioRecieveCommand(char addr, char* data, int dataLength){
         DATA_TRANSFER_STALL;
         data[i] = SPI0.DATA;
     }
+    PORTA.OUT |= 0b10000000;
     if(data[0] == 0){
         // if data is not valid command / no data
         return -1;
@@ -76,6 +81,7 @@ int RadioRecieveCommand(char addr, char* data, int dataLength){
     else{
         return dataLength;
     }
+
 }
 
 void RadioInitialization(){
