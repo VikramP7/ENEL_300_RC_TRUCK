@@ -1,3 +1,6 @@
 **\.generated_files\
 *.o
 *.o.d
+/ECUFirmware/ECUFirmware.X/.generated_files
+ECUFirmware/ECUFirmware.X/nbproject/Makefile-genesis.properties
+ECUFirmware/ECUFirmware.X/nbproject/private/private.xml
