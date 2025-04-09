@@ -21,9 +21,10 @@
 #define I2C_SNSR_SLV_ADDR 0b01111110
 #define I2C_SCRN_SLV_ADDR 0b00111110
 
-#define ACK_STALL while(!(TWI0.MSTATUS() & 0b0001000)) // Valid for both the master and slave status registers
+#define WI_STALL while(!(TWI0.MSTATUS & 0b01000000)) // Write interrupt stall
+#define RI_STALL while(!(TWI0.MSTATUS & 0b10000000)) // Read interrupt stall
 #define MASTER_STOP TWI0.MCTRLB() = 0b00000111 // Ends master transmission
-                                                       
+#define DI_STALL while(!(TWI0.SSTATUS & 0b10000000)) // Slave data interrupt stall                                                
 
 // #include <>
 

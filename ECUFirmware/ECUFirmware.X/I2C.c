@@ -8,12 +8,16 @@
 #include <avr/io.h>
 
 #include "I2C.h"
+#include <util/delay.h>
+#include <avr/interrupt.h>
+
 
 
 
 void I2CInitialization(){
     if (I2C_MASTER)
     {
+        // MUST CHANGE CLOCK for != 4 MHz /// 
         TWI0.MBAUD() =  0b00001111; //  Standard mode is up to 100kHz
                                     //  Need to figure out what our main clock is going to
                                     //  run at. I think we're at the default 4MHz
@@ -51,13 +55,45 @@ void I2CInitialization(){
 // In theory, most of the code here should be handled by Smart mode, but this 
 // looks way to easy.
 
-void I2CMasterTransfer(char slaveAddr, char data, int dataLength) {  
+void I2CMasterTransfer(char slaveAddr, char *data){  
+    TWI0.MADDR = slaveAddr;
+    
+    WI_STALL;
+    
     TWI0.MDATA() = data;
-    TWI0.MADDR() = slaveAddr + 1;
-    TWI0.MCTRLB() = 
-    ACK_STALL;
+
+    WI_STALL;
+    
+    TWI0.MCTRLB( = 0b00000011; // Assert stop condition; end transaction
+    _delay_ms(1);
 }
 
-char I2CSlaveRecieve(char *data) {
-    data = TWI0.SDATA();
+char I2CMasterReceive(char slaveAddr, char *data){
+    
+    TWI0.MADDR = slaveAddr + 1; 
+    
+    RI_STALL;
+    
+    TWI0.MCTRLB( = 0b00000011; // Assert stop condition; end transaction
+    
+    _delay_ms(1);
+    
+    return data = TWI0.MDATA;
 }
+
+void I2CSlave(char *readData, char* writeData) {
+    if(TWI0.SSTATUS & 0b01000010){ // Master Read Operation; master is requesting data
+        TWI0.SDATA = readData;
+        DI_STALL;
+        // Thus far we're only sending one byte at a time so we can just wait
+        // for the NACK I think
+    }
+    else if (TWI0.SSTATUS & 0b01000000){ // Master Write Operation; master is writing data
+        writeData = TWI0.SDATA;
+        DI_STALL;
+    }
+    
+    _delay_ms(1);
+    return;
+}
+
