@@ -120,10 +120,10 @@ int main(void) {
         
     TWI_initClient(0x11); // Initializes the motor board address to 0x11
     
-    // Responsible for motor control from ECU I2C data.
+    // Responsible for motor control from ECU I2C data. Sending left then right
+    // motor data.
     while (1)
     {   
-        // `left_sm` and `right_sm` will be assigned externally by I2C library
         // This will look something like:
         left_sm = data[8];
         right_sm = data[9];

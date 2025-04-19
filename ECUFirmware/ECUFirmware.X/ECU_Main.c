@@ -27,6 +27,43 @@ LOCKBITS = 0x5CC5C55C; // {KEY=NOLOCK}
 #include "leds.h"
 #include "buzzer.h"
 
+// Bluetooth Functions (Thanks Marc)
+// We need to implement the initialization here.
+// Also need to address u16s instead of u8s
+// In the event that we never receive the data these functions might be kinda
+// cooked, although the high data rate and retransmissions probably deal with 
+// it well enough
+
+void USART_Transmit(uint8_t data) {
+    while (!(USART1.STATUS & USART_DREIF_bm));  // Wait until buffer is empty
+    USART1.TXDATAL = data;  // Send data
+}
+
+
+uint8_t USART_Receive(void) {
+   
+    while (!(USART1.STATUS & USART_RXCIF_bm)){
+       
+    }  // Wait for data
+    return USART1.RXDATAL;  // Return received byte
+}
+
+
+void USART_Init(uint16_t baud) {
+    // Set baud rate
+    //USART1.BAUD = 0000010011100010;
+    USART1.BAUD = 6666;
+    // Set frame format: 8-bit, no parity, 1 stop bit (8N1)
+    USART1.CTRLC = USART_CMODE_ASYNCHRONOUS_gc | USART_PMODE_DISABLED_gc | USART_CHSIZE_8BIT_gc;
+   
+    // Set TXD (PC0 and PC1) as output
+    PORTC.DIRSET = PIN0_bm;
+    PORTC.DIRCLR = PIN1_bm;  
+   
+    // Enable transmitter and receiver
+    USART1.CTRLB = USART_TXEN_bm | USART_RXEN_bm;
+}
+
 
 int main(void)
 {    
@@ -56,9 +93,12 @@ int main(void)
     //Set initial pattern
     advancedIO_setOutputsHigh(0xAA);
     
+    volatile uint8_t left_sm = 0;
+    volatile uint8_t right_sm = 0;   
     
     // Responsible for all ECU functionality. Bluetooth interface, and communication
-    // sensor and motor boards.
+    // sensor and motor boards. The only things that the ECU will be receiving
+    // are motor data and the toggle bit for the lights.
     while (1)
     {   
         //Sleep until the PIT triggers
@@ -66,8 +106,17 @@ int main(void)
         
         //Flip the pin-state
         // This might be unnecessary, but the initialization is for sure required to the pin outs and baud rate type shit
-        advancedIO_toggleBitsInRegister(ADV_IO_LATx, 0xFF);
+        // advancedIO_toggleBitsInRegister(ADV_IO_LATx, 0xFF);
         
         TWI_sendByte(0x11, 0x69);
+        
+        
+        // Theoretical Code for Motor Interface via I2C
+        left_sm = USART_Receive();
+        right_sm = USART_Receive();
+        
+        TWI_sendByte(0x11, left_sm);
+        TWI_sendByte(0x11, right_sm);
+        
     }
 }
