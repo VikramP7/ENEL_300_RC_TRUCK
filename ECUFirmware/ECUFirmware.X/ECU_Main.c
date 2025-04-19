@@ -89,11 +89,11 @@ int main(void)
     //Setup CPU Clocks
     CLKCTRL_init();
                
-    //Setup Sleep Controller
-    SLPCTRL_init();
+    //Setup Sleep Controller (Probably not needed))
+//    SLPCTRL_init();
     
-    //Init RTC
-    RTC_init();
+    //Init RTC (Probably not needed))
+//    RTC_init();
     
     //Init the IO Expander
     advancedIO_init();

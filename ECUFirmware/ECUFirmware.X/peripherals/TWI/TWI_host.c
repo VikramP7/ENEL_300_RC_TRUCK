@@ -57,7 +57,7 @@ void TWI_initPins(void)
     //PA2/PA3
         
     //Output I/O
-    PORTA.DIRSET = PIN2_bm | PIN3_bm;
+    PORTA.DIRSET |= PIN2_bm | PIN3_bm;
 
 #ifdef TWI_ENABLE_PULLUPS
     //Enable Pull-Ups
