@@ -133,7 +133,7 @@ int main(void) {
         
         // Flush the data array while waiting for new inputs; left_sm and 
         // right_sm will both auto update as data comes in, allegedly.
-        for (uint8_t i = 0; i < DATA_SIZE; i++)
+        for (uint8_t i = 8; i < DATA_SIZE; i++)
         {
             data[i] = 0x00;
         } 
