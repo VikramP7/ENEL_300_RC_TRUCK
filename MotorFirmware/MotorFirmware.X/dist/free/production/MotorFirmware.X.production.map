@@ -1,9 +1,9 @@
 Archive member included to satisfy reference by file (symbol)
 
 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
-                              build/free/debug/_ext/2104088289/leds.o (__tablejump2__)
+                              build/free/production/_ext/2104088289/leds.o (__tablejump2__)
 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
-                              build/free/debug/Motor_Main.o (__do_copy_data)
+                              build/free/production/Motor_Main.o (__do_copy_data)
 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
                               C:/Program Files/Microchip/xc8/v3.00/dfp/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o (exit)
 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(_Exit.o)
@@ -15,69 +15,69 @@ Discarded input sections
 
  .data          0x0000000000000000        0x0 C:/Program Files/Microchip/xc8/v3.00/dfp/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
  .bss           0x0000000000000000        0x0 C:/Program Files/Microchip/xc8/v3.00/dfp/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
- .text          0x0000000000000000        0x0 build/free/debug/peripherals/CLKCTRL/CLKCTRL.o
- .data          0x0000000000000000        0x0 build/free/debug/peripherals/CLKCTRL/CLKCTRL.o
- .bss           0x0000000000000000        0x0 build/free/debug/peripherals/CLKCTRL/CLKCTRL.o
- .text          0x0000000000000000        0x0 build/free/debug/peripherals/TWI/TWI_client.o
- .data          0x0000000000000000        0x0 build/free/debug/peripherals/TWI/TWI_client.o
- .bss           0x0000000000000000        0x0 build/free/debug/peripherals/TWI/TWI_client.o
- .text          0x0000000000000000        0x0 build/free/debug/Motor_Main.o
- .data          0x0000000000000000        0x0 build/free/debug/Motor_Main.o
- .bss           0x0000000000000000        0x0 build/free/debug/Motor_Main.o
- .text          0x0000000000000000        0x0 build/free/debug/_ext/2104088289/buzzer.o
- .data          0x0000000000000000        0x0 build/free/debug/_ext/2104088289/buzzer.o
- .bss           0x0000000000000000        0x0 build/free/debug/_ext/2104088289/buzzer.o
- .debug_info    0x0000000000000000      0x26d build/free/debug/_ext/2104088289/buzzer.o
- .debug_abbrev  0x0000000000000000       0x1b build/free/debug/_ext/2104088289/buzzer.o
+ .text          0x0000000000000000        0x0 build/free/production/peripherals/CLKCTRL/CLKCTRL.o
+ .data          0x0000000000000000        0x0 build/free/production/peripherals/CLKCTRL/CLKCTRL.o
+ .bss           0x0000000000000000        0x0 build/free/production/peripherals/CLKCTRL/CLKCTRL.o
+ .text          0x0000000000000000        0x0 build/free/production/peripherals/TWI/TWI_client.o
+ .data          0x0000000000000000        0x0 build/free/production/peripherals/TWI/TWI_client.o
+ .bss           0x0000000000000000        0x0 build/free/production/peripherals/TWI/TWI_client.o
+ .text          0x0000000000000000        0x0 build/free/production/Motor_Main.o
+ .data          0x0000000000000000        0x0 build/free/production/Motor_Main.o
+ .bss           0x0000000000000000        0x0 build/free/production/Motor_Main.o
+ .text          0x0000000000000000        0x0 build/free/production/_ext/2104088289/buzzer.o
+ .data          0x0000000000000000        0x0 build/free/production/_ext/2104088289/buzzer.o
+ .bss           0x0000000000000000        0x0 build/free/production/_ext/2104088289/buzzer.o
+ .debug_info    0x0000000000000000      0x260 build/free/production/_ext/2104088289/buzzer.o
+ .debug_abbrev  0x0000000000000000       0x1b build/free/production/_ext/2104088289/buzzer.o
  .debug_aranges
-                0x0000000000000000       0x18 build/free/debug/_ext/2104088289/buzzer.o
- .debug_line    0x0000000000000000       0x1a build/free/debug/_ext/2104088289/buzzer.o
- .debug_str     0x0000000000000000        0x0 build/free/debug/_ext/2104088289/buzzer.o
- .comment       0x0000000000000000       0x30 build/free/debug/_ext/2104088289/buzzer.o
- .text          0x0000000000000000        0x0 build/free/debug/_ext/2104088289/leds.o
- .data          0x0000000000000000        0x0 build/free/debug/_ext/2104088289/leds.o
- .bss           0x0000000000000000        0x0 build/free/debug/_ext/2104088289/leds.o
+                0x0000000000000000       0x18 build/free/production/_ext/2104088289/buzzer.o
+ .debug_line    0x0000000000000000       0x1a build/free/production/_ext/2104088289/buzzer.o
+ .debug_str     0x0000000000000000        0x0 build/free/production/_ext/2104088289/buzzer.o
+ .comment       0x0000000000000000       0x30 build/free/production/_ext/2104088289/buzzer.o
+ .text          0x0000000000000000        0x0 build/free/production/_ext/2104088289/leds.o
+ .data          0x0000000000000000        0x0 build/free/production/_ext/2104088289/leds.o
+ .bss           0x0000000000000000        0x0 build/free/production/_ext/2104088289/leds.o
  .text.LedInitialization
-                0x0000000000000000       0x58 build/free/debug/_ext/2104088289/leds.o
- .text.LedOn    0x0000000000000000       0xf6 build/free/debug/_ext/2104088289/leds.o
+                0x0000000000000000       0x58 build/free/production/_ext/2104088289/leds.o
+ .text.LedOn    0x0000000000000000       0xf6 build/free/production/_ext/2104088289/leds.o
  .progmem.gcc_sw_table.LedOn
-                0x0000000000000000       0x10 build/free/debug/_ext/2104088289/leds.o
- .text.LedOff   0x0000000000000000       0xf6 build/free/debug/_ext/2104088289/leds.o
+                0x0000000000000000       0x10 build/free/production/_ext/2104088289/leds.o
+ .text.LedOff   0x0000000000000000       0xf6 build/free/production/_ext/2104088289/leds.o
  .progmem.gcc_sw_table.LedOff
-                0x0000000000000000       0x10 build/free/debug/_ext/2104088289/leds.o
- .debug_info    0x0000000000000000      0x5a8 build/free/debug/_ext/2104088289/leds.o
- .debug_abbrev  0x0000000000000000       0xe1 build/free/debug/_ext/2104088289/leds.o
+                0x0000000000000000       0x10 build/free/production/_ext/2104088289/leds.o
+ .debug_info    0x0000000000000000      0x59b build/free/production/_ext/2104088289/leds.o
+ .debug_abbrev  0x0000000000000000       0xe1 build/free/production/_ext/2104088289/leds.o
  .debug_aranges
-                0x0000000000000000       0x30 build/free/debug/_ext/2104088289/leds.o
- .debug_ranges  0x0000000000000000       0x20 build/free/debug/_ext/2104088289/leds.o
- .debug_line    0x0000000000000000      0x224 build/free/debug/_ext/2104088289/leds.o
- .debug_str     0x0000000000000000        0xc build/free/debug/_ext/2104088289/leds.o
- .comment       0x0000000000000000       0x30 build/free/debug/_ext/2104088289/leds.o
- .debug_frame   0x0000000000000000       0x74 build/free/debug/_ext/2104088289/leds.o
- .text          0x0000000000000000        0x0 build/free/debug/_ext/2104088289/systemTime.o
- .data          0x0000000000000000        0x0 build/free/debug/_ext/2104088289/systemTime.o
- .bss           0x0000000000000000        0x0 build/free/debug/_ext/2104088289/systemTime.o
+                0x0000000000000000       0x30 build/free/production/_ext/2104088289/leds.o
+ .debug_ranges  0x0000000000000000       0x20 build/free/production/_ext/2104088289/leds.o
+ .debug_line    0x0000000000000000      0x224 build/free/production/_ext/2104088289/leds.o
+ .debug_str     0x0000000000000000        0xc build/free/production/_ext/2104088289/leds.o
+ .comment       0x0000000000000000       0x30 build/free/production/_ext/2104088289/leds.o
+ .debug_frame   0x0000000000000000       0x74 build/free/production/_ext/2104088289/leds.o
+ .text          0x0000000000000000        0x0 build/free/production/_ext/2104088289/systemTime.o
+ .data          0x0000000000000000        0x0 build/free/production/_ext/2104088289/systemTime.o
+ .bss           0x0000000000000000        0x0 build/free/production/_ext/2104088289/systemTime.o
  .bss.CURRENT_TIME
-                0x0000000000000000        0x2 build/free/debug/_ext/2104088289/systemTime.o
+                0x0000000000000000        0x2 build/free/production/_ext/2104088289/systemTime.o
  .text.ClockInitialization
-                0x0000000000000000       0x48 build/free/debug/_ext/2104088289/systemTime.o
+                0x0000000000000000       0x48 build/free/production/_ext/2104088289/systemTime.o
  .text.SuperLoopSleep
-                0x0000000000000000       0x2c build/free/debug/_ext/2104088289/systemTime.o
+                0x0000000000000000       0x2c build/free/production/_ext/2104088289/systemTime.o
  .text.SysCurrentTimeUS
-                0x0000000000000000       0x3c build/free/debug/_ext/2104088289/systemTime.o
- .text.Wait     0x0000000000000000       0x6e build/free/debug/_ext/2104088289/systemTime.o
- .debug_info    0x0000000000000000      0xbb5 build/free/debug/_ext/2104088289/systemTime.o
- .debug_abbrev  0x0000000000000000      0x156 build/free/debug/_ext/2104088289/systemTime.o
+                0x0000000000000000       0x3c build/free/production/_ext/2104088289/systemTime.o
+ .text.Wait     0x0000000000000000       0x6e build/free/production/_ext/2104088289/systemTime.o
+ .debug_info    0x0000000000000000      0xba8 build/free/production/_ext/2104088289/systemTime.o
+ .debug_abbrev  0x0000000000000000      0x156 build/free/production/_ext/2104088289/systemTime.o
  .debug_aranges
-                0x0000000000000000       0x38 build/free/debug/_ext/2104088289/systemTime.o
- .debug_ranges  0x0000000000000000       0x28 build/free/debug/_ext/2104088289/systemTime.o
- .debug_line    0x0000000000000000      0x193 build/free/debug/_ext/2104088289/systemTime.o
- .debug_str     0x0000000000000000       0x5d build/free/debug/_ext/2104088289/systemTime.o
- .comment       0x0000000000000000       0x30 build/free/debug/_ext/2104088289/systemTime.o
- .debug_frame   0x0000000000000000       0x94 build/free/debug/_ext/2104088289/systemTime.o
- .text          0x0000000000000000        0x0 build/free/debug/TWI_blockData.o
- .data          0x0000000000000000        0x0 build/free/debug/TWI_blockData.o
- .bss           0x0000000000000000        0x0 build/free/debug/TWI_blockData.o
+                0x0000000000000000       0x38 build/free/production/_ext/2104088289/systemTime.o
+ .debug_ranges  0x0000000000000000       0x28 build/free/production/_ext/2104088289/systemTime.o
+ .debug_line    0x0000000000000000      0x193 build/free/production/_ext/2104088289/systemTime.o
+ .debug_str     0x0000000000000000       0x5d build/free/production/_ext/2104088289/systemTime.o
+ .comment       0x0000000000000000       0x30 build/free/production/_ext/2104088289/systemTime.o
+ .debug_frame   0x0000000000000000       0x94 build/free/production/_ext/2104088289/systemTime.o
+ .text          0x0000000000000000        0x0 build/free/production/TWI_blockData.o
+ .data          0x0000000000000000        0x0 build/free/production/TWI_blockData.o
+ .bss           0x0000000000000000        0x0 build/free/production/TWI_blockData.o
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
@@ -162,18 +162,16 @@ Address of section .data set to 0x804000
                 0x0000000000008000                __RODATA_PM_OFFSET__ = 0x8000
 LOAD C:/Program Files/Microchip/xc8/v3.00/dfp/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
                 0x0000000000000001                __MPLAB_BUILD = 0x1
-LOAD build/free/debug/peripherals/CLKCTRL/CLKCTRL.o
-LOAD build/free/debug/peripherals/TWI/TWI_client.o
-LOAD build/free/debug/Motor_Main.o
-LOAD build/free/debug/_ext/2104088289/buzzer.o
-LOAD build/free/debug/_ext/2104088289/leds.o
-LOAD build/free/debug/_ext/2104088289/systemTime.o
-LOAD build/free/debug/TWI_blockData.o
+LOAD build/free/production/peripherals/CLKCTRL/CLKCTRL.o
+LOAD build/free/production/peripherals/TWI/TWI_client.o
+LOAD build/free/production/Motor_Main.o
+LOAD build/free/production/_ext/2104088289/buzzer.o
+LOAD build/free/production/_ext/2104088289/leds.o
+LOAD build/free/production/_ext/2104088289/systemTime.o
+LOAD build/free/production/TWI_blockData.o
 START GROUP
 LOAD c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a
 END GROUP
-                0x0000000000000001                __MPLAB_DEBUG = 0x1
-                0x0000000000000001                __DEBUG = 0x1
 START GROUP
 LOAD c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a
 LOAD c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a
@@ -393,7 +391,7 @@ END GROUP
 
 .fuse           0x0000000000820000        0x9
  *(.fuse)
- .fuse          0x0000000000820000        0x9 build/free/debug/Motor_Main.o
+ .fuse          0x0000000000820000        0x9 build/free/production/Motor_Main.o
                 0x0000000000820000                __fuse
  *(.lfuse)
  *(.hfuse)
@@ -401,7 +399,7 @@ END GROUP
 
 .lock           0x0000000000830000        0x4
  *(.lock*)
- .lock          0x0000000000830000        0x4 build/free/debug/Motor_Main.o
+ .lock          0x0000000000830000        0x4 build/free/production/Motor_Main.o
                 0x0000000000830000                __lock
 
 .signature
@@ -433,11 +431,11 @@ END GROUP
 
 .comment        0x0000000000000000       0x5b
  *(.comment)
- .comment       0x0000000000000000       0x2f build/free/debug/peripherals/CLKCTRL/CLKCTRL.o
+ .comment       0x0000000000000000       0x2f build/free/production/peripherals/CLKCTRL/CLKCTRL.o
                                          0x30 (size before relaxing)
- .comment       0x000000000000002f       0x30 build/free/debug/peripherals/TWI/TWI_client.o
- .comment       0x000000000000002f       0x30 build/free/debug/Motor_Main.o
- .comment       0x000000000000002f       0x30 build/free/debug/TWI_blockData.o
+ .comment       0x000000000000002f       0x30 build/free/production/peripherals/TWI/TWI_client.o
+ .comment       0x000000000000002f       0x30 build/free/production/Motor_Main.o
+ .comment       0x000000000000002f       0x30 build/free/production/TWI_blockData.o
  .comment       0x000000000000002f       0x2c c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
                                          0x2d (size before relaxing)
  .comment       0x000000000000005b       0x2d c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(_Exit.o)
@@ -476,55 +474,55 @@ END GROUP
 .debug_aranges  0x0000000000000000       0xe0
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000       0x20 build/free/debug/peripherals/CLKCTRL/CLKCTRL.o
+                0x0000000000000000       0x20 build/free/production/peripherals/CLKCTRL/CLKCTRL.o
  .debug_aranges
-                0x0000000000000020       0x48 build/free/debug/peripherals/TWI/TWI_client.o
+                0x0000000000000020       0x48 build/free/production/peripherals/TWI/TWI_client.o
  .debug_aranges
-                0x0000000000000068       0x38 build/free/debug/Motor_Main.o
+                0x0000000000000068       0x38 build/free/production/Motor_Main.o
  .debug_aranges
-                0x00000000000000a0       0x40 build/free/debug/TWI_blockData.o
+                0x00000000000000a0       0x40 build/free/production/TWI_blockData.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x5004
+.debug_info     0x0000000000000000     0x4fd0
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000     0x3545 C:/Program Files/Microchip/xc8/v3.00/dfp/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
- .debug_info    0x0000000000003545      0x5ec build/free/debug/peripherals/CLKCTRL/CLKCTRL.o
- .debug_info    0x0000000000003b31      0x84f build/free/debug/peripherals/TWI/TWI_client.o
- .debug_info    0x0000000000004380      0x84b build/free/debug/Motor_Main.o
- .debug_info    0x0000000000004bcb      0x439 build/free/debug/TWI_blockData.o
+ .debug_info    0x0000000000003545      0x5df build/free/production/peripherals/CLKCTRL/CLKCTRL.o
+ .debug_info    0x0000000000003b24      0x842 build/free/production/peripherals/TWI/TWI_client.o
+ .debug_info    0x0000000000004366      0x83e build/free/production/Motor_Main.o
+ .debug_info    0x0000000000004ba4      0x42c build/free/production/TWI_blockData.o
 
 .debug_abbrev   0x0000000000000000     0x363e
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000     0x3274 C:/Program Files/Microchip/xc8/v3.00/dfp/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
- .debug_abbrev  0x0000000000003274       0xa4 build/free/debug/peripherals/CLKCTRL/CLKCTRL.o
- .debug_abbrev  0x0000000000003318      0x137 build/free/debug/peripherals/TWI/TWI_client.o
- .debug_abbrev  0x000000000000344f      0x145 build/free/debug/Motor_Main.o
- .debug_abbrev  0x0000000000003594       0xaa build/free/debug/TWI_blockData.o
+ .debug_abbrev  0x0000000000003274       0xa4 build/free/production/peripherals/CLKCTRL/CLKCTRL.o
+ .debug_abbrev  0x0000000000003318      0x137 build/free/production/peripherals/TWI/TWI_client.o
+ .debug_abbrev  0x000000000000344f      0x145 build/free/production/Motor_Main.o
+ .debug_abbrev  0x0000000000003594       0xaa build/free/production/TWI_blockData.o
 
 .debug_line     0x0000000000000000      0x8ce
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x240 C:/Program Files/Microchip/xc8/v3.00/dfp/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
- .debug_line    0x0000000000000240       0xec build/free/debug/peripherals/CLKCTRL/CLKCTRL.o
- .debug_line    0x000000000000032c      0x206 build/free/debug/peripherals/TWI/TWI_client.o
- .debug_line    0x0000000000000532      0x227 build/free/debug/Motor_Main.o
- .debug_line    0x0000000000000759      0x175 build/free/debug/TWI_blockData.o
+ .debug_line    0x0000000000000240       0xec build/free/production/peripherals/CLKCTRL/CLKCTRL.o
+ .debug_line    0x000000000000032c      0x206 build/free/production/peripherals/TWI/TWI_client.o
+ .debug_line    0x0000000000000532      0x227 build/free/production/Motor_Main.o
+ .debug_line    0x0000000000000759      0x175 build/free/production/TWI_blockData.o
 
 .debug_frame    0x0000000000000000      0x298
  *(.debug_frame)
- .debug_frame   0x0000000000000000       0x34 build/free/debug/peripherals/CLKCTRL/CLKCTRL.o
- .debug_frame   0x0000000000000034      0x11c build/free/debug/peripherals/TWI/TWI_client.o
- .debug_frame   0x0000000000000150       0x94 build/free/debug/Motor_Main.o
- .debug_frame   0x00000000000001e4       0xb4 build/free/debug/TWI_blockData.o
+ .debug_frame   0x0000000000000000       0x34 build/free/production/peripherals/CLKCTRL/CLKCTRL.o
+ .debug_frame   0x0000000000000034      0x11c build/free/production/peripherals/TWI/TWI_client.o
+ .debug_frame   0x0000000000000150       0x94 build/free/production/Motor_Main.o
+ .debug_frame   0x00000000000001e4       0xb4 build/free/production/TWI_blockData.o
 
 .debug_str      0x0000000000000000     0x1739
  *(.debug_str)
  .debug_str     0x0000000000000000     0x170f C:/Program Files/Microchip/xc8/v3.00/dfp/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
- .debug_str     0x000000000000170f        0x0 build/free/debug/peripherals/CLKCTRL/CLKCTRL.o
- .debug_str     0x000000000000170f        0xb build/free/debug/peripherals/TWI/TWI_client.o
- .debug_str     0x000000000000171a       0x1f build/free/debug/Motor_Main.o
- .debug_str     0x0000000000001739        0x0 build/free/debug/TWI_blockData.o
+ .debug_str     0x000000000000170f        0x0 build/free/production/peripherals/CLKCTRL/CLKCTRL.o
+ .debug_str     0x000000000000170f        0xb build/free/production/peripherals/TWI/TWI_client.o
+ .debug_str     0x000000000000171a       0x1f build/free/production/Motor_Main.o
+ .debug_str     0x0000000000001739        0x0 build/free/production/TWI_blockData.o
 
 .debug_loc
  *(.debug_loc)
@@ -549,14 +547,14 @@ END GROUP
 
 .debug_ranges   0x0000000000000000       0xa0
  *(.debug_ranges)
- .debug_ranges  0x0000000000000000       0x10 build/free/debug/peripherals/CLKCTRL/CLKCTRL.o
- .debug_ranges  0x0000000000000010       0x38 build/free/debug/peripherals/TWI/TWI_client.o
- .debug_ranges  0x0000000000000048       0x28 build/free/debug/Motor_Main.o
- .debug_ranges  0x0000000000000070       0x30 build/free/debug/TWI_blockData.o
+ .debug_ranges  0x0000000000000000       0x10 build/free/production/peripherals/CLKCTRL/CLKCTRL.o
+ .debug_ranges  0x0000000000000010       0x38 build/free/production/peripherals/TWI/TWI_client.o
+ .debug_ranges  0x0000000000000048       0x28 build/free/production/Motor_Main.o
+ .debug_ranges  0x0000000000000070       0x30 build/free/production/TWI_blockData.o
 
 .debug_macro
  *(.debug_macro)
-OUTPUT(dist/free/debug/MotorFirmware.X.debug.elf elf32-avr)
+OUTPUT(dist/free/production/MotorFirmware.X.production.elf elf32-avr)
 LOAD linker stubs
 LOAD data_init
 
@@ -568,145 +566,145 @@ LOAD data_init
 .bss.writeHandler
                 0x0000000000804000        0x2
  .bss.writeHandler
-                0x0000000000804000        0x2 build/free/debug/peripherals/TWI/TWI_client.o
+                0x0000000000804000        0x2 build/free/production/peripherals/TWI/TWI_client.o
 
 .bss.readHandler
                 0x0000000000804002        0x2
  .bss.readHandler
-                0x0000000000804002        0x2 build/free/debug/peripherals/TWI/TWI_client.o
+                0x0000000000804002        0x2 build/free/production/peripherals/TWI/TWI_client.o
 
 .bss.stopHandler
                 0x0000000000804004        0x2
  .bss.stopHandler
-                0x0000000000804004        0x2 build/free/debug/peripherals/TWI/TWI_client.o
+                0x0000000000804004        0x2 build/free/production/peripherals/TWI/TWI_client.o
 
 .bss.left_sm    0x000000000080400a        0x1
- .bss.left_sm   0x000000000080400a        0x1 build/free/debug/Motor_Main.o
+ .bss.left_sm   0x000000000080400a        0x1 build/free/production/Motor_Main.o
                 0x000000000080400a                left_sm
 
 .bss.right_sm   0x000000000080400b        0x1
- .bss.right_sm  0x000000000080400b        0x1 build/free/debug/Motor_Main.o
+ .bss.right_sm  0x000000000080400b        0x1 build/free/production/Motor_Main.o
                 0x000000000080400b                right_sm
 
 .bss.wasRead    0x000000000080400d        0x1
- .bss.wasRead   0x000000000080400d        0x1 build/free/debug/TWI_blockData.o
+ .bss.wasRead   0x000000000080400d        0x1 build/free/production/TWI_blockData.o
 
 .bss.i2c_index  0x000000000080400e        0x1
  .bss.i2c_index
-                0x000000000080400e        0x1 build/free/debug/TWI_blockData.o
+                0x000000000080400e        0x1 build/free/production/TWI_blockData.o
 
 .bss.writeBuffer
                 0x0000000000804006        0x2
  .bss.writeBuffer
-                0x0000000000804006        0x2 build/free/debug/TWI_blockData.o
+                0x0000000000804006        0x2 build/free/production/TWI_blockData.o
 
 .bss.writeBufferSize
                 0x000000000080400f        0x1
  .bss.writeBufferSize
-                0x000000000080400f        0x1 build/free/debug/TWI_blockData.o
+                0x000000000080400f        0x1 build/free/production/TWI_blockData.o
 
 .bss.readBuffer
                 0x0000000000804008        0x2
  .bss.readBuffer
-                0x0000000000804008        0x2 build/free/debug/TWI_blockData.o
+                0x0000000000804008        0x2 build/free/production/TWI_blockData.o
 
 .bss.readBufferSize
                 0x0000000000804010        0x1
  .bss.readBufferSize
-                0x0000000000804010        0x1 build/free/debug/TWI_blockData.o
+                0x0000000000804010        0x1 build/free/production/TWI_blockData.o
 
 .text.TWI0_ISR  0x0000000000000170      0x12e
  .text.TWI0_ISR
-                0x0000000000000170      0x12e build/free/debug/peripherals/TWI/TWI_client.o
+                0x0000000000000170      0x12e build/free/production/peripherals/TWI/TWI_client.o
                 0x0000000000000170                __vector_18
                 0x0000000000000170                TWI0_ISR
 
 .text.drive_motor
                 0x000000000000029e       0xd4
  .text.drive_motor
-                0x000000000000029e       0xd4 build/free/debug/Motor_Main.o
+                0x000000000000029e       0xd4 build/free/production/Motor_Main.o
                 0x000000000000029e                drive_motor
 
 .text.main      0x0000000000000372       0xac
- .text.main     0x0000000000000372       0xac build/free/debug/Motor_Main.o
+ .text.main     0x0000000000000372       0xac build/free/production/Motor_Main.o
                 0x0000000000000372                main
 
 .text.setup_pwm
                 0x000000000000041e       0x60
  .text.setup_pwm
-                0x000000000000041e       0x60 build/free/debug/Motor_Main.o
+                0x000000000000041e       0x60 build/free/production/Motor_Main.o
                 0x000000000000041e                setup_pwm
 
 .text._TWI_StoreByte
                 0x000000000000047e       0x5e
  .text._TWI_StoreByte
-                0x000000000000047e       0x5e build/free/debug/TWI_blockData.o
+                0x000000000000047e       0x5e build/free/production/TWI_blockData.o
                 0x000000000000047e                _TWI_StoreByte
 
 .text._TWI_RequestByte
                 0x00000000000004dc       0x58
  .text._TWI_RequestByte
-                0x00000000000004dc       0x58 build/free/debug/TWI_blockData.o
+                0x00000000000004dc       0x58 build/free/production/TWI_blockData.o
                 0x00000000000004dc                _TWI_RequestByte
 
 .text.TWI_initClient
                 0x0000000000000534       0x4e
  .text.TWI_initClient
-                0x0000000000000534       0x4e build/free/debug/peripherals/TWI/TWI_client.o
+                0x0000000000000534       0x4e build/free/production/peripherals/TWI/TWI_client.o
                 0x0000000000000534                TWI_initClient
 
 .text._onTWIStop
                 0x0000000000000582       0x34
  .text._onTWIStop
-                0x0000000000000582       0x34 build/free/debug/TWI_blockData.o
+                0x0000000000000582       0x34 build/free/production/TWI_blockData.o
                 0x0000000000000582                _onTWIStop
 
 .text.setupReadBuffer
                 0x00000000000005b6       0x32
  .text.setupReadBuffer
-                0x00000000000005b6       0x32 build/free/debug/TWI_blockData.o
+                0x00000000000005b6       0x32 build/free/production/TWI_blockData.o
                 0x00000000000005b6                setupReadBuffer
 
 .text.setupWriteBuffer
                 0x00000000000005e8       0x32
  .text.setupWriteBuffer
-                0x00000000000005e8       0x32 build/free/debug/TWI_blockData.o
+                0x00000000000005e8       0x32 build/free/production/TWI_blockData.o
                 0x00000000000005e8                setupWriteBuffer
 
 .text.TWI_initPins
                 0x000000000000061a       0x2e
  .text.TWI_initPins
-                0x000000000000061a       0x2e build/free/debug/peripherals/TWI/TWI_client.o
+                0x000000000000061a       0x2e build/free/production/peripherals/TWI/TWI_client.o
                 0x000000000000061a                TWI_initPins
 
 .text.TWI_assignByteWriteHandler
                 0x0000000000000648       0x26
  .text.TWI_assignByteWriteHandler
-                0x0000000000000648       0x26 build/free/debug/peripherals/TWI/TWI_client.o
+                0x0000000000000648       0x26 build/free/production/peripherals/TWI/TWI_client.o
                 0x0000000000000648                TWI_assignByteWriteHandler
 
 .text.TWI_assignByteReadHandler
                 0x000000000000066e       0x26
  .text.TWI_assignByteReadHandler
-                0x000000000000066e       0x26 build/free/debug/peripherals/TWI/TWI_client.o
+                0x000000000000066e       0x26 build/free/production/peripherals/TWI/TWI_client.o
                 0x000000000000066e                TWI_assignByteReadHandler
 
 .text.TWI_assignStopHandler
                 0x0000000000000694       0x26
  .text.TWI_assignStopHandler
-                0x0000000000000694       0x26 build/free/debug/peripherals/TWI/TWI_client.o
+                0x0000000000000694       0x26 build/free/production/peripherals/TWI/TWI_client.o
                 0x0000000000000694                TWI_assignStopHandler
 
 .text.setup_pins
                 0x00000000000006ba       0x24
  .text.setup_pins
-                0x00000000000006ba       0x24 build/free/debug/Motor_Main.o
+                0x00000000000006ba       0x24 build/free/production/Motor_Main.o
                 0x00000000000006ba                setup_pins
 
 .text.CLKCTRL_init
                 0x00000000000006de       0x1a
  .text.CLKCTRL_init
-                0x00000000000006de       0x1a build/free/debug/peripherals/CLKCTRL/CLKCTRL.o
+                0x00000000000006de       0x1a build/free/production/peripherals/CLKCTRL/CLKCTRL.o
                 0x00000000000006de                CLKCTRL_init
 
 .text.exit      0x00000000000006f8       0x16
@@ -799,4 +797,4 @@ LOAD data_init
                 0x000000000000071a                __simulator_exit
 
 .data.isFirst   0x000000000080400c        0x1 load address 0x000000000000071c
- .data.isFirst  0x000000000080400c        0x1 build/free/debug/TWI_blockData.o
+ .data.isFirst  0x000000000080400c        0x1 build/free/production/TWI_blockData.o

@@ -89,6 +89,7 @@ int main(void)
     
     //Setup CPU Clocks
     CLKCTRL_init();
+    ClockInitialization();
                
     //Setup Sleep Controller (Probably not needed))
 //    SLPCTRL_init();
@@ -125,7 +126,7 @@ int main(void)
     while (1)
     {   
         //Sleep until the PIT triggers
-        asm("SLEEP");
+//        asm("SLEEP"); // Can also get rid of this probably.
         
         //Flip the pin-state
         // This might be unnecessary, but the initialization is for sure required to the pin outs and baud rate type shit
@@ -140,6 +141,8 @@ int main(void)
         
         TWI_sendByte(0x11, left_sm);
         TWI_sendByte(0x11, right_sm);
+        
+        SuperLoopSleep();
         
     }
 }
