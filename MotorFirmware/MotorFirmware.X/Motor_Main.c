@@ -1,7 +1,11 @@
 #include <xc.h>
 
+//******************************************************************************
 
 // avr128db48-bare-metal-twi-mplab Main Initialization
+
+//******************************************************************************
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <avr/eeprom.h>
@@ -24,7 +28,11 @@ LOCKBITS = 0x5CC5C55C; // {KEY=NOLOCK}
 
 #define DATA_SIZE 16
 
+//******************************************************************************
+
 // Didsbury Diddlers Proprietary Function Definitions
+
+//******************************************************************************
 
 // === GLOBAL VARIABLES (I2C-assigned) ===
 volatile uint8_t left_sm = 0;
@@ -81,6 +89,12 @@ void drive_motor(uint8_t sm, uint8_t fwd_pin, uint8_t bwd_pin, volatile TCB_t *t
     tcb->CCMP = pwm;                      // Update PWM duty cycle
 }
 
+//******************************************************************************
+
+// Main
+
+//******************************************************************************
+
 // === MAIN LOOP ===
 int main(void) {
     
@@ -119,9 +133,16 @@ int main(void) {
     sei();
         
     TWI_initClient(0x11); // Initializes the motor board address to 0x11
+
+//******************************************************************************
+    
+  // Super Loop  
+
+//******************************************************************************
     
     // Responsible for motor control from ECU I2C data. Sending left then right
     // motor data.
+    
     while (1)
     {   
         // This will look something like:
@@ -130,12 +151,5 @@ int main(void) {
 
         drive_motor(left_sm, 1, 2, &TCB0);   // PD1 = FWD, PD2 = BWD (left)
         drive_motor(right_sm, 3, 4, &TCB1);  // PD3 = FWD, PD4 = BWD (right)
-        
-        // Flush the data array while waiting for new inputs; left_sm and 
-        // right_sm will both auto update as data comes in, allegedly.
-        for (uint8_t i = 8; i < DATA_SIZE; i++)
-        {
-            data[i] = 0x00;
-        } 
     }
 }

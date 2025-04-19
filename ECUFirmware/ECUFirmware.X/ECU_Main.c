@@ -1,7 +1,11 @@
 #include <xc.h>
 
+//******************************************************************************
 
 // avr128db48-bare-metal-twi-mplab Main Initialization
+
+//******************************************************************************
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <avr/eeprom.h>
@@ -23,7 +27,12 @@ FUSES = {
 
 LOCKBITS = 0x5CC5C55C; // {KEY=NOLOCK}
 
+//******************************************************************************
+
 // Disbury Diddlers Proprietary Libraries Initialization
+
+//******************************************************************************
+
 #include "leds.h"
 #include "buzzer.h"
 
@@ -64,6 +73,11 @@ void USART_Init(uint16_t baud) {
     USART1.CTRLB = USART_TXEN_bm | USART_RXEN_bm;
 }
 
+//******************************************************************************
+
+// Main
+
+//******************************************************************************
 
 int main(void)
 {    
@@ -96,9 +110,17 @@ int main(void)
     volatile uint8_t left_sm = 0;
     volatile uint8_t right_sm = 0;   
     
+
+//******************************************************************************
+    
+//    Super Loop
+    
+//******************************************************************************
+    
     // Responsible for all ECU functionality. Bluetooth interface, and communication
     // sensor and motor boards. The only things that the ECU will be receiving
     // are motor data and the toggle bit for the lights.
+    
     while (1)
     {   
         //Sleep until the PIT triggers
