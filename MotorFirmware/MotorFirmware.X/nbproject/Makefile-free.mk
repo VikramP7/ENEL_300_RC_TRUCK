@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=peripherals/CLKCTRL/CLKCTRL.c peripherals/TWI/TWI_client.c TWI_blockData.c Motor_Main.c ../../ECUFirmware/ECUFirmware.X/buzzer.c ../../ECUFirmware/ECUFirmware.X/leds.c ../../ECUFirmware/ECUFirmware.X/systemTime.c
+SOURCEFILES_QUOTED_IF_SPACED=peripherals/CLKCTRL/CLKCTRL.c peripherals/TWI/TWI_client.c Motor_Main.c ../../ECUFirmware/ECUFirmware.X/buzzer.c ../../ECUFirmware/ECUFirmware.X/leds.c ../../ECUFirmware/ECUFirmware.X/systemTime.c TWI_blockData.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o ${OBJECTDIR}/peripherals/TWI/TWI_client.o ${OBJECTDIR}/TWI_blockData.o ${OBJECTDIR}/Motor_Main.o ${OBJECTDIR}/_ext/2104088289/buzzer.o ${OBJECTDIR}/_ext/2104088289/leds.o ${OBJECTDIR}/_ext/2104088289/systemTime.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o.d ${OBJECTDIR}/peripherals/TWI/TWI_client.o.d ${OBJECTDIR}/TWI_blockData.o.d ${OBJECTDIR}/Motor_Main.o.d ${OBJECTDIR}/_ext/2104088289/buzzer.o.d ${OBJECTDIR}/_ext/2104088289/leds.o.d ${OBJECTDIR}/_ext/2104088289/systemTime.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o ${OBJECTDIR}/peripherals/TWI/TWI_client.o ${OBJECTDIR}/Motor_Main.o ${OBJECTDIR}/_ext/2104088289/buzzer.o ${OBJECTDIR}/_ext/2104088289/leds.o ${OBJECTDIR}/_ext/2104088289/systemTime.o ${OBJECTDIR}/TWI_blockData.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o.d ${OBJECTDIR}/peripherals/TWI/TWI_client.o.d ${OBJECTDIR}/Motor_Main.o.d ${OBJECTDIR}/_ext/2104088289/buzzer.o.d ${OBJECTDIR}/_ext/2104088289/leds.o.d ${OBJECTDIR}/_ext/2104088289/systemTime.o.d ${OBJECTDIR}/TWI_blockData.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o ${OBJECTDIR}/peripherals/TWI/TWI_client.o ${OBJECTDIR}/TWI_blockData.o ${OBJECTDIR}/Motor_Main.o ${OBJECTDIR}/_ext/2104088289/buzzer.o ${OBJECTDIR}/_ext/2104088289/leds.o ${OBJECTDIR}/_ext/2104088289/systemTime.o
+OBJECTFILES=${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o ${OBJECTDIR}/peripherals/TWI/TWI_client.o ${OBJECTDIR}/Motor_Main.o ${OBJECTDIR}/_ext/2104088289/buzzer.o ${OBJECTDIR}/_ext/2104088289/leds.o ${OBJECTDIR}/_ext/2104088289/systemTime.o ${OBJECTDIR}/TWI_blockData.o
 
 # Source Files
-SOURCEFILES=peripherals/CLKCTRL/CLKCTRL.c peripherals/TWI/TWI_client.c TWI_blockData.c Motor_Main.c ../../ECUFirmware/ECUFirmware.X/buzzer.c ../../ECUFirmware/ECUFirmware.X/leds.c ../../ECUFirmware/ECUFirmware.X/systemTime.c
+SOURCEFILES=peripherals/CLKCTRL/CLKCTRL.c peripherals/TWI/TWI_client.c Motor_Main.c ../../ECUFirmware/ECUFirmware.X/buzzer.c ../../ECUFirmware/ECUFirmware.X/leds.c ../../ECUFirmware/ECUFirmware.X/systemTime.c TWI_blockData.c
 
 
 
@@ -100,12 +100,6 @@ ${OBJECTDIR}/peripherals/TWI/TWI_client.o: peripherals/TWI/TWI_client.c  .genera
 	@${RM} ${OBJECTDIR}/peripherals/TWI/TWI_client.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/peripherals/TWI/TWI_client.o.d" -MT "${OBJECTDIR}/peripherals/TWI/TWI_client.o.d" -MT ${OBJECTDIR}/peripherals/TWI/TWI_client.o -o ${OBJECTDIR}/peripherals/TWI/TWI_client.o peripherals/TWI/TWI_client.c 
 	
-${OBJECTDIR}/TWI_blockData.o: TWI_blockData.c  .generated_files/flags/free/743029a16e3a8bc49d104c2602f0f2a71d46497c .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/TWI_blockData.o.d 
-	@${RM} ${OBJECTDIR}/TWI_blockData.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/TWI_blockData.o.d" -MT "${OBJECTDIR}/TWI_blockData.o.d" -MT ${OBJECTDIR}/TWI_blockData.o -o ${OBJECTDIR}/TWI_blockData.o TWI_blockData.c 
-	
 ${OBJECTDIR}/Motor_Main.o: Motor_Main.c  .generated_files/flags/free/58434ddd7d698bf1b6898cdb6e8e8980d2555021 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/Motor_Main.o.d 
@@ -130,6 +124,12 @@ ${OBJECTDIR}/_ext/2104088289/systemTime.o: ../../ECUFirmware/ECUFirmware.X/syste
 	@${RM} ${OBJECTDIR}/_ext/2104088289/systemTime.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/_ext/2104088289/systemTime.o.d" -MT "${OBJECTDIR}/_ext/2104088289/systemTime.o.d" -MT ${OBJECTDIR}/_ext/2104088289/systemTime.o -o ${OBJECTDIR}/_ext/2104088289/systemTime.o ../../ECUFirmware/ECUFirmware.X/systemTime.c 
 	
+${OBJECTDIR}/TWI_blockData.o: TWI_blockData.c  .generated_files/flags/free/743029a16e3a8bc49d104c2602f0f2a71d46497c .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/TWI_blockData.o.d 
+	@${RM} ${OBJECTDIR}/TWI_blockData.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/TWI_blockData.o.d" -MT "${OBJECTDIR}/TWI_blockData.o.d" -MT ${OBJECTDIR}/TWI_blockData.o -o ${OBJECTDIR}/TWI_blockData.o TWI_blockData.c 
+	
 else
 ${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o: peripherals/CLKCTRL/CLKCTRL.c  .generated_files/flags/free/4eb69bf65c3243c79c7f3e12c5ceae72c7a6ca63 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/peripherals/CLKCTRL" 
@@ -142,12 +142,6 @@ ${OBJECTDIR}/peripherals/TWI/TWI_client.o: peripherals/TWI/TWI_client.c  .genera
 	@${RM} ${OBJECTDIR}/peripherals/TWI/TWI_client.o.d 
 	@${RM} ${OBJECTDIR}/peripherals/TWI/TWI_client.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/peripherals/TWI/TWI_client.o.d" -MT "${OBJECTDIR}/peripherals/TWI/TWI_client.o.d" -MT ${OBJECTDIR}/peripherals/TWI/TWI_client.o -o ${OBJECTDIR}/peripherals/TWI/TWI_client.o peripherals/TWI/TWI_client.c 
-	
-${OBJECTDIR}/TWI_blockData.o: TWI_blockData.c  .generated_files/flags/free/620e4c05aae2162a0288662d44cad63a174e9511 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/TWI_blockData.o.d 
-	@${RM} ${OBJECTDIR}/TWI_blockData.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/TWI_blockData.o.d" -MT "${OBJECTDIR}/TWI_blockData.o.d" -MT ${OBJECTDIR}/TWI_blockData.o -o ${OBJECTDIR}/TWI_blockData.o TWI_blockData.c 
 	
 ${OBJECTDIR}/Motor_Main.o: Motor_Main.c  .generated_files/flags/free/7e0340d06ddf62b59d512e24a324684fb17ba674 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
@@ -172,6 +166,12 @@ ${OBJECTDIR}/_ext/2104088289/systemTime.o: ../../ECUFirmware/ECUFirmware.X/syste
 	@${RM} ${OBJECTDIR}/_ext/2104088289/systemTime.o.d 
 	@${RM} ${OBJECTDIR}/_ext/2104088289/systemTime.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/_ext/2104088289/systemTime.o.d" -MT "${OBJECTDIR}/_ext/2104088289/systemTime.o.d" -MT ${OBJECTDIR}/_ext/2104088289/systemTime.o -o ${OBJECTDIR}/_ext/2104088289/systemTime.o ../../ECUFirmware/ECUFirmware.X/systemTime.c 
+	
+${OBJECTDIR}/TWI_blockData.o: TWI_blockData.c  .generated_files/flags/free/620e4c05aae2162a0288662d44cad63a174e9511 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/TWI_blockData.o.d 
+	@${RM} ${OBJECTDIR}/TWI_blockData.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/TWI_blockData.o.d" -MT "${OBJECTDIR}/TWI_blockData.o.d" -MT ${OBJECTDIR}/TWI_blockData.o -o ${OBJECTDIR}/TWI_blockData.o TWI_blockData.c 
 	
 endif
 
@@ -216,3 +216,11 @@ endif
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${OBJECTDIR}
 	${RM} -r ${DISTDIR}
+
+# Enable dependency checking
+.dep.inc: .depcheck-impl
+
+DEPFILES=$(wildcard ${POSSIBLE_DEPFILES})
+ifneq (${DEPFILES},)
+include ${DEPFILES}
+endif
