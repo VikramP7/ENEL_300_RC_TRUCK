@@ -101,11 +101,11 @@ int main(void)
     //Enable Interrupts
     sei();
     
-    //Set the I/O Expander Pins as Outputs
-    advancedIO_setPinsAsOutputs(0xFF);
+    //Set the I/O Expander Pins as Outputs (Don't care about I/O Expander)
+//    advancedIO_setPinsAsOutputs(0xFF);
     
-    //Set initial pattern
-    advancedIO_setOutputsHigh(0xAA);
+    //Set initial pattern (Don't care about I/O Expander)
+//    advancedIO_setOutputsHigh(0xAA);
     
     volatile uint8_t left_sm = 0;
     volatile uint8_t right_sm = 0;   
