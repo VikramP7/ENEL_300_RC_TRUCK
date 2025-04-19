@@ -1,7 +1,7 @@
 #include <xc.h>
 
 
-// I2C Library Initialization
+// avr128db48-bare-metal-twi-mplab Main Initialization
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <avr/eeprom.h>
@@ -57,8 +57,10 @@ int main(void)
     //Enable Interrupts
     sei();
         
+    TWI_initClient(0x11); // Initializes the motor board address to 0x11
+    
     while (1)
     {   
-        //Wait...
+       // Slurs 
     }
 }

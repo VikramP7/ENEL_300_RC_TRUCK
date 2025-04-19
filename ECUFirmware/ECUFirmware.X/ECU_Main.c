@@ -1,5 +1,7 @@
 #include <xc.h>
 
+
+// avr128db48-bare-metal-twi-mplab Main Initialization
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <avr/eeprom.h>
@@ -25,8 +27,14 @@ LOCKBITS = 0x5CC5C55C; // {KEY=NOLOCK}
 #include "leds.h"
 #include "buzzer.h"
 
+
 int main(void)
-{           
+{    
+    // Led initialization
+    LedInitialization();
+    LedOn(LED_DEBUG_RED); // turn on red while initializing
+    LedOff(LED_DEBUG_RED);
+    
     //Setup CPU Clocks
     CLKCTRL_init();
                
@@ -54,6 +62,9 @@ int main(void)
         asm("SLEEP");
         
         //Flip the pin-state
+        // This might be unnecessary, but the initialization is for sure required to the pin outs and baud rate type shit
         advancedIO_toggleBitsInRegister(ADV_IO_LATx, 0xFF);
+        
+        TWI_sendByte(0x11, 0x69);
     }
 }

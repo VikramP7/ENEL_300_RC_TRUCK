@@ -44,8 +44,8 @@ void TWI_initHost(void)
     TWI0.MSTATUS = TWI_RIF_bm | TWI_WIF_bm | TWI_CLKHOLD_bm | TWI_RXACK_bm |
             TWI_ARBLOST_bm | TWI_BUSERR_bm | TWI_BUSSTATE_IDLE_gc;
     
-    //Set for 100kHz from a 4MHz oscillator
-    TWI0.MBAUD = 15;
+    //Set for 100kHz from a 16MHz oscillator
+    TWI0.MBAUD = 67; // Edited from original for our 16MHz clock for Bluetooth compatability
     
     //[No ISRs] and Host Mode
     TWI0.MCTRLA = TWI_ENABLE_bm;
