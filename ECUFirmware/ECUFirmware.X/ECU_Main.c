@@ -35,6 +35,7 @@ LOCKBITS = 0x5CC5C55C; // {KEY=NOLOCK}
 
 #include "leds.h"
 #include "buzzer.h"
+#include "systemTime.h"
 
 // Bluetooth Functions (Thanks Marc)
 // We need to implement the initialization here.
