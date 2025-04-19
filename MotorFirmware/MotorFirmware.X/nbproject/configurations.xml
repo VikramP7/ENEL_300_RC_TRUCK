@@ -8,17 +8,11 @@
         <logicalFolder name="f3" displayName="CLKCTRL" projectFiles="true">
           <itemPath>peripherals/CLKCTRL/CLKCTRL.h</itemPath>
         </logicalFolder>
-        <logicalFolder name="f4" displayName="RTC" projectFiles="true">
-          <itemPath>peripherals/RTC/RTC.h</itemPath>
-        </logicalFolder>
-        <logicalFolder name="f1" displayName="SLPCTRL" projectFiles="true">
-          <itemPath>peripherals/SLPCTRL/SLPCTRL.h</itemPath>
-        </logicalFolder>
         <logicalFolder name="f2" displayName="TWI" projectFiles="true">
-          <itemPath>peripherals/TWI/TWI_host.h</itemPath>
+          <itemPath>peripherals/TWI/TWI_client.h</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>advanced_IO.h</itemPath>
+      <itemPath>TWI_blockData.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -36,29 +30,23 @@
         <logicalFolder name="f3" displayName="CLKCTRL" projectFiles="true">
           <itemPath>peripherals/CLKCTRL/CLKCTRL.c</itemPath>
         </logicalFolder>
-        <logicalFolder name="f4" displayName="RTC" projectFiles="true">
-          <itemPath>peripherals/RTC/RTC.c</itemPath>
-        </logicalFolder>
-        <logicalFolder name="f1" displayName="SLPCTRL" projectFiles="true">
-          <itemPath>peripherals/SLPCTRL/SLPCTRL.c</itemPath>
-        </logicalFolder>
         <logicalFolder name="f2" displayName="TWI" projectFiles="true">
-          <itemPath>peripherals/TWI/TWI_host.c</itemPath>
+          <itemPath>peripherals/TWI/TWI_client.c</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>advanced_IO.c</itemPath>
-      <itemPath>ECU_Main_Old.c</itemPath>
-      <itemPath>ECU_Main.c</itemPath>
-      <itemPath>buzzer.c</itemPath>
-      <itemPath>buzzer.h</itemPath>
-      <itemPath>leds.c</itemPath>
-      <itemPath>leds.h</itemPath>
-      <itemPath>systemTime.c</itemPath>
-      <itemPath>systemTime.h</itemPath>
+      <itemPath>Motor_Main.c</itemPath>
+      <itemPath>../../ECUFirmware/ECUFirmware.X/buzzer.c</itemPath>
+      <itemPath>../../ECUFirmware/ECUFirmware.X/buzzer.h</itemPath>
+      <itemPath>../../ECUFirmware/ECUFirmware.X/leds.c</itemPath>
+      <itemPath>../../ECUFirmware/ECUFirmware.X/leds.h</itemPath>
+      <itemPath>../../ECUFirmware/ECUFirmware.X/systemTime.c</itemPath>
+      <itemPath>../../ECUFirmware/ECUFirmware.X/systemTime.h</itemPath>
     </logicalFolder>
+    <itemPath>TWI_blockData.c</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>.</Elem>
+    <Elem>../../ECUFirmware/ECUFirmware.X</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -147,8 +135,6 @@
                   value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value=""/>
       </AtmelIceTool>
-      <item path="ECU_Main_Old.c" ex="true" overriding="false">
-      </item>
       <HI-TECH-COMP>
         <property key="additional-warnings" value="true"/>
         <property key="asmlist" value="true"/>
@@ -236,7 +222,7 @@
         <property key="communication.speed" value="0.500"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="debugoptions.useswbreakpoints" value="true"/>
         <property key="firmware.path"
                   value="Press to browse for a specific firmware version"/>
         <property key="firmware.toolpack"
@@ -302,7 +288,7 @@
         <property key="communication.speed" value="0.500"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="debugoptions.useswbreakpoints" value="true"/>
         <property key="firmware.path"
                   value="Press to browse for a specific firmware version"/>
         <property key="firmware.toolpack"
@@ -324,7 +310,7 @@
         <property key="memories.programmemory.ranges" value="0-ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="C:/Users/caleb/Documents/EiE GitHub/ENEL300_RC_CAR/ECUFirmware/ECUFirmware.X/debug/free/ECUFirmware_ptg"/>
+                  value="C:/Users/C62081/MPLABXProjects/UVIndexDemo.X/debug/default/UVIndexDemo_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
@@ -578,8 +564,6 @@
         <property key="communication.activationmode" value="nohv"/>
         <property key="communication.interface" value="updi"/>
         <property key="communication.speed" value="0.500"/>
-        <property key="debugoptions.debug-startup" value="Use system settings"/>
-        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="debugoptions.useswbreakpoints" value="true"/>
         <property key="firmware.path"
                   value="Press to browse for a specific firmware version"/>
@@ -600,9 +584,8 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-ffff"/>
+        <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="true"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/Users/caleb/Documents/EiE GitHub/ENEL300_RC_CAR/ECUFirmware/ECUFirmware.X/debug/pro/ECUFirmware_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

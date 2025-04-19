@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=ECUFirmware.X
+PROJECTNAME=MotorFirmware.X
 
 # Active Configuration
 DEFAULTCONF=free
