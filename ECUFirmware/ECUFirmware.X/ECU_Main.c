@@ -55,7 +55,10 @@ int main(void)
     
     //Set initial pattern
     advancedIO_setOutputsHigh(0xAA);
-        
+    
+    
+    // Responsible for all ECU functionality. Bluetooth interface, and communication
+    // sensor and motor boards.
     while (1)
     {   
         //Sleep until the PIT triggers

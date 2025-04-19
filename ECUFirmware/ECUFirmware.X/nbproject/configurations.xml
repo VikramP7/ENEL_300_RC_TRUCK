@@ -70,7 +70,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>nEdbgTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.35</languageToolchainVersion>
+        <languageToolchainVersion>3.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -148,6 +148,14 @@
         <property key="voltagevalue" value=""/>
       </AtmelIceTool>
       <item path="ECU_Main_Old.c" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-CO>
+        </XC8-CO>
+        <XC8-config-global>
+        </XC8-config-global>
       </item>
       <HI-TECH-COMP>
         <property key="additional-warnings" value="true"/>
@@ -324,7 +332,7 @@
         <property key="memories.programmemory.ranges" value="0-ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="C:/Users/caleb/Documents/EiE GitHub/ENEL300_RC_CAR/ECUFirmware/ECUFirmware.X/debug/free/ECUFirmware_ptg"/>
+                  value="C:/Users/C62081/MPLABXProjects/UVIndexDemo.X/debug/default/UVIndexDemo_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
@@ -350,7 +358,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>nEdbgTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.35</languageToolchainVersion>
+        <languageToolchainVersion>3.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -602,7 +610,7 @@
         <property key="memories.programmemory.ranges" value="0-ffff"/>
         <property key="poweroptions.powerenable" value="true"/>
         <property key="programmerToGoFilePath"
-                  value="C:/Users/caleb/Documents/EiE GitHub/ENEL300_RC_CAR/ECUFirmware/ECUFirmware.X/debug/pro/ECUFirmware_ptg"/>
+                  value="C:/Users/C62081/MPLABXProjects/UVIndexDemo.X/debug/default/UVIndexDemo_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
