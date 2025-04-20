@@ -46,7 +46,7 @@ extern "C" {
  * This defines the 1st data byte of an i2c write as the address.
  * If commented out, each byte is loaded into the array. 
  */
-//#define FIRST_BYTE_ADDR
+#define FIRST_BYTE_ADDR
     
     /**
      * <b><FONT COLOR=BLUE>void</FONT> _TWI_StoreByte(<FONT COLOR=BLUE>uint8_t</FONT> data)</B>

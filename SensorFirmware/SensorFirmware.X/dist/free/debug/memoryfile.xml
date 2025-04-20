@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="dist/free/debug/SensorFirmware.X.debug.elf">                 
+    <memory name="program">              
+      <units>bytes</units>                 
+      <length>131072</length>                 
+      <used>2479</used>                     
+      <free>128593</free>                     
+    </memory>                              
+    <memory name="data">                 
+      <units>bytes</units>                 
+      <length>16384</length>                 
+      <used>51</used>                     
+      <free>16333</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 
