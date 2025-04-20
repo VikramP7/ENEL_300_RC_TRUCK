@@ -35,12 +35,6 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>Motor_Main.c</itemPath>
-      <itemPath>../../ECUFirmware/ECUFirmware.X/buzzer.c</itemPath>
-      <itemPath>../../ECUFirmware/ECUFirmware.X/buzzer.h</itemPath>
-      <itemPath>../../ECUFirmware/ECUFirmware.X/leds.c</itemPath>
-      <itemPath>../../ECUFirmware/ECUFirmware.X/leds.h</itemPath>
-      <itemPath>../../ECUFirmware/ECUFirmware.X/systemTime.c</itemPath>
-      <itemPath>../../ECUFirmware/ECUFirmware.X/systemTime.h</itemPath>
       <itemPath>TWI_blockData.c</itemPath>
     </logicalFolder>
   </logicalFolder>
@@ -331,6 +325,9 @@
       </nEdbgTool>
       <snap>
         <property key="debugoptions.useswbreakpoints" value="true"/>
+        <property key="memories.programmemory.ranges" value="0-ffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/C62081/MPLABXProjects/UVIndexDemo.X/debug/default/UVIndexDemo_ptg"/>
       </snap>
     </conf>
     <conf name="pro" type="2">
@@ -591,6 +588,8 @@
         <property key="memories.programmemory.ranges" value="0-ffff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/C62081/MPLABXProjects/UVIndexDemo.X/debug/default/UVIndexDemo_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

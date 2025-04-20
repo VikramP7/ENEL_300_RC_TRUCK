@@ -4,11 +4,7 @@
 # NOCDDL
 #
 CND_BASEDIR=`pwd`
-# free configuration
-CND_ARTIFACT_DIR_free=dist/free/production
-CND_ARTIFACT_NAME_free=ECUFirmware.X.production.hex
-CND_ARTIFACT_PATH_free=dist/free/production/ECUFirmware.X.production.hex
-# pro configuration
-CND_ARTIFACT_DIR_pro=dist/pro/production
-CND_ARTIFACT_NAME_pro=ECUFirmware.X.production.hex
-CND_ARTIFACT_PATH_pro=dist/pro/production/ECUFirmware.X.production.hex
+# default configuration
+CND_ARTIFACT_DIR_default=dist/default/production
+CND_ARTIFACT_NAME_default=ECUFirmware.X.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/ECUFirmware.X.production.hex

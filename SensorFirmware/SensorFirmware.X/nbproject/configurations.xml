@@ -18,19 +18,16 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="peripherals" displayName="peripherals" projectFiles="true">
+        <logicalFolder name="CLKCTRL" displayName="CLKCTRL" projectFiles="true">
+          <itemPath>peripherals/CLKCTRL/CLKCTRL.c</itemPath>
+        </logicalFolder>
         <logicalFolder name="TWI" displayName="TWI" projectFiles="true">
-          <itemPath>peripherals/TWI/TWI_host.c</itemPath>
+          <itemPath>peripherals/TWI/TWI_client.c</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>ECU-main.c</itemPath>
-      <itemPath>advanced_IO.c</itemPath>
-      <itemPath>advanced_IO.h</itemPath>
-      <itemPath>buzzer.c</itemPath>
-      <itemPath>buzzer.h</itemPath>
-      <itemPath>leds.c</itemPath>
-      <itemPath>leds.h</itemPath>
-      <itemPath>systemTime.c</itemPath>
-      <itemPath>systemTime.h</itemPath>
+      <itemPath>TWI_blockData.c</itemPath>
+      <itemPath>TWI_blockData.h</itemPath>
+      <itemPath>Sensor_Main.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
