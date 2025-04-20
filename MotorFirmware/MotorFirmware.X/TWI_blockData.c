@@ -7,6 +7,7 @@ static volatile bool isFirst = true;
 static volatile bool wasRead = false;
 
 static volatile uint8_t i2c_index = 0;
+static volatile uint8_t i2c_writeIndex = 0;
 
 static volatile uint8_t* writeBuffer = 0;
 static volatile uint8_t writeBufferSize = 0;
@@ -33,8 +34,9 @@ void _TWI_StoreByte(uint8_t data)
 #else
     if (i2c_index < writeBufferSize)
     {
-        writeBuffer[i2c_index] = data;
-        i2c_index++;
+        writeBuffer[i2c_writeIndex] = data;
+        i2c_writeIndex++;
+        i2c_writeIndex %= 2;
     }
 #endif
 }
