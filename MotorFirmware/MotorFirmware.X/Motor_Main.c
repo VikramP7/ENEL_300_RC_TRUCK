@@ -28,15 +28,14 @@ LOCKBITS = 0x5CC5C55C; // {KEY=NOLOCK}
 
 #define DATA_SIZE 16
 
+#define RIGHT 1
+#define LEFT 0
+
 //******************************************************************************
 
 // Didsbury Diddlers Proprietary Function Definitions
 
 //******************************************************************************
-
-// === GLOBAL VARIABLES (I2C-assigned) ===
-volatile uint8_t left_sm = 0;
-volatile uint8_t right_sm = 0;
 
 // Fairly sure that his clock setup is handled in the library
 
@@ -52,41 +51,55 @@ volatile uint8_t right_sm = 0;
 
 // === PIN SETUP ===
 void setup_pins() {
+    PORTMUX.TCAROUTEA = 0b00000010;
     PORTC.DIRSET = 0b00001100;            // PC2 (TCB0), PC3 (TCB1) as PWM outputs
     PORTD.DIRSET = 0b00011110;            // PD1–PD4 as motor direction control outputs
 }
 
 // === PWM SETUP ===
 void setup_pwm() {
-    // TCB0: Left motor on PC2
-    TCB0.CTRLA = 0b00000011;              // CLKSEL = CLKDIV1 (bit 0), ENABLE (bit 1)
-    TCB0.CTRLB = 0b00000101;              // CNTMODE = PWM8
-    TCB0.CCMP = 0;
-    TCB0.CNT = 0;
-
-    // TCB1: Right motor on PC3
-    TCB1.CTRLA = 0b00000011;
-    TCB1.CTRLB = 0b00000101;
-    TCB1.CCMP = 0;
-    TCB1.CNT = 0;
+    TCA0.SPLIT.CTRLESET = 0b00001100;
+    TCA0.SPLIT.CTRLD = 0b00000001;
+    TCA0.SPLIT.LPER = 0xff;
+    TCA0.SPLIT.HPER = 0xff;
+    
+    TCA0.SPLIT.HCMP0 = 0x00; // for right pwm, PC3
+    TCA0.SPLIT.LCMP2 = 0x00; // for left pwm, PC2
+    
+    TCA0.SPLIT.CTRLB = 0b00010100;
+    
+    TCA0.SPLIT.CTRLA = 0b00000001;
+    
 }
 
 // === MOTOR CONTROL FUNCTION ===
-void drive_motor(uint8_t sm, uint8_t fwd_pin, uint8_t bwd_pin, volatile TCB_t *tcb) {
+void drive_motor(uint8_t sm, uint8_t side) {
     uint8_t sign = sm & 0x80;             // Bit 7 = direction
     uint8_t magnitude = sm & 0x7F;        // Bits 6–0 = speed
 
-    uint16_t pwm = (uint16_t)magnitude * 515; // Scale 0–127 to 0–65535
-
-    if (sign) {
-        PORTD.OUTSET = (1 << bwd_pin);    // Set backward pin high
-        PORTD.OUTCLR = (1 << fwd_pin);    // Clear forward pin
-    } else {
-        PORTD.OUTSET = (1 << fwd_pin);    // Set forward pin high
-        PORTD.OUTCLR = (1 << bwd_pin);    // Clear backward pin
+    if(side == RIGHT){
+        if (sign) {
+            PORTD.OUTSET = (1 << 4);    // Set backward pin high
+            PORTD.OUTCLR = (1 << 3);    // Clear forward pin
+        } 
+        else {
+            PORTD.OUTSET = (1 << 3);    // Set forward pin high
+            PORTD.OUTCLR = (1 << 4);    // Clear backward pin
+        }
+        // set PWM duty 0-ff for right side
+        TCA0.SPLIT.HCMP0 = magnitude << 1;
     }
-
-    tcb->CCMP = pwm;                      // Update PWM duty cycle
+    else if (side == LEFT){
+        if (sign) {
+            PORTD.OUTSET = (1 << 2);    // Set backward pin high
+            PORTD.OUTCLR = (1 << 1);    // Clear forward pin
+        } else {
+            PORTD.OUTSET = (1 << 1);    // Set forward pin high
+            PORTD.OUTCLR = (1 << 2);    // Clear backward pin
+        }
+        // set PWM duty 0-ff for right side
+        TCA0.SPLIT.LCMP2 = magnitude << 1;
+    }
 }
 
 //******************************************************************************
@@ -108,7 +121,7 @@ int main(void) {
     TWI_initPins();
     
     //Setup TWI Interface
-    TWI_initClient(0x40);
+    TWI_initClient(0x11);
     
     //Data to R/W to. (Must be volatile)
     volatile uint8_t data[DATA_SIZE];
@@ -131,8 +144,6 @@ int main(void) {
     
     //Enable Interrupts
     sei();
-        
-    TWI_initClient(0x11); // Initializes the motor board address to 0x11
 
 //******************************************************************************
     
@@ -145,11 +156,7 @@ int main(void) {
     
     while (1)
     {   
-        // This will look something like:
-        left_sm = data[8];
-        right_sm = data[9];
-
-        drive_motor(left_sm, 1, 2, &TCB0);   // PD1 = FWD, PD2 = BWD (left)
-        drive_motor(right_sm, 3, 4, &TCB1);  // PD3 = FWD, PD4 = BWD (right)
+        drive_motor(data[8], LEFT);   // PD1 = FWD, PD2 = BWD (left)
+        drive_motor(data[9], RIGHT);  // PD3 = FWD, PD4 = BWD (right)
     }
 }

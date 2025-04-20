@@ -41,10 +41,12 @@
       <itemPath>../../ECUFirmware/ECUFirmware.X/leds.h</itemPath>
       <itemPath>../../ECUFirmware/ECUFirmware.X/systemTime.c</itemPath>
       <itemPath>../../ECUFirmware/ECUFirmware.X/systemTime.h</itemPath>
+      <itemPath>TWI_blockData.c</itemPath>
     </logicalFolder>
-    <itemPath>TWI_blockData.c</itemPath>
   </logicalFolder>
   <sourceRootList>
+    <Elem>../../avr128db48-bare-metal-twi-mplab-master/twi-client.X</Elem>
+    <Elem>..</Elem>
     <Elem>.</Elem>
     <Elem>../../ECUFirmware/ECUFirmware.X</Elem>
   </sourceRootList>
