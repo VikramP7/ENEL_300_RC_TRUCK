@@ -72,8 +72,8 @@ int main(void) {
         // receive data from sensor boards
         uint8_t byte1 = 0x00;
         uint8_t byte2 = 0x00;
-        //TWI_readByte(SENSOR_BOARD_ADDR, *byte1);
-        //TWI_readByte(SENSOR_BOARD_ADDR, *byte2);
+        TWI_readByte(SENSOR_BOARD_ADDR, &byte1);
+        TWI_readByte(SENSOR_BOARD_ADDR, &byte2);
         distanceCM = (byte1 << 7) + (byte2 >> 1);
         metalDetected = byte2 & 0x01;
         

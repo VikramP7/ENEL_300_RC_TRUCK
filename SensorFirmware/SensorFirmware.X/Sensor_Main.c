@@ -19,7 +19,7 @@
 #define VALUE_U_SIZE 8
 
 /* --------- GLOBAL VARS DECLARATION ------------- */
-uint8_t value_u[VALUE_U_SIZE];
+uint16_t value_u[VALUE_U_SIZE];
 uint8_t value[5];
 uint8_t count_u = 0;
 uint8_t tally_u = 0;
@@ -57,16 +57,18 @@ void SensorInitialization(){
 ISR(TCB2_INT_vect){
     TCB2.INTFLAGS = 0x01; //clears flag
     TCA0.SINGLE.CMP0 = 6;
-    distance = TCB2.CCMP;
+    //distance = TCB2.CCMP;
     //distance_final = ((distance * 0.000000125)*(340))/2; //gives distance in m
-    value_u[count_u] = distance;
+    value_u[count_u] = TCB2.CCMP;
     count_u++;
     count_u %= VALUE_U_SIZE;
     long averageDist = 0;
     for (int i = 0; i < VALUE_U_SIZE; i++){
        averageDist += value_u[i]; 
     }
-    data[0] = averageDist << 3;
+    averageDist = averageDist >> 3;
+    data[0] = averageDist;
+    data[1] = averageDist >> 8;
 }
 
 ISR(TCB1_INT_vect){
@@ -122,6 +124,7 @@ int main(void) {
     
     //Enable Interrupts
     sei();
+    
     while (1)
     {   
         //;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -88,50 +88,50 @@ MP_PROCESSOR_OPTION=AVR128DB48
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o: peripherals/CLKCTRL/CLKCTRL.c  .generated_files/flags/free/3854a3c4381346535231a3735531a6fb2bd45916 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o: peripherals/CLKCTRL/CLKCTRL.c  .generated_files/flags/free/cd67f3cffbaf2e3fd851540301331216b90c3609 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/peripherals/CLKCTRL" 
 	@${RM} ${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o.d 
 	@${RM} ${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o.d" -MT "${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o.d" -MT ${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o -o ${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o peripherals/CLKCTRL/CLKCTRL.c 
 	
-${OBJECTDIR}/peripherals/TWI/TWI_client.o: peripherals/TWI/TWI_client.c  .generated_files/flags/free/4ea276deed83c167f35f285394b522dcf3146d33 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/peripherals/TWI/TWI_client.o: peripherals/TWI/TWI_client.c  .generated_files/flags/free/da8d84fa407731c786be8ef9e78670cb3dc271a9 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/peripherals/TWI" 
 	@${RM} ${OBJECTDIR}/peripherals/TWI/TWI_client.o.d 
 	@${RM} ${OBJECTDIR}/peripherals/TWI/TWI_client.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/peripherals/TWI/TWI_client.o.d" -MT "${OBJECTDIR}/peripherals/TWI/TWI_client.o.d" -MT ${OBJECTDIR}/peripherals/TWI/TWI_client.o -o ${OBJECTDIR}/peripherals/TWI/TWI_client.o peripherals/TWI/TWI_client.c 
 	
-${OBJECTDIR}/Motor_Main.o: Motor_Main.c  .generated_files/flags/free/58434ddd7d698bf1b6898cdb6e8e8980d2555021 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/Motor_Main.o: Motor_Main.c  .generated_files/flags/free/a7fbed9938aeea0626c9a725a81a4d3d92f4b224 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/Motor_Main.o.d 
 	@${RM} ${OBJECTDIR}/Motor_Main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/Motor_Main.o.d" -MT "${OBJECTDIR}/Motor_Main.o.d" -MT ${OBJECTDIR}/Motor_Main.o -o ${OBJECTDIR}/Motor_Main.o Motor_Main.c 
 	
-${OBJECTDIR}/TWI_blockData.o: TWI_blockData.c  .generated_files/flags/free/743029a16e3a8bc49d104c2602f0f2a71d46497c .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/TWI_blockData.o: TWI_blockData.c  .generated_files/flags/free/ea753092da5ebff0468a6a4732acc0f4098981c .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/TWI_blockData.o.d 
 	@${RM} ${OBJECTDIR}/TWI_blockData.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/TWI_blockData.o.d" -MT "${OBJECTDIR}/TWI_blockData.o.d" -MT ${OBJECTDIR}/TWI_blockData.o -o ${OBJECTDIR}/TWI_blockData.o TWI_blockData.c 
 	
 else
-${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o: peripherals/CLKCTRL/CLKCTRL.c  .generated_files/flags/free/4eb69bf65c3243c79c7f3e12c5ceae72c7a6ca63 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o: peripherals/CLKCTRL/CLKCTRL.c  .generated_files/flags/free/e16c264e38bf07b4e86d6a2cf45df0afeee42959 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/peripherals/CLKCTRL" 
 	@${RM} ${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o.d 
 	@${RM} ${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o.d" -MT "${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o.d" -MT ${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o -o ${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o peripherals/CLKCTRL/CLKCTRL.c 
 	
-${OBJECTDIR}/peripherals/TWI/TWI_client.o: peripherals/TWI/TWI_client.c  .generated_files/flags/free/6e8d7a76c24748a6f8b7d89d39b01dfa7d6ac20 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/peripherals/TWI/TWI_client.o: peripherals/TWI/TWI_client.c  .generated_files/flags/free/60d9e3665a613ea8617462a6d0711d8eb1a222a8 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/peripherals/TWI" 
 	@${RM} ${OBJECTDIR}/peripherals/TWI/TWI_client.o.d 
 	@${RM} ${OBJECTDIR}/peripherals/TWI/TWI_client.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/peripherals/TWI/TWI_client.o.d" -MT "${OBJECTDIR}/peripherals/TWI/TWI_client.o.d" -MT ${OBJECTDIR}/peripherals/TWI/TWI_client.o -o ${OBJECTDIR}/peripherals/TWI/TWI_client.o peripherals/TWI/TWI_client.c 
 	
-${OBJECTDIR}/Motor_Main.o: Motor_Main.c  .generated_files/flags/free/7e0340d06ddf62b59d512e24a324684fb17ba674 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/Motor_Main.o: Motor_Main.c  .generated_files/flags/free/2a57142601c891b17b9503071a32d082b70e341b .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/Motor_Main.o.d 
 	@${RM} ${OBJECTDIR}/Motor_Main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/Motor_Main.o.d" -MT "${OBJECTDIR}/Motor_Main.o.d" -MT ${OBJECTDIR}/Motor_Main.o -o ${OBJECTDIR}/Motor_Main.o Motor_Main.c 
 	
-${OBJECTDIR}/TWI_blockData.o: TWI_blockData.c  .generated_files/flags/free/620e4c05aae2162a0288662d44cad63a174e9511 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/TWI_blockData.o: TWI_blockData.c  .generated_files/flags/free/1734b3d4d87602aec74695e769799e15c417fa34 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/TWI_blockData.o.d 
 	@${RM} ${OBJECTDIR}/TWI_blockData.o 

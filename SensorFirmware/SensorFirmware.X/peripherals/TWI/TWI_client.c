@@ -26,6 +26,7 @@ void TWI_initClient(uint8_t address)
     
     //Enable Data Interrupts, Address/Stop Interrupts, Enable STOP, and the TWI Peripheral
     TWI0.SCTRLA = TWI_DIEN_bm | TWI_APIEN_bm | TWI_PIEN_bm | TWI_ENABLE_bm;
+
 }
 
 void TWI_initPins(void)

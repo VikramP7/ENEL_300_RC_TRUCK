@@ -7,6 +7,7 @@ static volatile bool isFirst = true;
 static volatile bool wasRead = false;
 
 static volatile uint8_t i2c_index = 0;
+static volatile uint8_t i2c_read_index = 0;
 
 static volatile uint8_t* writeBuffer = 0;
 static volatile uint8_t writeBufferSize = 0;
@@ -45,8 +46,7 @@ uint8_t _TWI_RequestByte(void)
     uint8_t data = 0x00;
     if (i2c_index < readBufferSize)
     {
-        data = readBuffer[i2c_index];
-        i2c_index++;
+        data = readBuffer[i2c_read_index];
     }
     else
     {        
@@ -71,6 +71,9 @@ void _onTWIStop(void)
     
     isFirst = true;
     wasRead = false;
+    
+    i2c_read_index++;
+    i2c_read_index %= 2;
 }
 
 void setupReadBuffer(volatile uint8_t* buffer, uint8_t size)

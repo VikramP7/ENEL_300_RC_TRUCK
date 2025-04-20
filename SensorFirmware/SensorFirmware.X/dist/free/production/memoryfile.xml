@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <project>                                  
-  <executable name="dist/default/debug/ECUFirmware.X.debug.elf">                 
+  <executable name="dist/free/production/SensorFirmware.X.production.elf">                 
     <memory name="program">              
       <units>bytes</units>                 
       <length>131072</length>                 
-      <used>1234</used>                     
-      <free>129838</free>                     
+      <used>2169</used>                     
+      <free>128903</free>                     
     </memory>                              
     <memory name="data">                 
       <units>bytes</units>                 
       <length>16384</length>                 
-      <used>0</used>                     
-      <free>16384</free>                     
+      <used>56</used>                     
+      <free>16328</free>                     
     </memory>                              
   </executable>                            
 </project>                                 
