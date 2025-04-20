@@ -331,6 +331,9 @@
       </nEdbgTool>
       <snap>
         <property key="debugoptions.useswbreakpoints" value="true"/>
+        <property key="memories.programmemory.ranges" value="0-ffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/vikra/OneDrive/Documents/Vikram School/Second Year Eng/WINTER/ENEL300/ENEL300_RC_CAR/MotorFirmware/MotorFirmware.X/debug/free/MotorFirmware_ptg"/>
       </snap>
     </conf>
     <conf name="pro" type="2">
@@ -591,6 +594,8 @@
         <property key="memories.programmemory.ranges" value="0-ffff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/vikra/OneDrive/Documents/Vikram School/Second Year Eng/WINTER/ENEL300/ENEL300_RC_CAR/MotorFirmware/MotorFirmware.X/debug/pro/MotorFirmware_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
