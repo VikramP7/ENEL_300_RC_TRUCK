@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=peripherals/CLKCTRL/CLKCTRL.c peripherals/TWI/TWI_client.c Motor_Main.c ../../ECUFirmware/ECUFirmware.X/buzzer.c ../../ECUFirmware/ECUFirmware.X/leds.c ../../ECUFirmware/ECUFirmware.X/systemTime.c TWI_blockData.c
+SOURCEFILES_QUOTED_IF_SPACED=peripherals/CLKCTRL/CLKCTRL.c peripherals/TWI/TWI_client.c Motor_Main.c TWI_blockData.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o ${OBJECTDIR}/peripherals/TWI/TWI_client.o ${OBJECTDIR}/Motor_Main.o ${OBJECTDIR}/_ext/2104088289/buzzer.o ${OBJECTDIR}/_ext/2104088289/leds.o ${OBJECTDIR}/_ext/2104088289/systemTime.o ${OBJECTDIR}/TWI_blockData.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o.d ${OBJECTDIR}/peripherals/TWI/TWI_client.o.d ${OBJECTDIR}/Motor_Main.o.d ${OBJECTDIR}/_ext/2104088289/buzzer.o.d ${OBJECTDIR}/_ext/2104088289/leds.o.d ${OBJECTDIR}/_ext/2104088289/systemTime.o.d ${OBJECTDIR}/TWI_blockData.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o ${OBJECTDIR}/peripherals/TWI/TWI_client.o ${OBJECTDIR}/Motor_Main.o ${OBJECTDIR}/TWI_blockData.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o.d ${OBJECTDIR}/peripherals/TWI/TWI_client.o.d ${OBJECTDIR}/Motor_Main.o.d ${OBJECTDIR}/TWI_blockData.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o ${OBJECTDIR}/peripherals/TWI/TWI_client.o ${OBJECTDIR}/Motor_Main.o ${OBJECTDIR}/_ext/2104088289/buzzer.o ${OBJECTDIR}/_ext/2104088289/leds.o ${OBJECTDIR}/_ext/2104088289/systemTime.o ${OBJECTDIR}/TWI_blockData.o
+OBJECTFILES=${OBJECTDIR}/peripherals/CLKCTRL/CLKCTRL.o ${OBJECTDIR}/peripherals/TWI/TWI_client.o ${OBJECTDIR}/Motor_Main.o ${OBJECTDIR}/TWI_blockData.o
 
 # Source Files
-SOURCEFILES=peripherals/CLKCTRL/CLKCTRL.c peripherals/TWI/TWI_client.c Motor_Main.c ../../ECUFirmware/ECUFirmware.X/buzzer.c ../../ECUFirmware/ECUFirmware.X/leds.c ../../ECUFirmware/ECUFirmware.X/systemTime.c TWI_blockData.c
+SOURCEFILES=peripherals/CLKCTRL/CLKCTRL.c peripherals/TWI/TWI_client.c Motor_Main.c TWI_blockData.c
 
 
 
@@ -106,24 +106,6 @@ ${OBJECTDIR}/Motor_Main.o: Motor_Main.c  .generated_files/flags/free/a7fbed9938a
 	@${RM} ${OBJECTDIR}/Motor_Main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/Motor_Main.o.d" -MT "${OBJECTDIR}/Motor_Main.o.d" -MT ${OBJECTDIR}/Motor_Main.o -o ${OBJECTDIR}/Motor_Main.o Motor_Main.c 
 	
-${OBJECTDIR}/_ext/2104088289/buzzer.o: ../../ECUFirmware/ECUFirmware.X/buzzer.c  .generated_files/flags/free/54b338fd49ddae246de91c427109ab8f5ef6a63c .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/2104088289" 
-	@${RM} ${OBJECTDIR}/_ext/2104088289/buzzer.o.d 
-	@${RM} ${OBJECTDIR}/_ext/2104088289/buzzer.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/_ext/2104088289/buzzer.o.d" -MT "${OBJECTDIR}/_ext/2104088289/buzzer.o.d" -MT ${OBJECTDIR}/_ext/2104088289/buzzer.o -o ${OBJECTDIR}/_ext/2104088289/buzzer.o ../../ECUFirmware/ECUFirmware.X/buzzer.c 
-	
-${OBJECTDIR}/_ext/2104088289/leds.o: ../../ECUFirmware/ECUFirmware.X/leds.c  .generated_files/flags/free/37fe586e8c7c31af90e3c42633afe0c768c59233 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/2104088289" 
-	@${RM} ${OBJECTDIR}/_ext/2104088289/leds.o.d 
-	@${RM} ${OBJECTDIR}/_ext/2104088289/leds.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/_ext/2104088289/leds.o.d" -MT "${OBJECTDIR}/_ext/2104088289/leds.o.d" -MT ${OBJECTDIR}/_ext/2104088289/leds.o -o ${OBJECTDIR}/_ext/2104088289/leds.o ../../ECUFirmware/ECUFirmware.X/leds.c 
-	
-${OBJECTDIR}/_ext/2104088289/systemTime.o: ../../ECUFirmware/ECUFirmware.X/systemTime.c  .generated_files/flags/free/2ca0a23b0d04724fe765696e381d18ee729e0be2 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/2104088289" 
-	@${RM} ${OBJECTDIR}/_ext/2104088289/systemTime.o.d 
-	@${RM} ${OBJECTDIR}/_ext/2104088289/systemTime.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/_ext/2104088289/systemTime.o.d" -MT "${OBJECTDIR}/_ext/2104088289/systemTime.o.d" -MT ${OBJECTDIR}/_ext/2104088289/systemTime.o -o ${OBJECTDIR}/_ext/2104088289/systemTime.o ../../ECUFirmware/ECUFirmware.X/systemTime.c 
-	
 ${OBJECTDIR}/TWI_blockData.o: TWI_blockData.c  .generated_files/flags/free/ea753092da5ebff0468a6a4732acc0f4098981c .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/TWI_blockData.o.d 
@@ -148,24 +130,6 @@ ${OBJECTDIR}/Motor_Main.o: Motor_Main.c  .generated_files/flags/free/2a57142601c
 	@${RM} ${OBJECTDIR}/Motor_Main.o.d 
 	@${RM} ${OBJECTDIR}/Motor_Main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/Motor_Main.o.d" -MT "${OBJECTDIR}/Motor_Main.o.d" -MT ${OBJECTDIR}/Motor_Main.o -o ${OBJECTDIR}/Motor_Main.o Motor_Main.c 
-	
-${OBJECTDIR}/_ext/2104088289/buzzer.o: ../../ECUFirmware/ECUFirmware.X/buzzer.c  .generated_files/flags/free/e2be8662e28e508c4179768ec8e4ee51cc157962 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/2104088289" 
-	@${RM} ${OBJECTDIR}/_ext/2104088289/buzzer.o.d 
-	@${RM} ${OBJECTDIR}/_ext/2104088289/buzzer.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/_ext/2104088289/buzzer.o.d" -MT "${OBJECTDIR}/_ext/2104088289/buzzer.o.d" -MT ${OBJECTDIR}/_ext/2104088289/buzzer.o -o ${OBJECTDIR}/_ext/2104088289/buzzer.o ../../ECUFirmware/ECUFirmware.X/buzzer.c 
-	
-${OBJECTDIR}/_ext/2104088289/leds.o: ../../ECUFirmware/ECUFirmware.X/leds.c  .generated_files/flags/free/4bdd61cb06813058599a3e8ab651fb4cf1004e19 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/2104088289" 
-	@${RM} ${OBJECTDIR}/_ext/2104088289/leds.o.d 
-	@${RM} ${OBJECTDIR}/_ext/2104088289/leds.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/_ext/2104088289/leds.o.d" -MT "${OBJECTDIR}/_ext/2104088289/leds.o.d" -MT ${OBJECTDIR}/_ext/2104088289/leds.o -o ${OBJECTDIR}/_ext/2104088289/leds.o ../../ECUFirmware/ECUFirmware.X/leds.c 
-	
-${OBJECTDIR}/_ext/2104088289/systemTime.o: ../../ECUFirmware/ECUFirmware.X/systemTime.c  .generated_files/flags/free/d77c676473b52159d0e3fb890172a84e6bab3c1b .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/2104088289" 
-	@${RM} ${OBJECTDIR}/_ext/2104088289/systemTime.o.d 
-	@${RM} ${OBJECTDIR}/_ext/2104088289/systemTime.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__    -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -mext=cci -Wall -DXPRJ_free=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/_ext/2104088289/systemTime.o.d" -MT "${OBJECTDIR}/_ext/2104088289/systemTime.o.d" -MT ${OBJECTDIR}/_ext/2104088289/systemTime.o -o ${OBJECTDIR}/_ext/2104088289/systemTime.o ../../ECUFirmware/ECUFirmware.X/systemTime.c 
 	
 ${OBJECTDIR}/TWI_blockData.o: TWI_blockData.c  .generated_files/flags/free/1734b3d4d87602aec74695e769799e15c417fa34 .generated_files/flags/free/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 

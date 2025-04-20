@@ -1,7 +1,5 @@
 Archive member included to satisfy reference by file (symbol)
 
-c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
-                              build/free/production/_ext/2104088289/leds.o (__tablejump2__)
 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
                               build/free/production/Motor_Main.o (__do_copy_data)
 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
@@ -24,69 +22,9 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/free/production/Motor_Main.o
  .data          0x0000000000000000        0x0 build/free/production/Motor_Main.o
  .bss           0x0000000000000000        0x0 build/free/production/Motor_Main.o
- .text          0x0000000000000000        0x0 build/free/production/_ext/2104088289/buzzer.o
- .data          0x0000000000000000        0x0 build/free/production/_ext/2104088289/buzzer.o
- .bss           0x0000000000000000        0x0 build/free/production/_ext/2104088289/buzzer.o
- .debug_info    0x0000000000000000      0x28b build/free/production/_ext/2104088289/buzzer.o
- .debug_abbrev  0x0000000000000000       0x1b build/free/production/_ext/2104088289/buzzer.o
- .debug_aranges
-                0x0000000000000000       0x18 build/free/production/_ext/2104088289/buzzer.o
- .debug_line    0x0000000000000000       0x1a build/free/production/_ext/2104088289/buzzer.o
- .debug_str     0x0000000000000000        0x0 build/free/production/_ext/2104088289/buzzer.o
- .comment       0x0000000000000000       0x30 build/free/production/_ext/2104088289/buzzer.o
- .text          0x0000000000000000        0x0 build/free/production/_ext/2104088289/leds.o
- .data          0x0000000000000000        0x0 build/free/production/_ext/2104088289/leds.o
- .bss           0x0000000000000000        0x0 build/free/production/_ext/2104088289/leds.o
- .text.LedInitialization
-                0x0000000000000000       0x58 build/free/production/_ext/2104088289/leds.o
- .text.LedOn    0x0000000000000000       0xf6 build/free/production/_ext/2104088289/leds.o
- .progmem.gcc_sw_table.LedOn
-                0x0000000000000000       0x10 build/free/production/_ext/2104088289/leds.o
- .text.LedOff   0x0000000000000000       0xf6 build/free/production/_ext/2104088289/leds.o
- .progmem.gcc_sw_table.LedOff
-                0x0000000000000000       0x10 build/free/production/_ext/2104088289/leds.o
- .debug_info    0x0000000000000000      0x5c6 build/free/production/_ext/2104088289/leds.o
- .debug_abbrev  0x0000000000000000       0xe1 build/free/production/_ext/2104088289/leds.o
- .debug_aranges
-                0x0000000000000000       0x30 build/free/production/_ext/2104088289/leds.o
- .debug_ranges  0x0000000000000000       0x20 build/free/production/_ext/2104088289/leds.o
- .debug_line    0x0000000000000000      0x224 build/free/production/_ext/2104088289/leds.o
- .debug_str     0x0000000000000000        0xc build/free/production/_ext/2104088289/leds.o
- .comment       0x0000000000000000       0x30 build/free/production/_ext/2104088289/leds.o
- .debug_frame   0x0000000000000000       0x74 build/free/production/_ext/2104088289/leds.o
- .text          0x0000000000000000        0x0 build/free/production/_ext/2104088289/systemTime.o
- .data          0x0000000000000000        0x0 build/free/production/_ext/2104088289/systemTime.o
- .bss           0x0000000000000000        0x0 build/free/production/_ext/2104088289/systemTime.o
- .debug_info    0x0000000000000000      0x28f build/free/production/_ext/2104088289/systemTime.o
- .debug_abbrev  0x0000000000000000       0x1b build/free/production/_ext/2104088289/systemTime.o
- .debug_aranges
-                0x0000000000000000       0x18 build/free/production/_ext/2104088289/systemTime.o
- .debug_line    0x0000000000000000       0x1a build/free/production/_ext/2104088289/systemTime.o
- .debug_str     0x0000000000000000        0x0 build/free/production/_ext/2104088289/systemTime.o
- .comment       0x0000000000000000       0x30 build/free/production/_ext/2104088289/systemTime.o
  .text          0x0000000000000000        0x0 build/free/production/TWI_blockData.o
  .data          0x0000000000000000        0x0 build/free/production/TWI_blockData.o
  .bss           0x0000000000000000        0x0 build/free/production/TWI_blockData.o
- .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .text.libgcc.mul
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .text.libgcc.div
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .text.libgcc   0x0000000000000000       0x12 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .text.libgcc.prologue
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .stack.descriptors.hdr
-                0x0000000000000000        0xe c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .stack.descriptors
-                0x0000000000000000       0x1c c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .text.libgcc.builtins
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .text.libgcc.fmul
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
- .text.libgcc.fixed
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
@@ -154,9 +92,6 @@ LOAD C:/Program Files/Microchip/xc8/v3.00/dfp/xc8/avr/lib/avrxmega4/memx-const/m
 LOAD build/free/production/peripherals/CLKCTRL/CLKCTRL.o
 LOAD build/free/production/peripherals/TWI/TWI_client.o
 LOAD build/free/production/Motor_Main.o
-LOAD build/free/production/_ext/2104088289/buzzer.o
-LOAD build/free/production/_ext/2104088289/leds.o
-LOAD build/free/production/_ext/2104088289/systemTime.o
 LOAD build/free/production/TWI_blockData.o
 START GROUP
 LOAD c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a
