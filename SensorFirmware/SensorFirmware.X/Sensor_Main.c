@@ -16,100 +16,93 @@
 
 #define DATA_SIZE 16
 
-//******************************************************************************
+#define VALUE_U_SIZE 8
 
-// Didsbury Diddlers Proprietary Function Definitions
+/* --------- GLOBAL VARS DECLARATION ------------- */
+uint8_t value_u[VALUE_U_SIZE];
+uint8_t value[5];
+uint8_t count_u = 0;
+uint8_t tally_u = 0;
+uint8_t count = 0;
+uint8_t tally = 0;
+//uint8_t duty = 25000;
+float distance = 0.0;
+float distance_final = 0.0;
 
-//******************************************************************************
+//Data to R/W to. (Must be volatile)
+volatile uint8_t data[DATA_SIZE];
 
-// Fairly sure that his clock setup is handled in the library
-
-//// === CLOCK SETUP ===
-//void setup_clock() {
-//    CCP = 0xD8;
-//    CLKCTRL.OSCHFCTRLA = 0b00010100;      // Set 16 MHz internal oscillator
-//    while (CLKCTRL.MCLKSTATUS & 0b00000001); // Wait for clock switch to complete
-//}
-
-// Lowkey might need to readdress the pin setup, I have to fucking clue what
-// the library is doing rn.
-
-// === PIN SETUP ===
-void setup_pins() {
-    PORTMUX.TCAROUTEA = 0b00000010;
-    PORTC.DIRSET = 0b00001100;            // PC2 (TCB0), PC3 (TCB1) as PWM outputs
-    PORTD.DIRSET = 0b00011110;            // PD1–PD4 as motor direction control outputs
+void SensorInitialization(){
+    PORTA.DIRSET = 0b00000011;   //PA0 set as output
+    TCA0.SINGLE.CTRLA = (0x01)<<3 | 0x01;//divide by 16 and enable clk
+    TCA0.SINGLE.CTRLB = 0x03;   //single slope PWM
+    TCA0.SINGLE.CTRLB |= 0x01 << 4; //PA0 enabled
+    TCA0.SINGLE.PER = 31249;
+    TCA0.SINGLE.CMP0 = 6; //set to very low trigg duty cycle
+    EVSYS.CHANNEL0 = 0x45;    //PORTA pin PA5
+    EVSYS.USERTCB2CAPT = 0x01;  //Choose channel 0
+    TCB2.INTCTRL = 0x01; //Capture interupt enable
+    TCB2.EVCTRL = 0x01; //enable input capture event
+    TCB2.CTRLB = 0x04; //PWM measurement mode
+    TCB2.CTRLA = 0x01; //TCB enable
+    EVSYS.CHANNEL1 = 0x46;    //PORTA pin PA6
+    EVSYS.USERTCB1CAPT = 0x02;  //Choose channel 1
+    TCB1.INTCTRL = 0x01; //Capture interupt enable
+    TCB1.EVCTRL = 0x01; //enable input capture event
+    TCB1.CTRLB = 0x03; //Frequency measurement mode
+    TCB1.CTRLA = 0x01; //TCB enable
 }
 
-// === PWM SETUP ===
-void setup_pwm() {
-    TCA0.SPLIT.CTRLESET = 0b00001100;
-    TCA0.SPLIT.CTRLD = 0b00000001;
-    TCA0.SPLIT.LPER = 0xff;
-    TCA0.SPLIT.HPER = 0xff;
-    
-    TCA0.SPLIT.HCMP0 = 0x00; // for right pwm, PC3
-    TCA0.SPLIT.LCMP2 = 0x00; // for left pwm, PC2
-    
-    TCA0.SPLIT.CTRLB = 0b00010100;
-    
-    TCA0.SPLIT.CTRLA = 0b00000001;
-    
-}
-
-// === MOTOR CONTROL FUNCTION ===
-void drive_motor(uint8_t sm, uint8_t side) {
-    uint8_t sign = sm & 0x80;             // Bit 7 = direction
-    uint8_t magnitude = sm & 0x7F;        // Bits 6–0 = speed
-
-    if(side == RIGHT){
-        if (sign) {
-            PORTD.OUTSET = (1 << 4);    // Set backward pin high
-            PORTD.OUTCLR = (1 << 3);    // Clear forward pin
-        } 
-        else {
-            PORTD.OUTSET = (1 << 3);    // Set forward pin high
-            PORTD.OUTCLR = (1 << 4);    // Clear backward pin
-        }
-        // set PWM duty 0-ff for right side
-        TCA0.SPLIT.HCMP0 = magnitude << 1;
+/* ------ Define ISR -----*/
+ISR(TCB2_INT_vect){
+    TCB2.INTFLAGS = 0x01; //clears flag
+    TCA0.SINGLE.CMP0 = 6;
+    distance = TCB2.CCMP;
+    //distance_final = ((distance * 0.000000125)*(340))/2; //gives distance in m
+    value_u[count_u] = distance;
+    count_u++;
+    count_u %= VALUE_U_SIZE;
+    long averageDist = 0;
+    for (int i = 0; i < VALUE_U_SIZE; i++){
+       averageDist += value_u[i]; 
     }
-    else if (side == LEFT){
-        if (sign) {
-            PORTD.OUTSET = (1 << 2);    // Set backward pin high
-            PORTD.OUTCLR = (1 << 1);    // Clear forward pin
-        } else {
-            PORTD.OUTSET = (1 << 1);    // Set forward pin high
-            PORTD.OUTCLR = (1 << 2);    // Clear backward pin
+    data[0] = averageDist << 3;
+}
+
+ISR(TCB1_INT_vect){
+    TCB1.INTFLAGS = 0x01; //clears flag
+    value[count] = TCB1.CCMP;
+    if(value[count] < 200){
+        tally++;
+    }
+    count++;
+    if(count >= 5){
+        if(tally == 5){
+            PORTA.OUT = 0b00000010; 
+            data[1] = 0xff;
+        }else{
+            PORTA.OUT = 0b00000000;
+            data[1] = 0x00;
         }
-        // set PWM duty 0-ff for right side
-        TCA0.SPLIT.LCMP2 = magnitude << 1;
+        count = 0;
+        tally = 0;
     }
 }
 
-//******************************************************************************
-
-// Main
-
-//******************************************************************************
-
-// === MAIN LOOP ===
+// === MAIN FUNCTION ===
 int main(void) {
-    
-    setup_pins();                         // Set up direction and PWM pins
-    setup_pwm();                          // Configure PWM for TCB0 and TCB1
-       
     //Setup CPU Clocks
     CLKCTRL_init();
+    
+    // Sensor Initialization
+    SensorInitialization();
     
     //Setup TWI I/O
     TWI_initPins();
     
     //Setup TWI Interface
-    TWI_initClient(0x11);
+    TWI_initClient(0x22);
     
-    //Data to R/W to. (Must be volatile)
-    volatile uint8_t data[DATA_SIZE];
     
     //Initialize Memory to 0x00
     for (uint8_t i = 0; i < DATA_SIZE; i++)
@@ -129,19 +122,8 @@ int main(void) {
     
     //Enable Interrupts
     sei();
-
-//******************************************************************************
-    
-  // Super Loop  
-
-//******************************************************************************
-    
-    // Responsible for motor control from ECU I2C data. Sending left then right
-    // motor data.
-    
     while (1)
     {   
-        drive_motor(data[8], LEFT);   // PD1 = FWD, PD2 = BWD (left)
-        drive_motor(data[9], RIGHT);  // PD3 = FWD, PD4 = BWD (right)
+        //;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     }
 }

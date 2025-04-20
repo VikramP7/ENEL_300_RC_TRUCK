@@ -25,7 +25,6 @@
           <itemPath>peripherals/TWI/TWI_client.c</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>Motor_Main.c</itemPath>
       <itemPath>TWI_blockData.c</itemPath>
       <itemPath>TWI_blockData.h</itemPath>
       <itemPath>Sensor_Main.c</itemPath>
