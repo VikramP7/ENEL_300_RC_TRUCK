@@ -127,7 +127,7 @@ void LCDIntialize(void){
   
   // Display on, cursor on, cursor flash off.
   LCDWrite(0b0000,0,0,1);
-  LCDWrite(0b1110,0,0,1);
+  LCDWrite(0b1100,0,0,1);
   
   // Cursor increment when write on, display shift off.
   LCDWrite(0b0000,0,0,1);

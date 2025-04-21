@@ -22,6 +22,7 @@ volatile uint8_t button_pressed = 0;
 volatile uint16_t rx_buffer = 0;
 volatile uint16_t tx_buffer[PACKET_SIZE];
 volatile int count = 0;
+volatile uint16_t last_rx = 1;
 
 uint8_t adc_to_signmag_custom(uint16_t adc_val) {
     uint8_t sign = 0; 
@@ -88,6 +89,8 @@ uint8_t adc_to_signmag_custom(uint16_t adc_val) {
  }
  
 int main(void) {
+    LCDIntialize();
+    LCDWriteStr("Nigger"); // Test boot code
     setup_clock();
     USART_Init();
     // Enable global interrupts.
@@ -147,17 +150,22 @@ int main(void) {
             
             // Receive and Write Data LCD (Assuming that the metal detection data appears in the LSB)
             rx_buffer = USART_Receive();
-            LCDClrScreen();
-            LCDWriteStr("Distance to Object: ");
-            LCDWriteInt(rx_buffer >> 1, 2); // Write to the LCD. This will have to be formatted on the ECU side.
-            LCDMoveCursor(1,0);
-            if(rx_buffer << 7)
-                LCDWriteStr("Metal Detected");
-            else
-                LCDWriteStr("No Metal Detected");
-             
+            
+            if(last_rx != rx_buffer) {
+                LCDClrScreen();
+                LCDWriteStr("Distance: ");
+                LCDWriteInt(rx_buffer >> 1, 2); // Write to the LCD. This will have to be formatted on the ECU side.
+                LCDMoveCursor(0,1);
+                if(rx_buffer << 7)
+                    LCDWriteStr("Metal");
+                else
+                    LCDWriteStr("No Metal");
+                last_rx = rx_buffer;
+            }
+            
             _delay_ms(1);
             
+            // Transmit Data
             for (int i = 0; i < PACKET_SIZE; i++) {
                 USART_Transmit(tx_buffer[i]);
                 }
