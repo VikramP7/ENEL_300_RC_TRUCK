@@ -14,6 +14,8 @@
 #include "peripherals/TWI/TWI_client.h"
 #include "TWI_blockData.h"
 
+// #include <math.h> // Might need this for more optimized functions
+
 #define DATA_SIZE 16
 
 #define VALUE_U_SIZE 8
@@ -59,13 +61,17 @@ ISR(TCB2_INT_vect){
     TCA0.SINGLE.CMP0 = 6;
     //distance = TCB2.CCMP;
     //distance_final = ((distance * 0.000000125)*(340))/2; //gives distance in m
+    //distance_final = 17 * distance / 5^5 >> 8
     value_u[count_u] = TCB2.CCMP;
     count_u++;
     count_u %= VALUE_U_SIZE;
     long averageDist = 0;
+    //RMS might be appropriate for emphasizing the larger values.
     for (int i = 0; i < VALUE_U_SIZE; i++){
        averageDist += value_u[i]; 
+       //averageDist += value_u[i] * value_u[i];
     }
+    // averageDist = sqrt(averageDist >> 3) // Might need to include math for this
     averageDist = averageDist >> 3;
     data[0] = averageDist;
     data[1] = averageDist >> 8;
