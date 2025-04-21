@@ -197,18 +197,3 @@ void LCDMoveCursor(uint8_t x, uint8_t y){
     }
 }
 
-int main(void) {
-
-    LCDIntialize();
-    //LCDWriteStr("Maundiddler");
-    LCDMoveCursor(2, 1);
-    LCDWriteInt(128,-1);
-    
-  // Main loop
-  while (1) {
-    ;
-  }
-
-  return 0;
-}
-

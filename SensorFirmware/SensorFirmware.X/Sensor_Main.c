@@ -14,8 +14,6 @@
 #include "peripherals/TWI/TWI_client.h"
 #include "TWI_blockData.h"
 
-// #include <math.h> // Might need this for more optimized functions
-
 #define DATA_SIZE 16
 
 #define VALUE_U_SIZE 8
@@ -68,12 +66,10 @@ ISR(TCB2_INT_vect){
     long averageDist = 0;
     //RMS might be appropriate for emphasizing the larger values.
     for (int i = 0; i < VALUE_U_SIZE; i++){
-       averageDist += value_u[i]; 
-       //averageDist += value_u[i] * value_u[i];
+       averageDist += value_u[i];
     }
-    // averageDist = sqrt(averageDist >> 3) // Might need to include math for this
     averageDist = averageDist >> 3;
-    data[0] = averageDist;
+    data[0] = (averageDist & 0xFE) | (data[0] & 0b00000001);
     data[1] = averageDist >> 8;
 }
 
@@ -87,10 +83,10 @@ ISR(TCB1_INT_vect){
     if(count >= 5){
         if(tally == 5){
             PORTA.OUT = 0b00000010; 
-            data[1] = 0xff;
+            data[0] |= 0x01;
         }else{
             PORTA.OUT = 0b00000000;
-            data[1] = 0x00;
+            data[0] &= 0xFE;
         }
         count = 0;
         tally = 0;
@@ -133,6 +129,5 @@ int main(void) {
     
     while (1)
     {   
-        //;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     }
 }
