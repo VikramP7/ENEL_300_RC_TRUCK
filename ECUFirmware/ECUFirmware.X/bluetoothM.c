@@ -29,7 +29,12 @@ void BluetoothTransmit(uint16_t data){
 }
 
 uint16_t BluetoothReceive(){
-    while (!(USART0.STATUS & USART_RXCIF_bm));  // Wait for data
+    // Wait for data
+    uint16_t timeOutCount = 0;
+    while (!(USART0.STATUS & USART_RXCIF_bm) && (timeOutCount<10000))  
+    {
+        timeOutCount++;
+    }
     return USART0.RXDATAL;  // Return received byte
 }
 
