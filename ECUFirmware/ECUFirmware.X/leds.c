@@ -67,7 +67,7 @@ void LedOn(LedName selectedLed){
             PORTA.OUT &= ~(0b00000010);
             break;
         case 7:
-            PORTD.OUT &= ~(0b01111110);
+            PORTD.OUT &= ~(0b01111000);
             PORTA.OUT &= ~(0b00000010);
             break;
         default:
@@ -106,7 +106,7 @@ void LedOff(LedName selectedLed){
             PORTA.OUT |= 0b00000010;
             break;
         case 7:
-            PORTD.OUT |= 0b01111110;
+            PORTD.OUT |= 0b01111000;
             PORTA.OUT |= 0b00000010;
             break;
         default:

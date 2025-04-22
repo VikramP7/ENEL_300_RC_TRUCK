@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=peripherals/TWI/TWI_host.c ECU-main.c advanced_IO.c buzzer.c leds.c systemTime.c
+SOURCEFILES_QUOTED_IF_SPACED=peripherals/TWI/TWI_host.c ECU-main.c advanced_IO.c buzzer.c leds.c systemTime.c bluetoothM.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/peripherals/TWI/TWI_host.o ${OBJECTDIR}/ECU-main.o ${OBJECTDIR}/advanced_IO.o ${OBJECTDIR}/buzzer.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/systemTime.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/peripherals/TWI/TWI_host.o.d ${OBJECTDIR}/ECU-main.o.d ${OBJECTDIR}/advanced_IO.o.d ${OBJECTDIR}/buzzer.o.d ${OBJECTDIR}/leds.o.d ${OBJECTDIR}/systemTime.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/peripherals/TWI/TWI_host.o ${OBJECTDIR}/ECU-main.o ${OBJECTDIR}/advanced_IO.o ${OBJECTDIR}/buzzer.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/systemTime.o ${OBJECTDIR}/bluetoothM.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/peripherals/TWI/TWI_host.o.d ${OBJECTDIR}/ECU-main.o.d ${OBJECTDIR}/advanced_IO.o.d ${OBJECTDIR}/buzzer.o.d ${OBJECTDIR}/leds.o.d ${OBJECTDIR}/systemTime.o.d ${OBJECTDIR}/bluetoothM.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/peripherals/TWI/TWI_host.o ${OBJECTDIR}/ECU-main.o ${OBJECTDIR}/advanced_IO.o ${OBJECTDIR}/buzzer.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/systemTime.o
+OBJECTFILES=${OBJECTDIR}/peripherals/TWI/TWI_host.o ${OBJECTDIR}/ECU-main.o ${OBJECTDIR}/advanced_IO.o ${OBJECTDIR}/buzzer.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/systemTime.o ${OBJECTDIR}/bluetoothM.o
 
 # Source Files
-SOURCEFILES=peripherals/TWI/TWI_host.c ECU-main.c advanced_IO.c buzzer.c leds.c systemTime.c
+SOURCEFILES=peripherals/TWI/TWI_host.c ECU-main.c advanced_IO.c buzzer.c leds.c systemTime.c bluetoothM.c
 
 
 
@@ -124,6 +124,12 @@ ${OBJECTDIR}/systemTime.o: systemTime.c  .generated_files/flags/default/bfaba9b4
 	@${RM} ${OBJECTDIR}/systemTime.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/systemTime.o.d" -MT "${OBJECTDIR}/systemTime.o.d" -MT ${OBJECTDIR}/systemTime.o -o ${OBJECTDIR}/systemTime.o systemTime.c 
 	
+${OBJECTDIR}/bluetoothM.o: bluetoothM.c  .generated_files/flags/default/ed89682638b9acf7d0cf360433c681394626cadf .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/bluetoothM.o.d 
+	@${RM} ${OBJECTDIR}/bluetoothM.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/bluetoothM.o.d" -MT "${OBJECTDIR}/bluetoothM.o.d" -MT ${OBJECTDIR}/bluetoothM.o -o ${OBJECTDIR}/bluetoothM.o bluetoothM.c 
+	
 else
 ${OBJECTDIR}/peripherals/TWI/TWI_host.o: peripherals/TWI/TWI_host.c  .generated_files/flags/default/b05e765d133712cffcfe1f4d7d5348a43d940291 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/peripherals/TWI" 
@@ -160,6 +166,12 @@ ${OBJECTDIR}/systemTime.o: systemTime.c  .generated_files/flags/default/d3f1b616
 	@${RM} ${OBJECTDIR}/systemTime.o.d 
 	@${RM} ${OBJECTDIR}/systemTime.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/systemTime.o.d" -MT "${OBJECTDIR}/systemTime.o.d" -MT ${OBJECTDIR}/systemTime.o -o ${OBJECTDIR}/systemTime.o systemTime.c 
+	
+${OBJECTDIR}/bluetoothM.o: bluetoothM.c  .generated_files/flags/default/1292112a69022a795cb53ac73e1c083a2f10db20 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/bluetoothM.o.d 
+	@${RM} ${OBJECTDIR}/bluetoothM.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/bluetoothM.o.d" -MT "${OBJECTDIR}/bluetoothM.o.d" -MT ${OBJECTDIR}/bluetoothM.o -o ${OBJECTDIR}/bluetoothM.o bluetoothM.c 
 	
 endif
 
