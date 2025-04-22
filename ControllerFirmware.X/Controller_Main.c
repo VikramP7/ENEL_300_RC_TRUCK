@@ -92,6 +92,8 @@ int main(void) {
     LCDIntialize();
     
     //Boot Sequence
+    LCDWriteStr("Nigger!"); // DELETE BEFORE SUBMIT PLEASE
+    LCDClrScreen();
     LCDWriteStr("Didsbury Diddlers"); 
     LCDMoveCursor(0,1);
     LCDWriteStr("& Co. Est. 2006");
@@ -132,12 +134,10 @@ int main(void) {
 
     while (1) {
         if((PORTA.IN & PIN7_bm) == 0){
-             if(button_pressed == 0){
-                 button_pressed = 1;
-             }else if(button_pressed == 1){
-                 button_pressed = 0;
+            button_pressed = 1;
+        }else{
+            button_pressed = 0;
              }
-         }
         // Check if ADC result is ready.
         if (ADC0.INTFLAGS & 0b00000001) {
             // Check which channel is selected
