@@ -411,13 +411,13 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x5672
+.debug_info     0x0000000000000000     0x55c6
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000     0x3545 C:/Program Files/Microchip/xc8/v3.00/dfp/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
- .debug_info    0x0000000000003545      0x617 build/free/debug/peripherals/CLKCTRL/CLKCTRL.o
- .debug_info    0x0000000000003b5c      0x87a build/free/debug/peripherals/TWI/TWI_client.o
- .debug_info    0x00000000000043d6      0xe1c build/free/debug/Motor_Main.o
- .debug_info    0x00000000000051f2      0x480 build/free/debug/TWI_blockData.o
+ .debug_info    0x0000000000003545      0x5ec build/free/debug/peripherals/CLKCTRL/CLKCTRL.o
+ .debug_info    0x0000000000003b31      0x84f build/free/debug/peripherals/TWI/TWI_client.o
+ .debug_info    0x0000000000004380      0xdf1 build/free/debug/Motor_Main.o
+ .debug_info    0x0000000000005171      0x455 build/free/debug/TWI_blockData.o
 
 .debug_abbrev   0x0000000000000000     0x3644
  *(.debug_abbrev)

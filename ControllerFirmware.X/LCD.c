@@ -154,12 +154,11 @@ void LCDClrScreen(void){
 
 void LCDWriteChar(char chr){
     char high_nybble = chr >> 4;
-    char low_nybble = (chr << 4) >> 4;
+    char low_nybble = chr & 0x0F;
     
     LCDWrite(high_nybble,1,0,1);
     LCDWrite(low_nybble,1,0,1);
 }
-
 
 void LCDWriteInt(uint8_t num, uint8_t decimal){
     // create string buffer
@@ -196,4 +195,3 @@ void LCDMoveCursor(uint8_t x, uint8_t y){
         x--;
     }
 }
-

@@ -105,7 +105,7 @@ int main(void) {
     TWI_initPins();
     
     //Setup TWI Interface
-    TWI_initClient(0x22);
+    TWI_initClient(0x22); // Initialize client address as 0x22
     
     
     //Initialize Memory to 0x00

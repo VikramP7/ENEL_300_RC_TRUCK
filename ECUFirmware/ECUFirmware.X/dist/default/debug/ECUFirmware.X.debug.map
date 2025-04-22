@@ -54,7 +54,7 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/default/debug/buzzer.o
  .data          0x0000000000000000        0x0 build/default/debug/buzzer.o
  .bss           0x0000000000000000        0x0 build/default/debug/buzzer.o
- .debug_info    0x0000000000000000      0x298 build/default/debug/buzzer.o
+ .debug_info    0x0000000000000000      0x26d build/default/debug/buzzer.o
  .debug_abbrev  0x0000000000000000       0x1b build/default/debug/buzzer.o
  .debug_aranges
                 0x0000000000000000       0x18 build/default/debug/buzzer.o
@@ -67,9 +67,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/default/debug/systemTime.o
  .data          0x0000000000000000        0x0 build/default/debug/systemTime.o
  .bss           0x0000000000000000        0x0 build/default/debug/systemTime.o
- .text.SysCurrentTimeUS
-                0x0000000000000000       0x2a build/default/debug/systemTime.o
- .text.Wait     0x0000000000000000       0x3c build/default/debug/systemTime.o
  .bss.CURRENT_TIME
                 0x0000000000000000        0x2 build/default/debug/systemTime.o
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
@@ -465,7 +462,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x168
+.debug_aranges  0x0000000000000000      0x158
  *(.debug_aranges)
  .debug_aranges
                 0x0000000000000000       0x70 build/default/debug/peripherals/TWI/TWI_host.o
@@ -476,45 +473,45 @@ END GROUP
  .debug_aranges
                 0x0000000000000100       0x30 build/default/debug/leds.o
  .debug_aranges
-                0x0000000000000130       0x38 build/default/debug/systemTime.o
+                0x0000000000000130       0x28 build/default/debug/systemTime.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x541b
+.debug_info     0x0000000000000000     0x52e7
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000     0x272b C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
- .debug_info    0x000000000000272b      0xbf4 build/default/debug/peripherals/TWI/TWI_host.o
- .debug_info    0x000000000000331f      0x55c build/default/debug/ECU-main.o
- .debug_info    0x000000000000387b      0x8c2 build/default/debug/advanced_IO.o
- .debug_info    0x000000000000413d      0x5d5 build/default/debug/leds.o
- .debug_info    0x0000000000004712      0xd09 build/default/debug/systemTime.o
+ .debug_info    0x000000000000272b      0xbc9 build/default/debug/peripherals/TWI/TWI_host.o
+ .debug_info    0x00000000000032f4      0x531 build/default/debug/ECU-main.o
+ .debug_info    0x0000000000003825      0x897 build/default/debug/advanced_IO.o
+ .debug_info    0x00000000000040bc      0x5aa build/default/debug/leds.o
+ .debug_info    0x0000000000004666      0xc81 build/default/debug/systemTime.o
 
-.debug_abbrev   0x0000000000000000     0x2b3b
+.debug_abbrev   0x0000000000000000     0x2aeb
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000     0x2518 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
  .debug_abbrev  0x0000000000002518      0x191 build/default/debug/peripherals/TWI/TWI_host.o
  .debug_abbrev  0x00000000000026a9      0x104 build/default/debug/ECU-main.o
  .debug_abbrev  0x00000000000027ad      0x155 build/default/debug/advanced_IO.o
  .debug_abbrev  0x0000000000002902       0xe1 build/default/debug/leds.o
- .debug_abbrev  0x00000000000029e3      0x158 build/default/debug/systemTime.o
+ .debug_abbrev  0x00000000000029e3      0x108 build/default/debug/systemTime.o
 
-.debug_line     0x0000000000000000      0xce8
+.debug_line     0x0000000000000000      0xc9e
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x1ce C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
  .debug_line    0x00000000000001ce      0x3e9 build/default/debug/peripherals/TWI/TWI_host.o
  .debug_line    0x00000000000005b7      0x141 build/default/debug/ECU-main.o
  .debug_line    0x00000000000006f8      0x277 build/default/debug/advanced_IO.o
  .debug_line    0x000000000000096f      0x1fc build/default/debug/leds.o
- .debug_line    0x0000000000000b6b      0x17d build/default/debug/systemTime.o
+ .debug_line    0x0000000000000b6b      0x133 build/default/debug/systemTime.o
 
-.debug_frame    0x0000000000000000      0x300
+.debug_frame    0x0000000000000000      0x2e0
  *(.debug_frame)
  .debug_frame   0x0000000000000000      0x12c build/default/debug/peripherals/TWI/TWI_host.o
  .debug_frame   0x000000000000012c       0x34 build/default/debug/ECU-main.o
  .debug_frame   0x0000000000000160      0x108 build/default/debug/advanced_IO.o
  .debug_frame   0x0000000000000268       0x44 build/default/debug/leds.o
- .debug_frame   0x00000000000002ac       0x54 build/default/debug/systemTime.o
+ .debug_frame   0x00000000000002ac       0x34 build/default/debug/systemTime.o
 
 .debug_str      0x0000000000000000     0x123e
  *(.debug_str)
@@ -525,13 +522,12 @@ END GROUP
  .debug_str     0x00000000000011d5        0xc build/default/debug/leds.o
  .debug_str     0x00000000000011e1       0x5d build/default/debug/systemTime.o
 
-.debug_loc      0x0000000000000000      0x919
+.debug_loc      0x0000000000000000      0x8db
  *(.debug_loc)
  .debug_loc     0x0000000000000000      0x496 build/default/debug/peripherals/TWI/TWI_host.o
  .debug_loc     0x0000000000000496       0x4c build/default/debug/ECU-main.o
  .debug_loc     0x00000000000004e2      0x259 build/default/debug/advanced_IO.o
  .debug_loc     0x000000000000073b      0x1a0 build/default/debug/leds.o
- .debug_loc     0x00000000000008db       0x3e build/default/debug/systemTime.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -551,13 +547,13 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000      0x118
+.debug_ranges   0x0000000000000000      0x108
  *(.debug_ranges)
  .debug_ranges  0x0000000000000000       0x60 build/default/debug/peripherals/TWI/TWI_host.o
  .debug_ranges  0x0000000000000060       0x10 build/default/debug/ECU-main.o
  .debug_ranges  0x0000000000000070       0x60 build/default/debug/advanced_IO.o
  .debug_ranges  0x00000000000000d0       0x20 build/default/debug/leds.o
- .debug_ranges  0x00000000000000f0       0x28 build/default/debug/systemTime.o
+ .debug_ranges  0x00000000000000f0       0x18 build/default/debug/systemTime.o
 
 .debug_macro
  *(.debug_macro)

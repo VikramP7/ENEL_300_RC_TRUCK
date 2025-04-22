@@ -27,7 +27,6 @@
 void RadioLoop();
 void I2CLoop();
 
-
 /*------- Function Declarations -----*/
 
 int main(void) {
@@ -40,6 +39,7 @@ int main(void) {
     LedOn(LED_DEBUG_RED); // turn on red while initializing
     
     /* PWM audio initialization */
+    // Nothing going on here rn
     
     /* I2C */
     //Init the IO Expander
@@ -48,6 +48,8 @@ int main(void) {
     // enable global interupts after initialization is done
     sei();
     /* Driver Initialization */
+    
+    // R.I.P Radio SPI. 50 hours wasted
     /* Radio SPI initialization */
     //RadioInitialization();
     
@@ -78,8 +80,6 @@ int main(void) {
         metalDetected = byte2 & 0x01;
         
         /* -------- Bluetooth Comms ------------*/
-        
-        
         
         if(heartBeatOn){
             LedOff(LED_DEBUG_RED);

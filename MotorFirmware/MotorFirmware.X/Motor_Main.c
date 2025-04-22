@@ -46,8 +46,6 @@ LOCKBITS = 0x5CC5C55C; // {KEY=NOLOCK}
 //    while (CLKCTRL.MCLKSTATUS & 0b00000001); // Wait for clock switch to complete
 //}
 
-// Lowkey might need to readdress the pin setup, I have to fucking clue what
-// the library is doing rn.
 
 // === PIN SETUP ===
 void setup_pins() {
@@ -121,7 +119,7 @@ int main(void) {
     TWI_initPins();
     
     //Setup TWI Interface
-    TWI_initClient(0x11);
+    TWI_initClient(0x11); // Initialize client address as 0x11
     
     //Data to R/W to. (Must be volatile)
     volatile uint8_t data[DATA_SIZE];

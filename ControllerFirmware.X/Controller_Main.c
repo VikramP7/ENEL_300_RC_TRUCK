@@ -90,9 +90,15 @@ uint8_t adc_to_signmag_custom(uint16_t adc_val) {
  
 int main(void) {
     LCDIntialize();
-    LCDWriteStr("Nigger"); // Test boot code
+    
+    //Boot Sequence
+    LCDWriteStr("Didsbury Diddlers"); 
+    LCDMoveCursor(0,1);
+    LCDWriteStr("& Co. Est. 2006");
+    
     setup_clock();
     USART_Init();
+    
     // Enable global interrupts.
     SREG = 0b10000000;
 
@@ -120,6 +126,9 @@ int main(void) {
     PORTA.DIRCLR = PIN7_bm;
      
     PORTA.PIN7CTRL = PORT_PULLUPEN_bm;
+    
+    LCDClrScreen();
+    LCDWriteStr("Distance: ");
 
     while (1) {
         if((PORTA.IN & PIN7_bm) == 0){
@@ -148,16 +157,15 @@ int main(void) {
             tx_buffer[1] = 0b00000000 | result_right;
             tx_buffer[2] = 0b00000000 | button_pressed;
             
-            // Receive and Write Data LCD (Assuming that the metal detection data appears in the LSB)
+            // Receive and Write LCD Data (Assuming that the metal detection data appears in the LSB)
             rx_buffer = USART_Receive();
             
             if(last_rx != rx_buffer) {
-                LCDClrScreen();
-                LCDWriteStr("Distance: ");
+                LCDMoveCursor(10,0);
                 LCDWriteInt(rx_buffer >> 1, 2); // Write to the LCD. This will have to be formatted on the ECU side.
                 LCDMoveCursor(0,1);
                 if(rx_buffer << 7)
-                    LCDWriteStr("Metal");
+                    LCDWriteStr("Metal   "); // Extra spacing so we don't need to clear.
                 else
                     LCDWriteStr("No Metal");
                 last_rx = rx_buffer;
