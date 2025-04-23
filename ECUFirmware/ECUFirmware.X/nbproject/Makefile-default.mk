@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=peripherals/TWI/TWI_host.c ECU-main.c advanced_IO.c buzzer.c leds.c systemTime.c bluetoothM.c
+SOURCEFILES_QUOTED_IF_SPACED=peripherals/TWI/TWI_host.c ECU-main.c advanced_IO.c leds.c systemTime.c bluetoothM.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/peripherals/TWI/TWI_host.o ${OBJECTDIR}/ECU-main.o ${OBJECTDIR}/advanced_IO.o ${OBJECTDIR}/buzzer.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/systemTime.o ${OBJECTDIR}/bluetoothM.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/peripherals/TWI/TWI_host.o.d ${OBJECTDIR}/ECU-main.o.d ${OBJECTDIR}/advanced_IO.o.d ${OBJECTDIR}/buzzer.o.d ${OBJECTDIR}/leds.o.d ${OBJECTDIR}/systemTime.o.d ${OBJECTDIR}/bluetoothM.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/peripherals/TWI/TWI_host.o ${OBJECTDIR}/ECU-main.o ${OBJECTDIR}/advanced_IO.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/systemTime.o ${OBJECTDIR}/bluetoothM.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/peripherals/TWI/TWI_host.o.d ${OBJECTDIR}/ECU-main.o.d ${OBJECTDIR}/advanced_IO.o.d ${OBJECTDIR}/leds.o.d ${OBJECTDIR}/systemTime.o.d ${OBJECTDIR}/bluetoothM.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/peripherals/TWI/TWI_host.o ${OBJECTDIR}/ECU-main.o ${OBJECTDIR}/advanced_IO.o ${OBJECTDIR}/buzzer.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/systemTime.o ${OBJECTDIR}/bluetoothM.o
+OBJECTFILES=${OBJECTDIR}/peripherals/TWI/TWI_host.o ${OBJECTDIR}/ECU-main.o ${OBJECTDIR}/advanced_IO.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/systemTime.o ${OBJECTDIR}/bluetoothM.o
 
 # Source Files
-SOURCEFILES=peripherals/TWI/TWI_host.c ECU-main.c advanced_IO.c buzzer.c leds.c systemTime.c bluetoothM.c
+SOURCEFILES=peripherals/TWI/TWI_host.c ECU-main.c advanced_IO.c leds.c systemTime.c bluetoothM.c
 
 
 
@@ -88,37 +88,31 @@ MP_PROCESSOR_OPTION=AVR128DB28
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/peripherals/TWI/TWI_host.o: peripherals/TWI/TWI_host.c  .generated_files/flags/default/8bd885bfd8730ce31cee9230201b93b98612b298 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/peripherals/TWI/TWI_host.o: peripherals/TWI/TWI_host.c  .generated_files/flags/default/d4d4c69dcb716d2adf64ca30248ff588984e2639 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/peripherals/TWI" 
 	@${RM} ${OBJECTDIR}/peripherals/TWI/TWI_host.o.d 
 	@${RM} ${OBJECTDIR}/peripherals/TWI/TWI_host.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/peripherals/TWI/TWI_host.o.d" -MT "${OBJECTDIR}/peripherals/TWI/TWI_host.o.d" -MT ${OBJECTDIR}/peripherals/TWI/TWI_host.o -o ${OBJECTDIR}/peripherals/TWI/TWI_host.o peripherals/TWI/TWI_host.c 
 	
-${OBJECTDIR}/ECU-main.o: ECU-main.c  .generated_files/flags/default/86ca92acce5190d34ac97ba648e3ccf60681140f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/ECU-main.o: ECU-main.c  .generated_files/flags/default/35689976220eed7c54ba8e991362e6ffcac0d8b3 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/ECU-main.o.d 
 	@${RM} ${OBJECTDIR}/ECU-main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/ECU-main.o.d" -MT "${OBJECTDIR}/ECU-main.o.d" -MT ${OBJECTDIR}/ECU-main.o -o ${OBJECTDIR}/ECU-main.o ECU-main.c 
 	
-${OBJECTDIR}/advanced_IO.o: advanced_IO.c  .generated_files/flags/default/6ed2a981aa33d21795699cba63a3fc81600458bc .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/advanced_IO.o: advanced_IO.c  .generated_files/flags/default/e98e6b4b872e95a9fa9d787f6ef2caa74a6f728a .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/advanced_IO.o.d 
 	@${RM} ${OBJECTDIR}/advanced_IO.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/advanced_IO.o.d" -MT "${OBJECTDIR}/advanced_IO.o.d" -MT ${OBJECTDIR}/advanced_IO.o -o ${OBJECTDIR}/advanced_IO.o advanced_IO.c 
 	
-${OBJECTDIR}/buzzer.o: buzzer.c  .generated_files/flags/default/ef7a82a99516c5e997887ade96ae1d2e0ce345f9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/buzzer.o.d 
-	@${RM} ${OBJECTDIR}/buzzer.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/buzzer.o.d" -MT "${OBJECTDIR}/buzzer.o.d" -MT ${OBJECTDIR}/buzzer.o -o ${OBJECTDIR}/buzzer.o buzzer.c 
-	
-${OBJECTDIR}/leds.o: leds.c  .generated_files/flags/default/863fc182b02e68a40e510eed34b0055a3b6f5fd9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/leds.o: leds.c  .generated_files/flags/default/c650f206b978280730f079b88047698143345695 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/leds.o.d 
 	@${RM} ${OBJECTDIR}/leds.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/leds.o.d" -MT "${OBJECTDIR}/leds.o.d" -MT ${OBJECTDIR}/leds.o -o ${OBJECTDIR}/leds.o leds.c 
 	
-${OBJECTDIR}/systemTime.o: systemTime.c  .generated_files/flags/default/3256ca56e61eeb1164fcf6bc27af93daee42018d .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/systemTime.o: systemTime.c  .generated_files/flags/default/bfaba9b48a7935f568527f939c66f6ead5796ad8 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/systemTime.o.d 
 	@${RM} ${OBJECTDIR}/systemTime.o 
@@ -131,37 +125,31 @@ ${OBJECTDIR}/bluetoothM.o: bluetoothM.c  .generated_files/flags/default/7e9afeab
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/bluetoothM.o.d" -MT "${OBJECTDIR}/bluetoothM.o.d" -MT ${OBJECTDIR}/bluetoothM.o -o ${OBJECTDIR}/bluetoothM.o bluetoothM.c 
 	
 else
-${OBJECTDIR}/peripherals/TWI/TWI_host.o: peripherals/TWI/TWI_host.c  .generated_files/flags/default/60642728b5ac2c1c16f7406b4d0f27e2d5d9f0d1 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/peripherals/TWI/TWI_host.o: peripherals/TWI/TWI_host.c  .generated_files/flags/default/b05e765d133712cffcfe1f4d7d5348a43d940291 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/peripherals/TWI" 
 	@${RM} ${OBJECTDIR}/peripherals/TWI/TWI_host.o.d 
 	@${RM} ${OBJECTDIR}/peripherals/TWI/TWI_host.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/peripherals/TWI/TWI_host.o.d" -MT "${OBJECTDIR}/peripherals/TWI/TWI_host.o.d" -MT ${OBJECTDIR}/peripherals/TWI/TWI_host.o -o ${OBJECTDIR}/peripherals/TWI/TWI_host.o peripherals/TWI/TWI_host.c 
 	
-${OBJECTDIR}/ECU-main.o: ECU-main.c  .generated_files/flags/default/569c94a832028b418fb421b41281f0cdbf469919 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/ECU-main.o: ECU-main.c  .generated_files/flags/default/6c25cc7ac32217686fe35b0bd05353f21698baee .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/ECU-main.o.d 
 	@${RM} ${OBJECTDIR}/ECU-main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/ECU-main.o.d" -MT "${OBJECTDIR}/ECU-main.o.d" -MT ${OBJECTDIR}/ECU-main.o -o ${OBJECTDIR}/ECU-main.o ECU-main.c 
 	
-${OBJECTDIR}/advanced_IO.o: advanced_IO.c  .generated_files/flags/default/bd108d7eb306e5ecd34256d0f6acd6558d9297ee .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/advanced_IO.o: advanced_IO.c  .generated_files/flags/default/fc4f5494f1a7a46e5f5f163c7fb5246aabbf8b90 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/advanced_IO.o.d 
 	@${RM} ${OBJECTDIR}/advanced_IO.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/advanced_IO.o.d" -MT "${OBJECTDIR}/advanced_IO.o.d" -MT ${OBJECTDIR}/advanced_IO.o -o ${OBJECTDIR}/advanced_IO.o advanced_IO.c 
 	
-${OBJECTDIR}/buzzer.o: buzzer.c  .generated_files/flags/default/d6255d93b5d093223267c2874f72e9e535eb88ce .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/buzzer.o.d 
-	@${RM} ${OBJECTDIR}/buzzer.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/buzzer.o.d" -MT "${OBJECTDIR}/buzzer.o.d" -MT ${OBJECTDIR}/buzzer.o -o ${OBJECTDIR}/buzzer.o buzzer.c 
-	
-${OBJECTDIR}/leds.o: leds.c  .generated_files/flags/default/2f6e7d6ecd96213cf4f09e4f613ea6c2af99ab4f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/leds.o: leds.c  .generated_files/flags/default/a7ea214fcb0eaa0a04c68736cdf8a2fc4ad8cf37 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/leds.o.d 
 	@${RM} ${OBJECTDIR}/leds.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/leds.o.d" -MT "${OBJECTDIR}/leds.o.d" -MT ${OBJECTDIR}/leds.o -o ${OBJECTDIR}/leds.o leds.c 
 	
-${OBJECTDIR}/systemTime.o: systemTime.c  .generated_files/flags/default/6a45c1df5bf04aab6ee2cbebd43f42e5c20ceee9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/systemTime.o: systemTime.c  .generated_files/flags/default/d3f1b6160787e0f86eacddf5e641cf724352d222 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/systemTime.o.d 
 	@${RM} ${OBJECTDIR}/systemTime.o 
