@@ -94,8 +94,6 @@ int main(void) {
     USART_Init();
     
         //Boot Sequence
-    LCDWriteStr("Nigger!"); // DELETE BEFORE SUBMIT 
-    _delay_ms(100);
     LCDClrScreen();
     for(int i = 0; i < 100; i++ ) _delay_ms(100);
     LCDWriteStr("Didsbury Diddlers");

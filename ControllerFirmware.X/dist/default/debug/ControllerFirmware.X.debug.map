@@ -537,11 +537,11 @@ END GROUP
  .debug_abbrev  0x0000000000002518      0x19e build/default/debug/LCD.o
  .debug_abbrev  0x00000000000026b6      0x292 build/default/debug/Controller_Main.o
 
-.debug_line     0x0000000000000000      0x919
+.debug_line     0x0000000000000000      0x923
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x1ce C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
  .debug_line    0x00000000000001ce      0x36e build/default/debug/LCD.o
- .debug_line    0x000000000000053c      0x3dd build/default/debug/Controller_Main.o
+ .debug_line    0x000000000000053c      0x3e7 build/default/debug/Controller_Main.o
 
 .debug_frame    0x0000000000000000      0x150
  *(.debug_frame)
