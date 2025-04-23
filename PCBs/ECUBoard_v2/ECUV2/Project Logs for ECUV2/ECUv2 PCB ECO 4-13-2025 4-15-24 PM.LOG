@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=NetPMOS1_1 Pin=SW2-1
+Removed Pin From Net: NetName=NetPMOS2_1 Pin=SW2-4
+Added Pin To Net: NetName=NetPMOS2_1 Pin=SW2-1
+Added Pin To Net: NetName=NetPMOS1_1 Pin=SW2-4

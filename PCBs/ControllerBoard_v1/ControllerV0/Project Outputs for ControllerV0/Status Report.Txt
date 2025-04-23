@@ -1,0 +1,30 @@
+Output: Gerber X2 Files
+Type  : GerberX2
+From  : Variant [[No Variations]] of Project [ControllerV0.PrjPcb]
+   Generated File[ControllerV0_Copper_Signal_Top.gbr]
+   Generated File[ControllerV0_Copper_Signal_Bot.gbr]
+   Generated File[ControllerV0_Pads_Bot.gbr]
+   Generated File[ControllerV0_Pads_Top.gbr]
+   Generated File[ControllerV0_Legend_Top.gbr]
+   Generated File[ControllerV0_Legend_Bot.gbr]
+   Generated File[ControllerV0_Soldermask_Top.gbr]
+   Generated File[ControllerV0_Soldermask_Bot.gbr]
+   Generated File[ControllerV0_Paste_Top.gbr]
+   Generated File[ControllerV0_Paste_Bot.gbr]
+   Generated File[ControllerV0_Keep-out.gbr]
+   Generated File[ControllerV0_Mechanical_1.gbr]
+   Generated File[ControllerV0_Mechanical_13.gbr]
+   Generated File[ControllerV0_Mechanical_15.gbr]
+   Generated File[ControllerV0_Profile.gbr]
+   Generated File[ControllerV0_NPTH_Drill.gbr]
+   Generated File[ControllerV0_PTH_Drill.gbr]
+   Generated File[ControllerV0_Drawing_1.gbr]
+   Generated File[ControllerV0_Drillmap_1.gbr]
+   Generated File[ControllerV0.EXTREP]
+   Generated File[ControllerV0.REP]
+
+
+Files Generated   : 21
+Documents Printed : 0
+
+Finished Output Generation At 8:27:39 AM On 4/15/2025

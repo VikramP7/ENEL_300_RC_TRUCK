@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=5V Pin=R2-1
+Removed Member From Class: ClassName=ControllerV0 Member=R2
+Added Pin To Net: NetName=NetD1_A Pin=D2-A
+Added Member To Class: ClassName=ControllerV0 Member=Component J1 head2.54
+Added Member To Class: ClassName=ControllerV0 Member=Component J3 2.54mm
+Added Member To Class: ClassName=ControllerV0 Member=Component J6 head2.54
+Added Member To Class: ClassName=ControllerV0 Member=Component J9 2.54mm
+Added Member To Class: ClassName=ControllerV0 Member=Component J13 2.54mm
+Added Member To Class: ClassName=ControllerV0 Member=Component J15 2.54mm
+Added Member To Class: ClassName=ControllerV0 Member=Component J17 2.54mm

@@ -1,0 +1,30 @@
+Output: Gerber X2 Files
+Type  : GerberX2
+From  : Variant [[No Variations]] of Project [ECUV2.PrjPcb]
+   Generated File[ECUv2_Copper_Signal_Top.gbr]
+   Generated File[ECUv2_Copper_Signal_Bot.gbr]
+   Generated File[ECUv2_Pads_Bot.gbr]
+   Generated File[ECUv2_Pads_Top.gbr]
+   Generated File[ECUv2_Legend_Top.gbr]
+   Generated File[ECUv2_Legend_Bot.gbr]
+   Generated File[ECUv2_Soldermask_Top.gbr]
+   Generated File[ECUv2_Soldermask_Bot.gbr]
+   Generated File[ECUv2_Paste_Top.gbr]
+   Generated File[ECUv2_Paste_Bot.gbr]
+   Generated File[ECUv2_Keep-out.gbr]
+   Generated File[ECUv2_Mechanical_1.gbr]
+   Generated File[ECUv2_Mechanical_13.gbr]
+   Generated File[ECUv2_Mechanical_15.gbr]
+   Generated File[ECUv2_Profile.gbr]
+   Generated File[ECUv2_NPTH_Drill.gbr]
+   Generated File[ECUv2_PTH_Drill.gbr]
+   Generated File[ECUv2_Drawing_1.gbr]
+   Generated File[ECUv2_Drillmap_1.gbr]
+   Generated File[ECUv2.EXTREP]
+   Generated File[ECUv2.REP]
+
+
+Files Generated   : 21
+Documents Printed : 0
+
+Finished Output Generation At 7:15:24 PM On 4/14/2025

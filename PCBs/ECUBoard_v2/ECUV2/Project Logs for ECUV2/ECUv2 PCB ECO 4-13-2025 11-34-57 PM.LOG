@@ -1,0 +1,30 @@
+Removed Pin From Net: NetName=GND Pin=J9-11
+Removed Pin From Net: NetName=GND Pin=J9-12
+Removed Pin From Net: NetName=GND Pin=J9-13
+Removed Pin From Net: NetName=GND Pin=J9-14
+Removed Pin From Net: NetName=GND Pin=J9-15
+Removed Pin From Net: NetName=GND Pin=J9-16
+Removed Pin From Net: NetName=GND Pin=J9-17
+Removed Pin From Net: NetName=GND Pin=J9-18
+Change Component Designator: OldDesignator=3V NewDesignator=TP8
+Change Component Designator: OldDesignator=5V NewDesignator=TP5
+Change Component Designator: OldDesignator=BAT NewDesignator=TP2
+Change Component Designator: OldDesignator=BUZZER NewDesignator=TP15
+Change Component Designator: OldDesignator=CE NewDesignator=TP7
+Change Component Designator: OldDesignator=CSN NewDesignator=TP14
+Change Component Designator: OldDesignator=GND NewDesignator=TP3
+Change Component Designator: OldDesignator=GND NewDesignator=TP6
+Change Component Designator: OldDesignator=GND NewDesignator=TP9
+Change Component Designator: OldDesignator=IRQ NewDesignator=TP10
+Change Component Designator: OldDesignator=MISO NewDesignator=TP1
+Change Component Designator: OldDesignator=MOSI NewDesignator=TP12
+Change Component Designator: OldDesignator=SCK NewDesignator=TP4
+Change Component Designator: OldDesignator=SCL NewDesignator=TP13
+Change Component Designator: OldDesignator=SDA NewDesignator=TP11
+Added Member To Class: ClassName=ECUv2 Member=Component C6 0.1uF
+Added Member To Class: ClassName=ECUv2 Member=Component C8 47uF
+Added Member To Class: ClassName=ECUv2 Member=Component C10 4.7uF
+Added Member To Class: ClassName=ECUv2 Member=Component C12 1uF
+Added Member To Class: ClassName=ECUv2 Member=Component C13 1uF
+Added Member To Class: ClassName=ECUv2 Member=Component TP6 TP
+Added Member To Class: ClassName=ECUv2 Member=Component TP9 TP
