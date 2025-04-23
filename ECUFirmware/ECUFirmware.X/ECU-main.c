@@ -115,8 +115,8 @@ int main(void) {
         uint8_t byte2 = 0x00;
         TWI_readByte(SENSOR_BOARD_ADDR, &byte1);
         TWI_readByte(SENSOR_BOARD_ADDR, &byte2);
-        distanceMeasured = byte1;//((byte2 << 7) + byte1);
-        metalDetected = byte1 ? 0x01:0x00;
+        distanceMeasured = byte2;//((byte2 << 7) + byte1);
+        metalDetected = (byte1 & 0x01) ? 0x01:0x00;
         
         
         
