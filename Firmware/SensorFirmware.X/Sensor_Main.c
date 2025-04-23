@@ -33,19 +33,19 @@ float distance_final = 0.0;
 volatile uint8_t data[DATA_SIZE];
 
 void SensorInitialization(){
-    PORTA.DIRSET = 0b00000011;   //PA0 set as output
+    PORTA.DIRSET = 0b00000011;   //PA0 and PA1 set as output
     TCA0.SINGLE.CTRLA = (0x01)<<3 | 0x01;//divide by 16 and enable clk
     TCA0.SINGLE.CTRLB = 0x03;   //single slope PWM
     TCA0.SINGLE.CTRLB |= 0x01 << 4; //PA0 enabled
-    TCA0.SINGLE.PER = 31249;
-    TCA0.SINGLE.CMP0 = 6; //set to very low trigg duty cycle
-    EVSYS.CHANNEL0 = 0x45;    //PORTA pin PA5
+    TCA0.SINGLE.PER = 31249; //value calculated to produce trigger pulse
+    TCA0.SINGLE.CMP0 = 6; //set to very low duty for trigger pulse
+    EVSYS.CHANNEL0 = 0x45;    //PORTA pin PA5 as echo input
     EVSYS.USERTCB2CAPT = 0x01;  //Choose channel 0
     TCB2.INTCTRL = 0x01; //Capture interupt enable
     TCB2.EVCTRL = 0x01; //enable input capture event
     TCB2.CTRLB = 0x04; //PWM measurement mode
     TCB2.CTRLA = 0x01; //TCB enable
-    EVSYS.CHANNEL1 = 0x46;    //PORTA pin PA6
+    EVSYS.CHANNEL1 = 0x46;    //PORTA pin PA6 for metal detector
     EVSYS.USERTCB1CAPT = 0x02;  //Choose channel 1
     TCB1.INTCTRL = 0x01; //Capture interupt enable
     TCB1.EVCTRL = 0x01; //enable input capture event
@@ -57,16 +57,13 @@ void SensorInitialization(){
 ISR(TCB2_INT_vect){
     TCB2.INTFLAGS = 0x01; //clears flag
     TCA0.SINGLE.CMP0 = 6;
-    //distance = TCB2.CCMP;
-    //distance_final = ((distance * 0.000000125)*(340))/2; //gives distance in m
-    //distance_final = 17 * distance / 5^5 >> 8
     value_u[count_u] = TCB2.CCMP;
     count_u++;
-    count_u %= VALUE_U_SIZE;
+    count_u %= VALUE_U_SIZE; // used later to average TCB.CCMP for distance measuring
     long averageDist = 0;
     //RMS might be appropriate for emphasizing the larger values.
     for (int i = 0; i < VALUE_U_SIZE; i++){
-       averageDist += value_u[i];
+       averageDist += value_u[i]; //averages TCB.CCMP for distance measuring
     }
     averageDist = averageDist >> 3;
     data[0] = (averageDist & 0xFE) | (data[0] & 0b00000001);
@@ -76,11 +73,11 @@ ISR(TCB2_INT_vect){
 ISR(TCB1_INT_vect){
     TCB1.INTFLAGS = 0x01; //clears flag
     value[count] = TCB1.CCMP;
-    if(value[count] < 200){
+    if(value[count] < 200){ 
         tally++;
     }
     count++;
-    if(count >= 5){
+    if(count >= 5){ //if five consecutive values read metal, detect the metal.
         if(tally == 5){
             PORTA.OUT = 0b00000010; 
             data[0] |= 0x01;
