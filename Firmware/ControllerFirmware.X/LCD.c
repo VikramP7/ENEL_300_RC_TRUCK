@@ -20,6 +20,8 @@
  *   29.2, 29.3.1, 29.3.2.1, 29.3.2.2.1 and the entries in 29.4 and 29.5
  *   that explain the SFRs I use below.
  */
+ 
+ /* This code was adapted from original code by Geoff Messier*/
 void I2CWrite(uint8_t address, uint8_t data) {
 
   // Set secondary device address and trigger the bus start condition.
@@ -58,6 +60,8 @@ void I2CWrite(uint8_t address, uint8_t data) {
  *   5.2 to get an idea of some LCD commands and section 6.5.6 to see the
  *   timing requirements for the LCD lines.
  */
+ 
+ /* This code was adapted from original code by Geoff Messier*/
 void LCDWrite(uint8_t nibble, uint8_t rs, uint8_t rw, uint8_t ledOn){
   
   // Prepare the 8 bits that will be sent over I2C.  The wiring diagram on
@@ -79,6 +83,8 @@ void LCDWrite(uint8_t nibble, uint8_t rs, uint8_t rw, uint8_t ledOn){
   
 }
 
+
+/* This code was adapted from original code by Geoff Messier*/
 void LCDIntialize(void){
      
   // -- Initialization --
