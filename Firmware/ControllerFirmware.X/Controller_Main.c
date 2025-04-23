@@ -183,5 +183,5 @@ int main(void) {
                 USART_Transmit(tx_buffer[i]);
                 }
         }
-        }
-    }
+	}
+}
