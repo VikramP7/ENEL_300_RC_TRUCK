@@ -35,13 +35,16 @@ void SuperLoopSleep(){
     TCA0.SINGLE.CNT = 0;
 }
 
-unsigned long SysCurrentTimeUS(){
-    return 1+((11*TCA0.SINGLE.CNT) >> 4);
-}
+// We never use this so its commented out for now.
+// R.I.P our beautiful time approximations.
 
-void Wait(int us){
-    // evil bit trickery, this 1+(11/16)cnt is an approximation for 0.66667cnt
-    // (3/2) = 3*us >> 2 to convert from us to cnt
-    int start = TCA0.SINGLE.CNT;
-    while(start + ((8*us) >> 5) >= TCA0.SINGLE.CNT);
-}
+//unsigned long SysCurrentTimeUS(){
+//    return 1+((11*TCA0.SINGLE.CNT) >> 4);
+//}
+//
+//void Wait(int us){
+//    // evil bit trickery, this 1+(11/16)cnt is an approximation for 0.66667cnt
+//    // (3/2) = 3*us >> 2 to convert from us to cnt
+//    int start = TCA0.SINGLE.CNT;
+//    while(start + ((8*us) >> 5) >= TCA0.SINGLE.CNT);
+//}

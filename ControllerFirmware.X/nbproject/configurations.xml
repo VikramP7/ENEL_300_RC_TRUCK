@@ -17,10 +17,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>Controller_BT.c</itemPath>
-      <itemPath>controller.c</itemPath>
       <itemPath>LCD.h</itemPath>
       <itemPath>LCD.c</itemPath>
+      <itemPath>Controller_Main.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -69,8 +68,6 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item path="Controller_BT.c" ex="true" overriding="false">
-      </item>
       <HI-TECH-COMP>
         <property key="additional-warnings" value="true"/>
         <property key="asmlist" value="true"/>
@@ -681,6 +678,8 @@
         <property key="periphComp4.gte" value="gt"/>
         <property key="periphComp5.gte" value="gt"/>
         <property key="periphComp6.gte" value="gt"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/caleb/Documents/EiE GitHub/ENEL300_RC_CAR/ControllerFirmware.X/debug/default/ControllerFirmware_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
@@ -1164,8 +1163,6 @@
         <property key="user-pack-device-support" value=""/>
         <property key="wpo-lto" value="false"/>
       </XC8-config-global>
-      <item path="controller.c" ex="true" overriding="false">
-      </item>
       <snap>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="ToolFirmwareFilePath"
@@ -1199,8 +1196,6 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-ffff"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/Users/caleb/Documents/EiE GitHub/ENEL300_RC_CAR/ControllerFirmware.X/debug/default/ControllerFirmware_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

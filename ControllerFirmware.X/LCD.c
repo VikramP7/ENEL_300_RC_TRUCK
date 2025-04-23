@@ -127,7 +127,7 @@ void LCDIntialize(void){
   
   // Display on, cursor on, cursor flash off.
   LCDWrite(0b0000,0,0,1);
-  LCDWrite(0b1110,0,0,1);
+  LCDWrite(0b1100,0,0,1);
   
   // Cursor increment when write on, display shift off.
   LCDWrite(0b0000,0,0,1);
@@ -154,12 +154,11 @@ void LCDClrScreen(void){
 
 void LCDWriteChar(char chr){
     char high_nybble = chr >> 4;
-    char low_nybble = (chr << 4) >> 4;
+    char low_nybble = chr & 0x0F;
     
     LCDWrite(high_nybble,1,0,1);
     LCDWrite(low_nybble,1,0,1);
 }
-
 
 void LCDWriteInt(uint8_t num, uint8_t decimal){
     // create string buffer
@@ -175,13 +174,19 @@ void LCDWriteInt(uint8_t num, uint8_t decimal){
     // print chars and place decimal place if necessary
     uint8_t leadingZeros = 1;
     for(i = 0; i < 3;i++){
+        if(buffer[i] == 0){
+            LCDWriteChar(' ');
+        }
+        else{
+            LCDWriteChar(buffer[i]);
+        }
+        /*
         leadingZeros = (leadingZeros && !buffer[i]) ? 1 : 0;
         if(leadingZeros == 0){
              if(i == decimal){
                 LCDWriteChar('.');
             }
-            LCDWriteChar(buffer[i]);
-        }
+        }*/
     }
 }
 
@@ -196,19 +201,3 @@ void LCDMoveCursor(uint8_t x, uint8_t y){
         x--;
     }
 }
-
-int main(void) {
-
-    LCDIntialize();
-    //LCDWriteStr("Maundiddler");
-    LCDMoveCursor(2, 1);
-    LCDWriteInt(128,-1);
-    
-  // Main loop
-  while (1) {
-    ;
-  }
-
-  return 0;
-}
-

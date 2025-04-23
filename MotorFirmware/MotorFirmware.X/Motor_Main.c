@@ -14,9 +14,19 @@
 #include "peripherals/TWI/TWI_client.h"
 #include "TWI_blockData.h"
 
-#define DATA_SIZE 16
+FUSES = {
+	.WDTCFG = 0x00, // WDTCFG {PERIOD=OFF, WINDOW=OFF}
+	.BODCFG = 0x06, // BODCFG {SLEEP=SAMPLE, ACTIVE=ENABLE, SAMPFREQ=128Hz, LVL=BODLEVEL0}
+	.OSCCFG = 0x00, // OSCCFG {CLKSEL=OSCHF}
+	.SYSCFG0 = 0xC8, // SYSCFG0 {EESAVE=CLEAR, RSTPINCFG=RST, CRCSEL=CRC16, CRCSRC=NOCRC}
+	.SYSCFG1 = 0x0C, // SYSCFG1 {SUT=8MS, MVSYSCFG=DUAL}
+	.CODESIZE = 0x00, // CODESIZE {CODESIZE=User range:  0x0 - 0xFF}
+	.BOOTSIZE = 0x00, // BOOTSIZE {BOOTSIZE=User range:  0x0 - 0xFF}
+};
 
-#define AVERAGE_SIZE 4
+LOCKBITS = 0x5CC5C55C; // {KEY=NOLOCK}
+
+#define DATA_SIZE 16
 
 #define RIGHT 1
 #define LEFT 0
@@ -36,8 +46,6 @@
 //    while (CLKCTRL.MCLKSTATUS & 0b00000001); // Wait for clock switch to complete
 //}
 
-// Lowkey might need to readdress the pin setup, I have to fucking clue what
-// the library is doing rn.
 
 // === PIN SETUP ===
 void setup_pins() {
@@ -111,7 +119,7 @@ int main(void) {
     TWI_initPins();
     
     //Setup TWI Interface
-    TWI_initClient(0x11);
+    TWI_initClient(0x11); // Initialize client address as 0x11
     
     //Data to R/W to. (Must be volatile)
     volatile uint8_t data[DATA_SIZE];
@@ -143,37 +151,9 @@ int main(void) {
     
     // Responsible for motor control from ECU I2C data. Sending left then right
     // motor data.
-    static uint8_t rightAve[AVERAGE_SIZE] = {0};
-    static uint8_t leftAve[AVERAGE_SIZE] = {0};
-    static uint8_t aveIndex = 0;
-    static uint8_t rightSpeed = 0;
-    static uint8_t leftSpeed = 0;
     
     while (1)
-    {
-        /*
-        leftAve[aveIndex] = data[8];
-        rightAve[aveIndex] = data[9];
-        aveIndex++;
-        aveIndex %= AVERAGE_SIZE;
-        
-        for (uint8_t i = 0; i < AVERAGE_SIZE; i++){
-            if(leftAve[i] & 0b10000000){
-                leftSpeed -= (leftAve[i] & 0b011111111);
-            }else {
-                leftSpeed += (leftAve[i] & 0b011111111);
-            }
-
-            if(rightAve[i] & 0b10000000){
-                rightSpeed -= (rightAve[i] & 0b011111111);
-            }else {
-                rightSpeed += (rightAve[i] & 0b011111111);
-            }
-        }
-        
-        rightSpeed >> 2;
-        leftSpeed >> 2;
-         */
+    {   
         
         drive_motor(data[8], LEFT);   // PD1 = FWD, PD2 = BWD (left)
         drive_motor(data[9], RIGHT);  // PD3 = FWD, PD4 = BWD (right)

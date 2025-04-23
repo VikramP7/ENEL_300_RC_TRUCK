@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=LCD.c
+SOURCEFILES_QUOTED_IF_SPACED=LCD.c Controller_Main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/LCD.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/LCD.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/LCD.o ${OBJECTDIR}/Controller_Main.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/LCD.o.d ${OBJECTDIR}/Controller_Main.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/LCD.o
+OBJECTFILES=${OBJECTDIR}/LCD.o ${OBJECTDIR}/Controller_Main.o
 
 # Source Files
-SOURCEFILES=LCD.c
+SOURCEFILES=LCD.c Controller_Main.c
 
 
 
@@ -94,12 +94,24 @@ ${OBJECTDIR}/LCD.o: LCD.c  .generated_files/flags/default/bb2e76e79af37274f06acc
 	@${RM} ${OBJECTDIR}/LCD.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/LCD.o.d" -MT "${OBJECTDIR}/LCD.o.d" -MT ${OBJECTDIR}/LCD.o -o ${OBJECTDIR}/LCD.o LCD.c 
 	
+${OBJECTDIR}/Controller_Main.o: Controller_Main.c  .generated_files/flags/default/be848ee58ecab379c032341f8c5693c5648374cf .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Controller_Main.o.d 
+	@${RM} ${OBJECTDIR}/Controller_Main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/Controller_Main.o.d" -MT "${OBJECTDIR}/Controller_Main.o.d" -MT ${OBJECTDIR}/Controller_Main.o -o ${OBJECTDIR}/Controller_Main.o Controller_Main.c 
+	
 else
 ${OBJECTDIR}/LCD.o: LCD.c  .generated_files/flags/default/6d1798f47d6db318c98d30df76b583dcfca190ed .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/LCD.o.d 
 	@${RM} ${OBJECTDIR}/LCD.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/LCD.o.d" -MT "${OBJECTDIR}/LCD.o.d" -MT ${OBJECTDIR}/LCD.o -o ${OBJECTDIR}/LCD.o LCD.c 
+	
+${OBJECTDIR}/Controller_Main.o: Controller_Main.c  .generated_files/flags/default/3b02890ff27d7acbd4d0302d56fd2d4ad6b6740b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Controller_Main.o.d 
+	@${RM} ${OBJECTDIR}/Controller_Main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/Controller_Main.o.d" -MT "${OBJECTDIR}/Controller_Main.o.d" -MT ${OBJECTDIR}/Controller_Main.o -o ${OBJECTDIR}/Controller_Main.o Controller_Main.c 
 	
 endif
 
