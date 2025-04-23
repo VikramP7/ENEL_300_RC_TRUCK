@@ -65,8 +65,7 @@ uint8_t adc_to_signmag_custom(uint16_t adc_val) {
  
  uint16_t USART_Receive(void) {
     
-     while (!(USART0.STATUS & USART_RXCIF_bm)){
-         count++;
+     while (!(USART0.STATUS & USART_RXCIF_bm)){         count++;
          if(count == 10000)
              break;
      }  // Wait for data
@@ -91,15 +90,19 @@ uint8_t adc_to_signmag_custom(uint16_t adc_val) {
 int main(void) {
     LCDIntialize();
     
-    //Boot Sequence
-    LCDWriteStr("Nigger!"); // DELETE BEFORE SUBMIT PLEASE
-    LCDClrScreen();
-    LCDWriteStr("Didsbury Diddlers"); 
-    LCDMoveCursor(0,1);
-    LCDWriteStr("& Co. Est. 2006");
-    
     setup_clock();
     USART_Init();
+    
+        //Boot Sequence
+    LCDWriteStr("Nigger!"); // DELETE BEFORE SUBMIT 
+    _delay_ms(100);
+    LCDClrScreen();
+    for(int i = 0; i < 100; i++ ) _delay_ms(100);
+    LCDWriteStr("Didsbury Diddlers");
+    for(int i = 0; i < 100; i++ ) _delay_ms(100);
+    LCDMoveCursor(0,1);
+    LCDWriteStr("& Co. Est. 2006");
+    for(int i = 0; i < 100; i++ ) _delay_ms(100);
     
     // Enable global interrupts.
     SREG = 0b10000000;
@@ -162,9 +165,11 @@ int main(void) {
             
             if(last_rx != rx_buffer) {
                 LCDMoveCursor(10,0);
-                LCDWriteInt(rx_buffer >> 1, 2); // Write to the LCD. This will have to be formatted on the ECU side.
+                uint8_t distance = (rx_buffer >> 1) * 17 / 8000;
+                LCDWriteInt(rx_buffer >> 1, -1); // Write to the LCD. This will have to be formatted on the ECU side.
+                LCDWriteStr("cm");
                 LCDMoveCursor(0,1);
-                if(rx_buffer << 7)
+                if(rx_buffer & 0x01)
                     LCDWriteStr("Metal   "); // Extra spacing so we don't need to clear.
                 else
                     LCDWriteStr("No Metal");

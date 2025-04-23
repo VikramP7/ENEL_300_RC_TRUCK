@@ -174,13 +174,19 @@ void LCDWriteInt(uint8_t num, uint8_t decimal){
     // print chars and place decimal place if necessary
     uint8_t leadingZeros = 1;
     for(i = 0; i < 3;i++){
+        if(buffer[i] == 0){
+            LCDWriteChar(' ');
+        }
+        else{
+            LCDWriteChar(buffer[i]);
+        }
+        /*
         leadingZeros = (leadingZeros && !buffer[i]) ? 1 : 0;
         if(leadingZeros == 0){
              if(i == decimal){
                 LCDWriteChar('.');
             }
-            LCDWriteChar(buffer[i]);
-        }
+        }*/
     }
 }
 
