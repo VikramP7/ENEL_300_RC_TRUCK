@@ -13,15 +13,10 @@
 int CURRENT_TIME = 0;
 
 void ClockInitialization(){
+    // set new clock frequency to 16MHz
     _PROTECTED_WRITE(CLKCTRL.OSCHFCTRLA, CLKCTRL_FRQSEL_16M_gc);
-    /*
-    // set new clock frequency to 24MHz
-    CLKCTRL.OSCHFCTRLA = 0b00100100;
-    // wait till clock stablizes before procceding
-    while(CLKCTRL.MCLKSTATUS & 0b00000001);
-     */
     
-    // sets max period for receting clock 
+    // sets max period for reseting clock 
     TCA0.SINGLE.PER = 0xFFFF;
     // enable TCA and set division to be fclk/ 16
     // this produces a resolution of 0.6667us
