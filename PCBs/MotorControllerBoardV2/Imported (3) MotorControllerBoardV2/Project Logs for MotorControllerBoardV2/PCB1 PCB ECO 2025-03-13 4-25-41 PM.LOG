@@ -1,0 +1,312 @@
+Added Component: Designator=C1(CAPRB500W50L450T300H550)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C2(CAPRB500W50L450T300H550)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1µF"; VariantName = "[No Variations]"
+Added Component: Designator=C3(CAPRB500W50L450T300H550)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1µF"; VariantName = "[No Variations]"
+Added Component: Designator=C4(CAPRB500W50L450T300H550)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1nF"; VariantName = "[No Variations]"
+Added Component: Designator=C5(CAPRB500W50L450T300H550)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C6(CAPRB500W50L450T300H550)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1µF"; VariantName = "[No Variations]"
+Added Component: Designator=C7(CAPRB500W50L450T300H550)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1µF"; VariantName = "[No Variations]"
+Added Component: Designator=C8(CAPRB500W50L450T300H550)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "220µF"; VariantName = "[No Variations]"
+Added Component: Designator=C9(CAPRB500W50L450T300H550)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1µF"; VariantName = "[No Variations]"
+Added Component: Designator=C10(CAPRB500W50L450T300H550)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1nF"; VariantName = "[No Variations]"
+Added Component: Designator=C11(CAPRB500W50L450T300H550)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "220µF"; VariantName = "[No Variations]"
+Added Component: Designator=C12(CAPRB500W50L450T300H550)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1µF"; VariantName = "[No Variations]"
+Added Component: Designator=C13(CAPRB500W50L450T300H550)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C14(CAPRB500W50L450T300H550)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C15(CAPRB500W50L450T300H550)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1µF"; VariantName = "[No Variations]"
+Added Component: Designator=D1(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=D2(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=D3(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=D4(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=D5(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=D6(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=D7(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=D8(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=D9(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=D10(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=D11(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=D12(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=D13(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=D14(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=D15(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=D16(DIO_B340-13-F)
+Add component (AddParameter): Name = "Value"; Value = "B340"; VariantName = "[No Variations]"
+Added Component: Designator=J1(MOLEX_2125201006)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/212520-1006/Molex/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Description_1"; Value = "\n                        \n                            MINI-FIT MAX 6 CIRCUIT HDR VERT | Molex Incorporated 212520-1006\n                        \n"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DigiKey_Part_Number"; Value = "900-2125201006-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MANUFACTURER"; Value = "Molex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MAXIMUM_PACKAGE_HEIGHT"; Value = "13.60mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Molex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "212520-1006"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PARTREV"; Value = "B1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/212520-1006/Molex/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STANDARD"; Value = "Manufacturer Recommendations"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2125201006"; VariantName = "[No Variations]"
+Added Component: Designator=MLB1(CUI_TB006 -508-02BE)
+Add component (AddParameter): Name = "Value"; Value = "Screw_Terminal_2_P5.00mm"; VariantName = "[No Variations]"
+Added Component: Designator=MLF1(CUI_TB006 -508-02BE)
+Add component (AddParameter): Name = "Value"; Value = "Screw_Terminal_2_P5.00mm"; VariantName = "[No Variations]"
+Added Component: Designator=MRB2(CUI_TB006 -508-02BE)
+Add component (AddParameter): Name = "Value"; Value = "Screw_Terminal_2_P5.00mm"; VariantName = "[No Variations]"
+Added Component: Designator=MRF2(CUI_TB006 -508-02BE)
+Add component (AddParameter): Name = "Value"; Value = "Screw_Terminal_2_P5.00mm"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RESAD1520W70L1030D380)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "54.5k"; VariantName = "[No Variations]"
+Added Component: Designator=R2(RESAD1520W70L1030D380)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "54.5k"; VariantName = "[No Variations]"
+Added Component: Designator=R3(RESAD1520W70L1030D380)
+Add component (AddParameter): Name = "Indicator"; Value = "+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1.2k"; VariantName = "[No Variations]"
+Added Component: Designator=SW1(SW_FSM8JH)
+Add component (AddParameter): Name = "Value"; Value = "SW_Push"; VariantName = "[No Variations]"
+Added Component: Designator=U1(DIP762W60P254L3556H510Q28)
+Add component (AddParameter): Name = "Value"; Value = "AVR128DB28x-xSP"; VariantName = "[No Variations]"
+Added Component: Designator=U2(L298N_IC_HS)
+Add component (AddParameter): Name = "Value"; Value = "L298N"; VariantName = "[No Variations]"
+Added Component: Designator=U3(IC_TCKE812NA)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/TCKE812NA,RF/Toshiba/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Description_1"; Value = "\n                        \n                            Fuse IC with Adjustable Over Current Protection and Reverse Current Blocking FET Control\n                        \n"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MANUFACTURER"; Value = "Toshiba Semiconductor and Storage"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MAXIMUM_PACKAGE_HEIGHT"; Value = "0.75mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Toshiba Semiconductor and Storage"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "TCKE812NA,RF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "WFDFN-10 Toshiba Semiconductor and Storage"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PARTREV"; Value = "9.0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/TCKE812NA,RF/Toshiba/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STANDARD"; Value = "Manufacturer Recommendations"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "TCKE812NA_RF"; VariantName = "[No Variations]"
+Added Component: Designator=U4(IC_TCKE812NA)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/TCKE812NA,RF/Toshiba/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Description_1"; Value = "\n                        \n                            Fuse IC with Adjustable Over Current Protection and Reverse Current Blocking FET Control\n                        \n"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MANUFACTURER"; Value = "Toshiba Semiconductor and Storage"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MAXIMUM_PACKAGE_HEIGHT"; Value = "0.75mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Toshiba Semiconductor and Storage"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "TCKE812NA,RF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "WFDFN-10 Toshiba Semiconductor and Storage"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PARTREV"; Value = "9.0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/TCKE812NA,RF/Toshiba/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STANDARD"; Value = "Manufacturer Recommendations"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "TCKE812NA_RF"; VariantName = "[No Variations]"
+Added Component: Designator=U5(L298N_IC_HS)
+Add component (AddParameter): Name = "Value"; Value = "L298N"; VariantName = "[No Variations]"
+Added Component: Designator=UPDIHeader1(HARWIN_M20-9990345)
+Add component (AddParameter): Name = "Value"; Value = "PINHD_1x3_Male"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=5V Logic Pin=C1-1
+Added Pin To Net: NetName=5V Logic Pin=C6-1
+Added Pin To Net: NetName=5V Logic Pin=C14-1
+Added Pin To Net: NetName=5V Logic Pin=C15-1
+Added Pin To Net: NetName=5V Logic Pin=J1-6
+Added Pin To Net: NetName=5V Logic Pin=U1-6
+Added Pin To Net: NetName=5V Logic Pin=U1-14
+Added Pin To Net: NetName=5V Logic Pin=U1-20
+Added Pin To Net: NetName=5V Logic Pin=U2-9
+Added Pin To Net: NetName=5V Logic Pin=U5-9
+Added Pin To Net: NetName=5V Logic Pin=UPDIHeader1-1
+Added Net: Name=5V Logic
+Added Pin To Net: NetName=7.2V Motor Pin=C2-1
+Added Pin To Net: NetName=7.2V Motor Pin=C8-1
+Added Pin To Net: NetName=7.2V Motor Pin=C9-1
+Added Pin To Net: NetName=7.2V Motor Pin=C11-1
+Added Pin To Net: NetName=7.2V Motor Pin=J1-3
+Added Pin To Net: NetName=7.2V Motor Pin=U3-2
+Added Pin To Net: NetName=7.2V Motor Pin=U3-3
+Added Pin To Net: NetName=7.2V Motor Pin=U3-4
+Added Pin To Net: NetName=7.2V Motor Pin=U3-5
+Added Pin To Net: NetName=7.2V Motor Pin=U4-2
+Added Pin To Net: NetName=7.2V Motor Pin=U4-3
+Added Pin To Net: NetName=7.2V Motor Pin=U4-4
+Added Pin To Net: NetName=7.2V Motor Pin=U4-5
+Added Net: Name=7.2V Motor
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=GND Pin=C6-2
+Added Pin To Net: NetName=GND Pin=C7-1
+Added Pin To Net: NetName=GND Pin=C8-2
+Added Pin To Net: NetName=GND Pin=C9-2
+Added Pin To Net: NetName=GND Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=GND Pin=C12-2
+Added Pin To Net: NetName=GND Pin=C13-2
+Added Pin To Net: NetName=GND Pin=C14-2
+Added Pin To Net: NetName=GND Pin=C15-2
+Added Pin To Net: NetName=GND Pin=J1-2
+Added Pin To Net: NetName=GND Pin=R1-1
+Added Pin To Net: NetName=GND Pin=R2-1
+Added Pin To Net: NetName=GND Pin=SW1-1
+Added Pin To Net: NetName=GND Pin=U1-15
+Added Pin To Net: NetName=GND Pin=U1-21
+Added Pin To Net: NetName=GND Pin=U2-1
+Added Pin To Net: NetName=GND Pin=U2-8
+Added Pin To Net: NetName=GND Pin=U2-15
+Added Pin To Net: NetName=GND Pin=U3-11
+Added Pin To Net: NetName=GND Pin=U4-11
+Added Pin To Net: NetName=GND Pin=U5-1
+Added Pin To Net: NetName=GND Pin=U5-8
+Added Pin To Net: NetName=GND Pin=U5-15
+Added Pin To Net: NetName=GND Pin=UPDIHeader1-2
+Added Net: Name=GND
+Added Pin To Net: NetName=LBWD Pin=U1-8
+Added Pin To Net: NetName=LBWD Pin=U2-7
+Added Pin To Net: NetName=LBWD Pin=U2-12
+Added Net: Name=LBWD
+Added Pin To Net: NetName=LFWD Pin=U1-7
+Added Pin To Net: NetName=LFWD Pin=U2-5
+Added Pin To Net: NetName=LFWD Pin=U2-10
+Added Net: Name=LFWD
+Added Pin To Net: NetName=LPWM Pin=U1-22
+Added Pin To Net: NetName=LPWM Pin=U2-6
+Added Pin To Net: NetName=LPWM Pin=U2-11
+Added Net: Name=LPWM
+Added Pin To Net: NetName=NetC3_1 Pin=C3-1
+Added Pin To Net: NetName=NetC3_1 Pin=C5-1
+Added Pin To Net: NetName=NetC3_1 Pin=U2-4
+Added Pin To Net: NetName=NetC3_1 Pin=U4-6
+Added Pin To Net: NetName=NetC3_1 Pin=U4-7
+Added Pin To Net: NetName=NetC3_1 Pin=U4-8
+Added Net: Name=NetC3_1
+Added Pin To Net: NetName=NetC4_1 Pin=C4-1
+Added Pin To Net: NetName=NetC4_1 Pin=U4-1
+Added Net: Name=NetC4_1
+Added Pin To Net: NetName=NetC7_2 Pin=C7-2
+Added Pin To Net: NetName=NetC7_2 Pin=SW1-2
+Added Pin To Net: NetName=NetC7_2 Pin=U1-18
+Added Net: Name=NetC7_2
+Added Pin To Net: NetName=NetC10_1 Pin=C10-1
+Added Pin To Net: NetName=NetC10_1 Pin=U3-1
+Added Net: Name=NetC10_1
+Added Pin To Net: NetName=NetC12_1 Pin=C12-1
+Added Pin To Net: NetName=NetC12_1 Pin=C13-1
+Added Pin To Net: NetName=NetC12_1 Pin=U3-6
+Added Pin To Net: NetName=NetC12_1 Pin=U3-7
+Added Pin To Net: NetName=NetC12_1 Pin=U3-8
+Added Pin To Net: NetName=NetC12_1 Pin=U5-4
+Added Net: Name=NetC12_1
+Added Pin To Net: NetName=NetD1_2 Pin=MLF1-1
+Added Pin To Net: NetName=NetD1_2 Pin=U2-2
+Added Net: Name=NetD1_2
+Added Pin To Net: NetName=NetD3_2 Pin=MLF1-2
+Added Pin To Net: NetName=NetD3_2 Pin=U2-3
+Added Net: Name=NetD3_2
+Added Pin To Net: NetName=NetD5_2 Pin=MLB1-1
+Added Pin To Net: NetName=NetD5_2 Pin=U2-13
+Added Net: Name=NetD5_2
+Added Pin To Net: NetName=NetD7_2 Pin=MLB1-2
+Added Pin To Net: NetName=NetD7_2 Pin=U2-14
+Added Net: Name=NetD7_2
+Added Pin To Net: NetName=NetD9_2 Pin=MRF2-1
+Added Pin To Net: NetName=NetD9_2 Pin=U5-2
+Added Net: Name=NetD9_2
+Added Pin To Net: NetName=NetD11_2 Pin=MRF2-2
+Added Pin To Net: NetName=NetD11_2 Pin=U5-3
+Added Net: Name=NetD11_2
+Added Pin To Net: NetName=NetD13_2 Pin=MRB2-1
+Added Pin To Net: NetName=NetD13_2 Pin=U5-13
+Added Net: Name=NetD13_2
+Added Pin To Net: NetName=NetD15_2 Pin=MRB2-2
+Added Pin To Net: NetName=NetD15_2 Pin=U5-14
+Added Net: Name=NetD15_2
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR1_2 Pin=U4-10
+Added Net: Name=NetR1_2
+Added Pin To Net: NetName=NetR2_2 Pin=R2-2
+Added Pin To Net: NetName=NetR2_2 Pin=U3-10
+Added Net: Name=NetR2_2
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetR3_1 Pin=UPDIHeader1-3
+Added Net: Name=NetR3_1
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=NetR3_2 Pin=U1-19
+Added Net: Name=NetR3_2
+Added Pin To Net: NetName=RBWD Pin=U1-10
+Added Pin To Net: NetName=RBWD Pin=U1-11
+Added Pin To Net: NetName=RBWD Pin=U5-7
+Added Pin To Net: NetName=RBWD Pin=U5-12
+Added Net: Name=RBWD
+Added Pin To Net: NetName=RFWD Pin=U1-9
+Added Pin To Net: NetName=RFWD Pin=U5-5
+Added Pin To Net: NetName=RFWD Pin=U5-10
+Added Net: Name=RFWD
+Added Pin To Net: NetName=RPWM Pin=U1-23
+Added Pin To Net: NetName=RPWM Pin=U5-6
+Added Pin To Net: NetName=RPWM Pin=U5-11
+Added Net: Name=RPWM
+Added Pin To Net: NetName=SCL Pin=J1-1
+Added Pin To Net: NetName=SCL Pin=U1-25
+Added Net: Name=SCL
+Added Pin To Net: NetName=SDA Pin=J1-4
+Added Pin To Net: NetName=SDA Pin=U1-24
+Added Net: Name=SDA
+Added Class: Name=MotorControllerBoardV2

@@ -16,6 +16,7 @@ The workload of the various systems  was divided amongst us based on interest an
 
 ## Sensors Systems
 ### Metal Detector
+![Picture of Metal detector coil]()
 
 ### Distance Sensor
 
