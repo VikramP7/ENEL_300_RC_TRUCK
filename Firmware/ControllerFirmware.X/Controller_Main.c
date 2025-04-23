@@ -15,6 +15,8 @@
 
 #define F_CPU 16000000UL
 #define PACKET_SIZE 3
+
+// Define useful variables
 volatile uint16_t result_right = 0;
 volatile uint16_t result_left = 0;
 volatile uint8_t result_8_bit = 0;
@@ -41,7 +43,7 @@ uint8_t adc_to_signmag_custom(uint16_t adc_val) {
         magnitude = (uint8_t)((float)(2039 - adc_val) * 127 / 2039);
     }
     else {
-        // Deadzone ? output zero
+        // Deadzone output zero
         return 0x00;
     }
 
@@ -93,7 +95,7 @@ int main(void) {
     setup_clock();
     USART_Init();
     
-        //Boot Sequence
+    //Boot Sequence
     LCDClrScreen();
     for(int i = 0; i < 100; i++ ) _delay_ms(100);
     LCDWriteStr("Didsbury Diddlers");
