@@ -103,6 +103,7 @@ int main(void) {
     LCDMoveCursor(0,1);
     LCDWriteStr("& Co. Est. 2006");
     for(int i = 0; i < 100; i++ ) _delay_ms(100);
+	// **Expeditiously**
     
     // Enable global interrupts.
     SREG = 0b10000000;
