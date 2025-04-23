@@ -17,10 +17,6 @@ void BluetoothInitialize(){
 
     // Enable transmitter and receiver
     USART0.CTRLB = 0b11000000;
-    
-    // set PA6 as 5V power for radio
-    PORTA.DIR |= 0b01000000;
-    PORTA.OUTSET |= 0b01000000;
 }
 
 void BluetoothTransmit(uint16_t data){
