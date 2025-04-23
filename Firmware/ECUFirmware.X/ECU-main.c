@@ -1,10 +1,3 @@
-/*
- * File:   newavr-main.c
- * Author: vikra
- *
- * Created on April 1, 2025, 5:06 PM
- */
-
 // External file includes
 #include <avr/io.h>
 #include "leds.h"
