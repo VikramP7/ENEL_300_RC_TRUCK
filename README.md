@@ -18,7 +18,9 @@ The workload of the various systems  was divided amongst us based on interest an
 ### Metal Detector
 ![Picture of Metal detector coil]()
 
+
 ### Distance Sensor
+![Sensor board Schematic]()
 
 ## Power Systems
 ### Battery
