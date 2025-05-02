@@ -33,7 +33,7 @@ The four boards include:
 
 The metal detection system is designed around a 555 timer IC and inductor capacitor (LC) circuit. The 555 timer produces an AC signal inwhich the frequency response varries with any changes in inductance. By exposing the inductor coil placed on the bottom of the car to a copper sheet the inducatance of the coil changes and the frequency of the output changes in response. The sensor board uses a built in timer module of the AVR128DB28 to measure the frecuency of the LC circuit.
 
-By tuning the recorded 
+By tuning the recorded frequency 
 
 Before the PCB for the sensor board was designed, the main 555 timer based metal detection circuit the PCB is now based upon was breadboarded, and tested extensively. The output of the circuit, where the AVR128DB28 would take its input, was probed with an oscilloscope to confirm the frequency change was detectable, and consistent. Furthermore, because of the high voltage supply needed for the metal detector circuit — 9V — further testing and calculations were required to find an appropriate resistor value such that the AVR128DB28 input pin used did not get overloaded. No preliminary testing was done for the HC-SR04 ultrasonic sensor, due to the previous experience our group has with the sensor.
 
