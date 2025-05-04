@@ -120,4 +120,5 @@ The Motor Control Board is also equipped with an AVR128DB28 to interface with th
 ## Mechanical Design
 The frame and body of the vehicle, along with the controler case was 3d printed. The frame consisted of a baseplate that custom motor bracket mounts were attched to. The frame had holes drilled for connections to motor terminals. The body was printed from a modified 3d model of a RAM 3500 found online. Wheels were also printed and off the shelf rubber tires were fitted to them. All 3d models were scaled to achive an aproximate 1:16 scale to the real truck. All prints were done in PLA, and infil was scaled based on points of high stress.  
 
-![Picture of 3d Prints](./Pictures/TruckBody3d.png)
+![Picture of 3d Prints](./Pictures/TruckBody3d.png)  
+*3D Printed Body File*
