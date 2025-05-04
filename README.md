@@ -49,12 +49,15 @@ The battery we selected has a capacity of 3000 mAh with a nominal voltage of 12.
 
 Through estimates of maximum current draw, the runtime on one full charge was calculated to be 228 minutes. This battery was initially chosen as previously we had sourced higher power motors, these higher power motors made the battery selection more reasonable for runtime calculations. However, in switching motors we decided not to change our battery selection as it was still sufficient for operation.
 
-### Voltage Regulation (ECU)
-![Picture of Bottom of ECU]()
+### Voltage Regulation
 
 To produce the voltage 5V and 3.3V lines linear dropout regulators (LDOs) were used. These regulators were placed on the ECU and using a custom Molex connector voltage levels were distributed to other boards (motor control board, and sensor board).
 
+![Picture of Molex connector standard]()
+
 ### Power Switch
+
+![Picture of Bottom of ECU]()
 
 
 ## Communications Systems (ECU + Others)
@@ -71,16 +74,34 @@ One 8-bit packet was sent from the ECU to describe metal detection (most signifi
 ### I<sup>2</sup>C Interboard Communication
 An I<sup>2</sup>C bus was utilized between boards within the vehicle (ECU, Motor Board, and Sensor Board). Connection between boards was accomplished using the same custom molex connector as described in the power regulation section.
 
-![Picture of Molex connector standard]()
+![Picture of Car Opened with Wires]()
 
 The ECU hosted the I<sup>2</sup>C bus housing the pull-up resistorsr and acted as the master on the bus. The ECU would relay motor control data recieved from the controller board to the Motor Board. The ECU would request data from the Sensor Board, recieving distance and metal detection data. I<sup>2</sup>C communications is a non-blocking function within the superloop of all boards. 
 
 I<sup>2</sup>C packets took a very similar form to USART packets over bluetooth. The motor board would receive two 8-bit sign-magnitude packets one for each side of the vehicle. Two packets were received from the Sensor Board. The MSB of the first packet described the metal detection data, and the remaining 15 bits described the distance sensor data. The ECU would compress the data to 7 bits before relaying to the controler.
 
+![Picture of ECU Board]()
+
 ## Controller
+
+![Picture of Controller]()
+
 ### LCD UI
+The 2x16 ASCII LCD selected was equiped with an I<sup>2</sup>C piggy-back-board to allow for fewer requiered pins for operation. The controller board acted as the master and LCD as slave on the I<sup>2</sup>C bus. 
+
+![Picture of LCD on Controller]()
+
+On power up the LCD would display the team name, before displaying the distance data, and metal detection data
+
 ### Inputs
+The controller was equiped with two single axis joysticks for controlling locomotion and one switch for controlling the lights. The vehicle utilized a tank steering system where each joystick would control the speed of the wheels on one side of the vehicle.  
 
 ## Locomotion Systems (Motor Board)
 ### Motor Selection
+![Picture of Motors]()
+
+
 ### Motor Drivers
+![Picture of Motor Board]()
+
+## Mechanical Design
