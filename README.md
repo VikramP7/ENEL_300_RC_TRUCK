@@ -31,27 +31,56 @@ The four boards include:
 ### Metal Detector
 ![Picture of Metal detector coil]()
 
-The metal detection system is designed around a 555 timer IC and inductor capacitor (LC) circuit. The 555 timer produces an AC signal inwhich the frequency response varries with any changes in inductance. By exposing the inductor coil placed on the bottom of the car to a copper sheet the inducatance of the coil changes and the frequency of the output changes in response. The sensor board uses a built in timer module of the AVR128DB28 to measure the frecuency of the LC circuit.
+The metal detection system is designed around a 555 timer IC and inductor capacitor (LC) circuit. The 555 timer produces an AC input inwhich the frequency response output varries with changes in inductance. By exposing the inductor coil placed on the bottom of the car to a copper sheet the inducatance of the coil changes and the frequency of the output changes in response.
 
-By tuning the recorded frequency 
-
-Before the PCB for the sensor board was designed, the main 555 timer based metal detection circuit the PCB is now based upon was breadboarded, and tested extensively. The output of the circuit, where the AVR128DB28 would take its input, was probed with an oscilloscope to confirm the frequency change was detectable, and consistent. Furthermore, because of the high voltage supply needed for the metal detector circuit — 9V — further testing and calculations were required to find an appropriate resistor value such that the AVR128DB28 input pin used did not get overloaded. No preliminary testing was done for the HC-SR04 ultrasonic sensor, due to the previous experience our group has with the sensor.
+The sensor board uses a built in timer module of the AVR128DB28 to measure the frecuency of the LC circuit. By tuning a threshold, the recorded frequency could be used to identify if the coil was exposed to metal. This information was then relayed over I<sup>2</sup>C to the ECU.
 
 
 ### Distance Sensor
+An ultrasonic distance sensor was use to find the distance of the nearest object in frount of the car. The Sensor Board interfaced with the ultrasonic providing the appropriet 10 microsecond trigger and recording the echo. This raw echo data was transmitted over I<sup>2</sup>C to the ECU.
+
 ![Sensor board Schematic]()
 
-## Power Systems
+## Power Systems (ECU)
 ### Battery
+The battery we selected has a capacity of 3000 mAh with a nominal voltage of 12.6V, this was used to supply power to all boards and the motors excluding the metal detection circuit. This battery consisted of 4 cells with integrated charging and level balancing technology.
 
-## Communications Systems
+![Battery Picture]()
+
+Through estimates of maximum current draw, the runtime on one full charge was calculated to be 228 minutes. This battery was initially chosen as previously we had sourced higher power motors, these higher power motors made the battery selection more reasonable for runtime calculations. However, in switching motors we decided not to change our battery selection as it was still sufficient for operation.
+
+### Voltage Regulation (ECU)
+![Picture of Bottom of ECU]()
+
+To produce the voltage 5V and 3.3V lines linear dropout regulators (LDOs) were used. These regulators were placed on the ECU and using a custom Molex connector voltage levels were distributed to other boards (motor control board, and sensor board).
+
+### Power Switch
+
+
+## Communications Systems (ECU + Others)
 ### Bluetooth USART
-### I<sup>2</sup>C Interboard
+
+![Picture of HC-05]()
+
+The ECU board and controller boards preformed wireless communications via a USART over bluetooth communications module [HC-05](https://www.electronicwings.com/sensors-modules/bluetooth-module-hc-05-). The controller board would send movement control and light switch position data to the ECU board, describing positions of single axis joy sticks and if the lights should be on or not. The ECU board would send sensor data including distance and metal detection.
+
+Three 8-bit data packets were sent from the controller. Two packets described the left and right joystick position encoded using sign magnitude. And the third packet contained the status of the light switch. 
+
+One 8-bit packet was sent from the ECU to describe metal detection (most significant bit), and distance sensor data encoded in the 7 least significant bits. 
+
+### I<sup>2</sup>C Interboard Communication
+An I<sup>2</sup>C bus was utilized between boards within the vehicle (ECU, Motor Board, and Sensor Board). Connection between boards was accomplished using the same custom molex connector as described in the power regulation section.
+
+![Picture of Molex connector standard]()
+
+The ECU hosted the I<sup>2</sup>C bus housing the pull-up resistorsr and acted as the master on the bus. The ECU would relay motor control data recieved from the controller board to the Motor Board. The ECU would request data from the Sensor Board, recieving distance and metal detection data. I<sup>2</sup>C communications is a non-blocking function within the superloop of all boards. 
+
+I<sup>2</sup>C packets took a very similar form to USART packets over bluetooth. The motor board would receive two 8-bit sign-magnitude packets one for each side of the vehicle. Two packets were received from the Sensor Board. The MSB of the first packet described the metal detection data, and the remaining 15 bits described the distance sensor data. The ECU would compress the data to 7 bits before relaying to the controler.
 
 ## Controller
 ### LCD UI
 ### Inputs
 
-## Locomotion Systems
+## Locomotion Systems (Motor Board)
 ### Motor Selection
 ### Motor Drivers
