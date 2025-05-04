@@ -68,7 +68,8 @@ The power switch uses a PMOS high side switch topology to switch between three s
 ## Communications Systems (ECU + Others)
 ### Bluetooth USART
 
-![Picture of HC-05](./Pictures/HC-05BluetoothModule.jpg)
+![Picture of HC-05](./Pictures/HC-05BluetoothModule.jpg)  
+[*Image Cred.*](https://www.electronicwings.com/sensors-modules/bluetooth-module-hc-05-)
 
 The ECU board and controller boards preformed wireless communications via a USART over Bluetooth communications module [HC-05](https://www.electronicwings.com/sensors-modules/bluetooth-module-hc-05-). The controller board would send movement control and light switch position data to the ECU board, describing positions of single axis joy sticks and if the lights should be on or not. The ECU board would send sensor data including distance and metal detection.
 
