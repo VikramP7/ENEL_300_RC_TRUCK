@@ -52,7 +52,8 @@ Through estimates of maximum current draw, the runtime on one full charge was ca
 
 ### Voltage Regulation
 
-![Picture of Molex connector standard](./Pictures/CarMolex.png)  *Custom Standard for Molex Connector*
+![Picture of Molex connector standard](./Pictures/CarMolex.png)  
+*Custom Standard for Molex Connector*
 
 To produce the voltage 5V and 3.3V lines linear dropout regulators (LDOs) were used. These regulators were placed on the ECU and using a custom Molex connector voltage levels were distributed to other boards (motor control board, and sensor board).
 
